@@ -21,8 +21,10 @@
     "babel-plugin-transform-import-meta": "^3.1.0",
     "danger": "^0.18.0",
     "esbuild": "^0.28.2",
+    "fontkit": "^3.0.0",
     "husky": "^0.13.3",
     "jest": "^30.5.2",
+    "linebreak": "^2.0.0",
     "lint-staged": "^3.2.5",
     "react": "^19.3.1",
     "react-test-renderer": "^19.3.1",
@@ -36,7 +38,7 @@
     "test": "jest",
     "type-check": "tsc --noEmit",
     "build": "yarn build:js && tsc --emitDeclarationOnly && cp -r src/font build",
-    "build:js": "esbuild src/index.ts --bundle --platform=node --format=cjs --target=node18 --external:fontkit --external:linebreak --outfile=build/index.js",
+    "build:js": "esbuild src/index.ts --bundle --platform=node --conditions=browser --format=cjs --target=node18 --outfile=build/index.js",
     "watch": "yarn build:js --watch",
     "lint": "tslint 'src/**/*.{ts,tsx}'",
     "precommit": "lint-staged",
@@ -51,12 +53,9 @@
   "jest": {
     "testRegex": "(.test)\\.(ts|tsx)$",
     "transformIgnorePatterns": [
-      "/node_modules/(?!yoga-layout/)"
+      "/node_modules/(?!(yoga-layout|fontkit|linebreak|brotli|dfa|restructure|unicode-properties|unicode-trie)/)"
     ],
     "cacheDirectory": ".jest/cache"
   },
-  "dependencies": {
-    "fontkit": "^1.7.7",
-    "linebreak": "^0.3.0"
-  }
+  "dependencies": {}
 }

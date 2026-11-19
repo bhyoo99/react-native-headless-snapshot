@@ -4,6 +4,7 @@
 * Remove `font-manager`: fonts other than the bundled Proza Libre must be loaded with `loadFont` or `addFontToSvg`
 * Move the test setup to Jest 30, Babel 8 and TypeScript 6
 * Accept the output of React 19 renderers: `@testing-library/react-native`, `test-renderer` and `react-test-renderer`, including trees with several roots
+* Update `fontkit` to 3 and `linebreak` to 2 (both ESM-only) and bundle them into the build, so the package has no runtime dependencies
 
 ### 0.1.0
 
