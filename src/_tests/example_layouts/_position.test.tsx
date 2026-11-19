@@ -1,6 +1,6 @@
 import "../../index"
 
-import { Text, View } from "../host-components"
+import { View } from "../host-components"
 import { renderToJSON } from "../render-json"
 
 it("Renders views on top position", async () => {

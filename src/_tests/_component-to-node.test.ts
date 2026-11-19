@@ -32,7 +32,7 @@ describe("componentToNode", () => {
   })
 })
 
-const componentWithStyle = (style: any) => ({ kind: "Stub", props: {style}})
+const componentWithStyle = (style: any) => ({ type: "Stub", props: { style }, children: null })
 
 describe("styleFromComponent", () => {
   it("handles deeply nested arrays of styles", () => {
@@ -58,6 +58,6 @@ describe("styleFromComponent", () => {
       { fontFamily: "AGaramondPro-Regular" }
     ]
     const component = componentWithStyle(style)
-    expect(styleFromComponent).toMatchSnapshot()
+    expect(styleFromComponent(component)).toMatchSnapshot()
   })
 })

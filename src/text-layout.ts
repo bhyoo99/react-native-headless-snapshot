@@ -52,7 +52,7 @@ export const breakLines = (
   textStyle: TextWithAttributedStyle,
   width: number
 ): TextWithAttributedStyle[] => {
-  const { text, attributedStyles } = textStyle
+  const { text } = textStyle
   const breaker = new LineBreaker(text)
 
   const lines: TextWithAttributedStyle[] = []

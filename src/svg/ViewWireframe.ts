@@ -1,15 +1,10 @@
-import { styleFromComponent } from "../component-to-node"
 import { RenderedComponent } from "../index"
-import wsp from "../whitespace"
 import {
-  dashStyles,
-  filledPathForSide,
   getScaledBorderRadius,
   pathForRect,
   scaleSides,
   Sides,
   sidesEqual,
-  strokedPathForSide,
 } from "./borders"
 import { $ } from "./util"
 
