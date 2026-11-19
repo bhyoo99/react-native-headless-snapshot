@@ -2,6 +2,20 @@
 
 Take a React Native component tree, and render it into an SVG.
 
+## Installation
+
+This fork is not published to npm. Install it from GitHub, and the package builds itself while it installs:
+
+```sh
+npm install --save-dev github:bhyoo99/react-native-headless-snapshot
+# Yarn 1 needs the git+https form to run the build
+yarn add --dev jest-snapshots-svg@git+https://github.com/bhyoo99/react-native-headless-snapshot.git
+```
+
+It needs Jest 29 or later and works with the React Native Jest preset (`@react-native/jest-preset`). Import it in a
+test file, or once for every test with `setupFilesAfterEnv: ["jest-snapshots-svg"]` in the Jest config. For the
+`toMatchSVGSnapshot` types without an import, add `"jest-snapshots-svg"` to `compilerOptions.types`.
+
 ```ts
 // _tests/render.test.tsx
 

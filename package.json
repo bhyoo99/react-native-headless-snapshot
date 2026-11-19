@@ -4,7 +4,7 @@
   "description": "Generate SVG Snapshots of React Native Component Trees",
   "main": "build/index.js",
   "files": [
-    "build/*"
+    "build"
   ],
   "typings": "build/index.d.ts",
   "author": "Orta Therox <orta.therox@gmail.com> & Art.sy Inc",
@@ -38,11 +38,11 @@
   "scripts": {
     "test": "jest",
     "type-check": "tsc --noEmit",
-    "build": "yarn build:js && tsc --emitDeclarationOnly && cp -r src/font build",
+    "build": "npm run build:js && tsc -p tsconfig.build.json && node -e \"require('fs').cpSync('src/font', 'build/font', { recursive: true })\"",
     "build:js": "esbuild src/index.ts --bundle --platform=node --conditions=browser --format=cjs --target=node18 --outfile=build/index.js",
-    "watch": "yarn build:js --watch",
+    "watch": "npm run build:js -- --watch",
     "lint": "eslint .",
-    "prepare": "husky"
+    "prepare": "npm run build && husky"
   },
   "lint-staged": {
     "*.{ts,tsx,js,mjs}": "eslint --fix"
@@ -54,5 +54,8 @@
     ],
     "cacheDirectory": ".jest/cache"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "peerDependencies": {
+    "jest": ">=29"
+  }
 }
