@@ -7,8 +7,6 @@ import componentTreeToNodeTree from "../component-tree-to-nodes"
 import renderedComponentTree from "../reapply-layouts-to-components"
 import treeToSVG from "../tree-to-svg"
 
-import * as fs from "fs"
-
 it("handles some simple JSX", async () => {
   const jsx = (
     <View style={{ width: 100, height: 260, marginLeft: 40, marginTop: 40, paddingLeft: 20 }}>

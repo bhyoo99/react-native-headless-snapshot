@@ -1,3 +1,16 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`styleFromComponent handles deeply nested arrays of styles 1`] = `[Function]`;
+exports[`styleFromComponent handles deeply nested arrays of styles 1`] = `
+{
+  "alignSelf": "center",
+  "color": "black",
+  "fontFamily": "AGaramondPro-Regular",
+  "fontSize": 30,
+  "lineHeight": 32,
+  "marginTop": 35,
+  "paddingLeft": 20,
+  "paddingRight": 20,
+  "textAlign": "center",
+  "width": 280,
+}
+`;

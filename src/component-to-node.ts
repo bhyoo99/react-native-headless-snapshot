@@ -9,7 +9,7 @@ export const textLines = Symbol("textLines")
 
 const isNotEmpty = prop => typeof prop !== "undefined" && prop !== null
 
-const componentToNode = (component: Component, settings: Settings): Node => {
+const componentToNode = (component: Component, _settings: Settings): Node => {
   const yoga = getYoga()
   // Do we need to pass in the parent node too?
   const node = yoga.Node.create()

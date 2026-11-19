@@ -8,16 +8,14 @@ import viewWireframe from "./svg/ViewWireframe"
 import wsp from "./whitespace"
 
 const nodeToSVG = (indent: number, node: RenderedComponent, settings: Settings) => {
-  const { layout, props } = node
+  const { layout } = node
   const style = styleFromComponent(node) || {}
-  const { top, left, width, height } = layout
-
   // TODO: Enable this
   // if (!style.backgroundColor && sidesEqual(borderWidths) && borderWidths[0] === 0) {
   //   return ""
   // }
 
-  let svgText = ""
+  let svgText: string
   if (node[textLines] && node[textLines].length > 0) {
     svgText = text(layout.left, layout.top, layout.width, layout.height, node[textLines])
   } else if (!settings.wireframe) {

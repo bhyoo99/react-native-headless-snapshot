@@ -14,24 +14,25 @@
     "@babel/preset-env": "^8.0.7",
     "@babel/preset-react": "^8.0.1",
     "@babel/preset-typescript": "^8.0.7",
+    "@eslint/js": "^10.0.1",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
     "babel-jest": "^30.5.2",
     "babel-plugin-transform-import-meta": "^3.1.0",
-    "danger": "^0.18.0",
     "esbuild": "^0.28.2",
+    "eslint": "^10.15.0",
     "fontkit": "^3.0.0",
-    "husky": "^0.13.3",
+    "globals": "^17.14.0",
+    "husky": "^9.1.7",
     "jest": "^30.5.2",
     "linebreak": "^2.0.0",
-    "lint-staged": "^3.2.5",
+    "lint-staged": "^17.6.1",
     "react": "^19.3.1",
     "react-test-renderer": "^19.3.1",
     "test-renderer": "^1.3.1",
-    "ts-node": "^3.0.0",
-    "tslint": "^5.2.0",
     "typescript": "^6.0.3",
+    "typescript-eslint": "^8.73.0",
     "yoga-layout": "^3.2.1"
   },
   "scripts": {
@@ -40,15 +41,11 @@
     "build": "yarn build:js && tsc --emitDeclarationOnly && cp -r src/font build",
     "build:js": "esbuild src/index.ts --bundle --platform=node --conditions=browser --format=cjs --target=node18 --outfile=build/index.js",
     "watch": "yarn build:js --watch",
-    "lint": "tslint 'src/**/*.{ts,tsx}'",
-    "precommit": "lint-staged",
-    "prepush": "yarn build && yarn jest"
+    "lint": "eslint .",
+    "prepare": "husky"
   },
   "lint-staged": {
-    "*.@(ts|tsx)": [
-      "tslint --fix",
-      "git add"
-    ]
+    "*.{ts,tsx,js,mjs}": "eslint --fix"
   },
   "jest": {
     "testRegex": "(.test)\\.(ts|tsx)$",

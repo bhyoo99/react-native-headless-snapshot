@@ -5,8 +5,6 @@ import { getYoga } from "../yoga"
 import { View } from "./host-components"
 import { renderToJSON } from "./render-json"
 
-import treeToSVG from "../tree-to-svg"
-
 describe("Counting nodes", () => {
     it("it is good with memory", async () => {
       const yoga = getYoga()

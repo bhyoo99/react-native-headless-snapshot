@@ -5,6 +5,7 @@
 * Move the test setup to Jest 30, Babel 8 and TypeScript 6
 * Accept the output of React 19 renderers: `@testing-library/react-native`, `test-renderer` and `react-test-renderer`, including trees with several roots
 * Update `fontkit` to 3 and `linebreak` to 2 (both ESM-only) and bundle them into the build, so the package has no runtime dependencies
+* Replace TSLint with ESLint and typescript-eslint, update husky and lint-staged, and drop Travis CI and Danger
 
 ### 0.1.0
 
