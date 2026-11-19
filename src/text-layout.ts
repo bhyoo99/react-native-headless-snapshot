@@ -1,4 +1,4 @@
-import LineBreaker from "linebreak"
+import { LineBreaker } from "linebreak"
 import { AttributedStyle, TextWithAttributedStyle } from "./extract-text"
 import { fontForStyle } from "./font-loader"
 
