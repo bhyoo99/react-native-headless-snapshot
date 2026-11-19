@@ -7,7 +7,7 @@ module.exports = {
   overrides: [
     {
       test: /\.tsx$/,
-      presets: [["@babel/preset-react", { runtime: "classic" }]],
+      presets: ["@babel/preset-react"],
     },
   ],
 }

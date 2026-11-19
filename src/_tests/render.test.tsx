@@ -1,8 +1,7 @@
 import "../index"
 
-import * as React from "react"
-import * as renderer from "react-test-renderer"
 import { View } from "./host-components"
+import { renderToJSON } from "./render-json"
 
 import componentTreeToNodeTree from "../component-tree-to-nodes"
 import renderedComponentTree from "../reapply-layouts-to-components"
@@ -10,7 +9,7 @@ import treeToSVG from "../tree-to-svg"
 
 import * as fs from "fs"
 
-it("handles some simple JSX", () => {
+it("handles some simple JSX", async () => {
   const jsx = (
     <View style={{ width: 100, height: 260, marginLeft: 40, marginTop: 40, paddingLeft: 20 }}>
       <View style={{ width: 20, height: 20 }} />
@@ -32,7 +31,7 @@ it("handles some simple JSX", () => {
     </View>
   )
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   const settings = {
     width: 600,
     height: 400,

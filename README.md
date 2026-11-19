@@ -5,19 +5,23 @@ Take a React Native component tree, and render it into an SVG.
 ```ts
 // _tests/render.test.tsx
 
-import * as React from "react"
+import { render, screen } from "@testing-library/react-native"
 import { Text } from "react-native"
-import * as renderer from "react-test-renderer"
 import "jest-snapshots-svg"
 
 describe("Fixtures", () => {
-  it("does some simple JSX", () => {
-    const component = renderer.create(<Text />).toJSON()
-    expect(component).toMatchSnapshot()
-    expect(component).toMatchSVGSnapshot(480, 640)
+  it("does some simple JSX", async () => {
+    await render(<Text />)
+    expect(screen.toJSON()).toMatchSnapshot()
+    expect(screen.toJSON()).toMatchSVGSnapshot(480, 640)
   })
 })
 ```
+
+`toMatchSVGSnapshot` takes the JSON tree from `@testing-library/react-native` (`screen.toJSON()`),
+[`test-renderer`](https://github.com/mdjastrzebski/test-renderer) (`root.container`) or
+`react-test-renderer` (`renderer.toJSON()`). A tree with several roots (an array, or a container with
+several children) is laid out inside one container that fills the snapshot size.
 
 Would make:
 
@@ -43,15 +47,14 @@ It does this by emulating the rendering process of React Native by calling yoga-
   <tr>
     <td><p>Write your normal Jest snapshot tests, but use <code>toMatchSVGSnapshot</code></p>
 
-    import * as React from "react"
+    import { render, screen } from "@testing-library/react-native"
     import { View } from "react-native"
-    import * as renderer from "react-test-renderer"
     import "jest-snapshots-svg"
 
     const squareStyle = (color) =>
       ({ width: 50, height: 50, backgroundColor: color })
 
-    it("Renders three centered blocks", () => {
+    it("Renders three centered blocks", async () => {
       const jsx =
         <View style={{
           flex: 1,
@@ -64,8 +67,8 @@ It does this by emulating the rendering process of React Native by calling yoga-
           <View style={squareStyle("steelblue")}/>
         </View>
 
-      const component = renderer.create(jsx).toJSON()
-      expect(component).toMatchSVGSnapshot(320, 480)
+      await render(jsx)
+      expect(screen.toJSON()).toMatchSVGSnapshot(320, 480)
     })
 
   </td>

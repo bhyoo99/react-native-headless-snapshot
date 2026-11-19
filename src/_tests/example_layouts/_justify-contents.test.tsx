@@ -1,12 +1,11 @@
 import "../../index"
 
-import * as React from "react"
-import * as renderer from "react-test-renderer"
 import { View } from "../host-components"
+import { renderToJSON } from "../render-json"
 
 // https://facebook.github.io/react-native/docs/flexbox.html
 
-it("Splits the layout vertically across", () => {
+it("Splits the layout vertically across", async () => {
   const jsx =
     <View style={{ flex: 1, flexDirection: "column", justifyContent: "space-between" }}>
       <View style={{ width: 50, height: 50, backgroundColor: "powderblue" }} />
@@ -14,6 +13,6 @@ it("Splits the layout vertically across", () => {
       <View style={{ width: 50, height: 50, backgroundColor: "steelblue" }} />
     </View>
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480, { wireframe: true })
 })

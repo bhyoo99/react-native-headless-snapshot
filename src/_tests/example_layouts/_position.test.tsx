@@ -1,10 +1,9 @@
 import "../../index"
 
-import * as React from "react"
-import * as renderer from "react-test-renderer"
 import { Text, View } from "../host-components"
+import { renderToJSON } from "../render-json"
 
-it("Renders views on top position", () => {
+it("Renders views on top position", async () => {
   const jsx =
     <View style={{ flex: 1 }}>
       <View style={{
@@ -22,11 +21,11 @@ it("Renders views on top position", () => {
         height: 80,
       }} />
     </View>
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480, { wireframe: true })
 })
 
-it("Renders views on bottom position", () => {
+it("Renders views on bottom position", async () => {
   const jsx =
     <View style={{ flex: 1 }}>
       <View style={{
@@ -44,11 +43,11 @@ it("Renders views on bottom position", () => {
         height: 80,
       }} />
     </View>
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480, { wireframe: true })
 })
 
-it("Renders views on left position", () => {
+it("Renders views on left position", async () => {
   const jsx =
     <View style={{ flex: 1 }}>
       <View style={{
@@ -59,6 +58,6 @@ it("Renders views on left position", () => {
         width: 100,
       }} />
     </View>
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480, { wireframe: true })
 })
