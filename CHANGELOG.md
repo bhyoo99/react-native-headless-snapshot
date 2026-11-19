@@ -12,6 +12,7 @@
 * Escape `<`, `>` and `&` in text and attributes (numeric character references such as `&#xF101;` are kept)
 * Default the line height to the font's natural line height instead of 18
 * Replace every character that is invalid in file names when naming SVG snapshots
+* Follow Jest's snapshot rules: write missing snapshots and pass (not with `--ci`), fail with a diff without overwriting on a mismatch, and overwrite only with `-u`
 
 ### 0.1.0
 
