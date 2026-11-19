@@ -1,4 +1,3 @@
-import * as fontManager from "font-manager"
 import * as fontkit from "fontkit"
 import * as fs from "fs"
 
@@ -122,25 +121,12 @@ export const addFontFallback = (fontFamily: string, fallback: string) => {
   fontFallbacks[fontFamily] = fallback
 }
 
-export const fontForStyle = (style, force = false) => {
+export const fontForStyle = style => {
   const key = keyFor(style)
-  if (fonts[key]) {
-    return fonts[key]
-  } else if (force) {
-    throw new Error(`No font defined for ${key}`)
+  if (!fonts[key]) {
+    throw new Error(`No font defined for ${key}, load it with loadFont() or addFontToSvg()`)
   }
-
-  const fontDescriptor = fontManager.findFontSync({
-    family: style.fontFamily,
-    weight: Number(numberWeight(style.fontWeight)),
-    italic: style.fontStyle === "italic",
-  })
-
-  if (fontDescriptor) {
-    loadFont(fs.readFileSync(fontDescriptor.path))
-  }
-
-  return fontForStyle(style, true)
+  return fonts[key]
 }
 
 export const fontWithFallbacks = (fontFamily: string): string => (

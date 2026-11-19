@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`nodeToSVG handles a simple square 1`] = `
 "
- <rect type=\\"View\\" x=\\"0\\" y=\\"0\\" width=\\"600\\" height=\\"400\\" fill=\\"none\\"/>"
+ <rect type="View" x="0" y="0" width="600" height="400" fill="none"/>"
 `;

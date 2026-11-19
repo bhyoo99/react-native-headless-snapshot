@@ -1,14 +1,16 @@
-import * as yoga from "yoga-layout"
+import type { Node } from "yoga-layout/load"
 import extractText from "./extract-text"
 import { flattenStyles } from "./flatten-styles"
 import { Component, Settings } from "./index"
 import { breakLines, measureLines } from "./text-layout"
+import { getYoga } from "./yoga"
 
 export const textLines = Symbol("textLines")
 
 const isNotEmpty = prop => typeof prop !== "undefined" && prop !== null
 
-const componentToNode = (component: Component, settings: Settings): yoga.NodeInstance => {
+const componentToNode = (component: Component, settings: Settings): Node => {
+  const yoga = getYoga()
   // Do we need to pass in the parent node too?
   const node = yoga.Node.create()
   const hasStyle = component.props && component.props.style

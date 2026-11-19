@@ -1,5 +1,3 @@
-import * as yoga from "yoga-layout"
-
 import componentToNode from "./component-to-node"
 import { Component, Settings } from "./index"
 

@@ -1,4 +1,3 @@
-import * as yoga from "yoga-layout"
 
 import treeToSVG from "../tree-to-svg"
 

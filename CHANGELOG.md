@@ -1,5 +1,9 @@
 ### Master
 
+* Replace the native `yoga-layout` 1.9 with `yoga-layout` 3 (WebAssembly, bundled into the build), so installing no longer compiles C++
+* Remove `font-manager`: fonts other than the bundled Proza Libre must be loaded with `loadFont` or `addFontToSvg`
+* Move the test setup to Jest 30, Babel 8 and TypeScript 6
+
 ### 0.1.0
 
 * Adds the ability to set a default font [dawnmist]

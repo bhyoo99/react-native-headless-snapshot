@@ -1,6 +1,3 @@
-import { ViewStyle } from "react-native"
-import * as yoga from "yoga-layout"
-
 import { styleFromComponent } from "../component-to-node"
 import { RenderedComponent } from "../index"
 import wsp from "../whitespace"
@@ -17,7 +14,7 @@ import {
 } from "./borders"
 import { $ } from "./util"
 
-export default ({ top, left, width, height }: yoga.Layout, style: any) => {
+export default ({ top, left, width, height }: RenderedComponent["layout"], style: any) => {
   const attributes: any = {
     type: "View",
   }

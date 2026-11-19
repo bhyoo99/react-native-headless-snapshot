@@ -1,8 +1,8 @@
 import "../../index"
 
 import * as React from "react"
-import { View } from "react-native"
 import * as renderer from "react-test-renderer"
+import { View } from "../host-components"
 
 // https://facebook.github.io/react-native/docs/flexbox.html
 

@@ -1,4 +1,3 @@
-import * as yoga from "yoga-layout"
 
 import nodeToSVG from "../node-to-svg"
 

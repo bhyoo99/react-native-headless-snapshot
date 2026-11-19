@@ -1,6 +1,3 @@
-import {ViewStyle} from "react-native"
-import * as yoga from "yoga-layout"
-
 enum Side {
   All,
   Vertical,
