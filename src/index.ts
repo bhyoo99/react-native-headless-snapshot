@@ -1,7 +1,7 @@
 import * as fs from "fs"
 import * as path from "path"
 
-import * as yoga from "yoga-layout"
+import { getYoga, initYoga } from "./yoga"
 
 // Add toMatchSVGSnapshot to jest definitions. Specified here so that it is output into
 // the index.d.ts definitions provided for projects to use.
@@ -23,7 +23,7 @@ export interface Component {
 export interface RenderedComponent {
     type: string
     props: any
-    textContent: string | undefined
+    textContent?: string
     children: RenderedComponent[]
     layout: {
         left: number
@@ -50,6 +50,8 @@ import treeToSVG from "./tree-to-svg"
 const fail = (msg) => ({ message: () => msg, pass: false })
 
 export { addFontFallback, addFontToSvg, loadFont, setDefaultFont } from "./font-loader"
+
+beforeAll(() => initYoga())
 
 expect.extend({
     toMatchSVGSnapshot(
@@ -86,7 +88,7 @@ expect.extend({
         try {
             // This will mutate the node tree, we cannot trust that the nodes  in the original tree will
             // still exist.
-            rootNode.calculateLayout(settings.width, settings.height, yoga.DIRECTION_LTR)
+            rootNode.calculateLayout(settings.width, settings.height, getYoga().DIRECTION_LTR)
         } catch (e) {
             // Clean up the root node after the failure to calculate layout then rethrow the error
             if (rootNode) {

@@ -1,5 +1,4 @@
 import * as path from "path"
-import * as yoga from "yoga-layout"
 import { getSvgFonts, getUsedFontKeys } from "./font-loader"
 import { RenderedComponent, Settings } from "./index"
 import nodeToSVG from "./node-to-svg"

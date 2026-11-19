@@ -1,5 +1,3 @@
-import { ViewStyle } from "react-native"
-import * as yoga from "yoga-layout"
 import { textLines } from "./component-to-node"
 
 import { styleFromComponent } from "./component-to-node"
@@ -23,9 +21,9 @@ const nodeToSVG = (indent: number, node: RenderedComponent, settings: Settings) 
   if (node[textLines] && node[textLines].length > 0) {
     svgText = text(layout.left, layout.top, layout.width, layout.height, node[textLines])
   } else if (!settings.wireframe) {
-    svgText = view(layout as yoga.Layout, style)
+    svgText = view(layout, style)
   } else {
-    svgText = viewWireframe(layout as yoga.Layout, style)
+    svgText = viewWireframe(layout, style)
   }
 
   return "\n"

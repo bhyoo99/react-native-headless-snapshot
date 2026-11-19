@@ -1,17 +1,18 @@
 import "../index"
 
-import * as yoga from "yoga-layout"
+import { getYoga } from "../yoga"
 
 import * as React from "react"
-import { View } from "react-native"
 import * as renderer from "react-test-renderer"
+import { View } from "./host-components"
 
 import treeToSVG from "../tree-to-svg"
 
 describe("Counting nodes", () => {
     it("it is good with memory", () => {
-
-      expect(yoga.getInstanceCount()).toEqual(0)
+      const yoga = getYoga()
+      const created = jest.spyOn(yoga.Node, "createDefault")
+      const destroyed = jest.spyOn(yoga.Node, "destroy")
 
       const jsx =
         <View style={{
@@ -28,6 +29,9 @@ describe("Counting nodes", () => {
       const component = renderer.create(jsx).toJSON()
       expect(component).toMatchSVGSnapshot(320, 480)
 
-      expect(yoga.getInstanceCount()).toEqual(0)
+      expect(created).toHaveBeenCalledTimes(4)
+      expect(destroyed).toHaveBeenCalledTimes(4)
+      created.mockRestore()
+      destroyed.mockRestore()
     })
 })

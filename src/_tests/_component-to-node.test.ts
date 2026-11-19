@@ -1,6 +1,7 @@
-import * as yoga from "yoga-layout"
-
 import componentToNode, { styleFromComponent } from "../component-to-node"
+import { getYoga, initYoga } from "../yoga"
+
+beforeAll(() => initYoga())
 
 describe("componentToNode", () => {
   it("generates the width for a simple component", () => {
@@ -22,7 +23,7 @@ describe("componentToNode", () => {
     }
 
     const node = componentToNode(component, settings)
-    node.calculateLayout(yoga.UNDEFINED, yoga.UNDEFINED, yoga.DIRECTION_INHERIT)
+    node.calculateLayout(undefined, undefined, getYoga().DIRECTION_INHERIT)
 
     expect(node.getComputedWidth()).toEqual(300)
     expect(node.getComputedHeight()).toEqual(40)

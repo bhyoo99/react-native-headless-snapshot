@@ -3,8 +3,8 @@ import "../../index"
 import * as fs from "fs"
 import * as path from "path"
 import * as React from "react"
-import { Text, View } from "react-native"
 import * as renderer from "react-test-renderer"
+import { Text, View } from "../host-components"
 
 import { addFontFallback, loadFont, setDefaultFont } from "../../index"
 

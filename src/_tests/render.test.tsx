@@ -1,15 +1,14 @@
 import "../index"
 
 import * as React from "react"
-import { View } from "react-native"
 import * as renderer from "react-test-renderer"
+import { View } from "./host-components"
 
 import componentTreeToNodeTree from "../component-tree-to-nodes"
 import renderedComponentTree from "../reapply-layouts-to-components"
 import treeToSVG from "../tree-to-svg"
 
 import * as fs from "fs"
-import * as yoga from "yoga-layout"
 
 it("handles some simple JSX", () => {
   const jsx = (

@@ -1,8 +1,8 @@
 import "../../index"
 
 import * as React from "react"
-import { Text, View } from "react-native"
 import * as renderer from "react-test-renderer"
+import { Text, View } from "../host-components"
 
 it("Renders views on top position", () => {
   const jsx =

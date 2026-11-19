@@ -1,9 +1,10 @@
-const mockNodeToSVG = jest.fn()
-jest.mock("../node-to-svg.ts", () => ({ default: mockNodeToSVG }))
+jest.mock("../node-to-svg.ts", () => ({ __esModule: true, default: jest.fn() }))
 
-import * as yoga from "yoga-layout"
 import { RenderedComponent } from "../index"
+import nodeToSVG from "../node-to-svg"
 import { recurseTree, svgWrapper } from "../tree-to-svg"
+
+const mockNodeToSVG = nodeToSVG as jest.Mock
 
 describe("svgWrapper", () => {
     it("wraps whatever text you pass into it with an SVG schema", () => {

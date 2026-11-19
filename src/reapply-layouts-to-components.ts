@@ -1,14 +1,13 @@
-import {ViewStyle} from "react-native"
-import * as yoga from "yoga-layout"
+import type { Node } from "yoga-layout/load"
 import { textLines } from "./component-to-node"
 
 import { Component, RenderedComponent } from "./index"
 
-const renderedComponentTree = (root: Component, node: yoga.NodeInstance) => recurseTree(root, node)
+const renderedComponentTree = (root: Component, node: Node) => recurseTree(root, node)
 
 export default renderedComponentTree
 
-export const recurseTree = (component: Component, node: yoga.NodeInstance) => {
+export const recurseTree = (component: Component, node: Node) => {
 
   const newChildren = [] as RenderedComponent[]
 
