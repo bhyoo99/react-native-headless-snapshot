@@ -1,7 +1,4 @@
-import * as fs from "fs"
-import * as path from "path"
-
-import { getYoga, initYoga } from "./yoga"
+import { initYoga } from "./yoga"
 
 // Add toMatchSVGSnapshot to jest definitions. Specified here so that it is output into
 // the index.d.ts definitions provided for projects to use.
@@ -41,94 +38,10 @@ export interface Settings {
     wireframe: boolean
 }
 
-import componentTreeToNodeTree from "./component-tree-to-nodes"
-import renderedComponentTree from "./reapply-layouts-to-components"
-import { toRootComponent } from "./to-root-component"
-import treeToSVG from "./tree-to-svg"
-
-// toMatchSVGSnapshot(1024, 768)
-
-const fail = (msg) => ({ message: () => msg, pass: false })
-
-import { resetUsedFonts } from "./font-loader"
+import { toMatchSVGSnapshot } from "./to-match-svg-snapshot"
 
 export { addFontFallback, addFontToSvg, loadFont, setDefaultFont } from "./font-loader"
 
 beforeAll(() => initYoga())
 
-expect.extend({
-    toMatchSVGSnapshot(
-        received: unknown,
-        width,
-        height,
-        { wireframe = false }: { wireframe?: boolean } = {}
-    ) {
-        const root = toRootComponent(received)
-        if (!root) { return fail("A falsy Component was passed to toMatchSVGSnapshot") }
-        if (!root.props) { return fail("A Component without props was passed to toMatchSVGSnapshot") }
-        if (typeof root.type !== "string") {
-            return fail("A Component without a type was passed to toMatchSVGSnapshot")
-        }
-
-        // getState isn't in the d.ts for Jest, this is ok though.
-        const state = (expect as any).getState()
-        const currentTest = state.testPath as string
-        const currentTestName = state.currentTestName as string
-
-        const testFile = currentTestName.replace(/\s+/g, "-").replace(/[\\/:*?"<>|]/g, "-").toLowerCase()
-
-        //  Figure out the paths
-        const snapshotsDir = path.join(currentTest, "..", "__snapshots__")
-        const expectedSnapshot = path.join(snapshotsDir, path.basename(currentTest) + "-" + testFile + ".svg")
-
-        // Make our folder if it's needed
-        if (!fs.existsSync(snapshotsDir)) { fs.mkdirSync(snapshotsDir) }
-
-        // We will need to do something smarter in the future, these snapshots need to be 1 file per test
-        // whereas jest-snapshots can be multi-test per file.
-
-        const settings: Settings = { width, height, wireframe }
-        resetUsedFonts()
-        const rootNode = componentTreeToNodeTree(root, settings)
-        if (!rootNode) { return }
-
-        try {
-            // This will mutate the node tree, we cannot trust that the nodes  in the original tree will
-            // still exist.
-            rootNode.calculateLayout(settings.width, settings.height, getYoga().DIRECTION_LTR)
-        } catch (e) {
-            // Clean up the root node after the failure to calculate layout then rethrow the error
-            if (rootNode) {
-                rootNode.freeRecursive()
-            }
-            throw e
-        }
-
-        // Generate a tree of components with the layout baked into it, them clean up yog memory
-        const renderedComponentRoot = renderedComponentTree(root, rootNode)
-        rootNode.freeRecursive()
-
-        const svgText = treeToSVG(renderedComponentRoot, settings, snapshotsDir)
-
-        // TODO: Determine if Jest is in `-u`?
-        // can be done via the private API
-        // state.snapshotState._updateSnapshot === "all"
-
-        // Are we in write mode?
-        if (!fs.existsSync(expectedSnapshot)) {
-            fs.writeFileSync(expectedSnapshot, svgText)
-            return {
-                message: () => "Created a new Snapshot for you",
-                pass: false
-            }
-        } else {
-            const contents = fs.readFileSync(expectedSnapshot, "utf8")
-            if (contents !== svgText) {
-                fs.writeFileSync(expectedSnapshot, svgText)
-                return { message: () => `SVG Snapshot failed: we have updated it for you`, pass: false }
-            } else {
-                return { message: () => "All good", pass: true }
-            }
-        }
-    }
-} as any)
+expect.extend({ toMatchSVGSnapshot })

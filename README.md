@@ -93,6 +93,13 @@ It does this by emulating the rendering process of React Native by calling yoga-
   </tr>
 </table>
 
+### Updating snapshots
+
+SVG snapshots follow Jest's snapshot rules, and Jest's summary counts them with the other snapshots:
+
+* A missing snapshot is written and the test passes. When Jest runs with `--ci`, it is not written and the test fails.
+* A snapshot that no longer matches fails the test with a diff and is left as it is. Run `jest -u` to overwrite it.
+
 ### Fonts
 
 If you use `<Text />` elements, you must have access to the font files so we can lay the text out.
