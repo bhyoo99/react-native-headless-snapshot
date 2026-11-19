@@ -1,4 +1,5 @@
 import * as path from "path"
+import { styleFromComponent } from "./component-to-node"
 import { getSvgFonts, getUsedFontKeys } from "./font-loader"
 import { RenderedComponent, Settings } from "./index"
 import nodeToSVG from "./node-to-svg"
@@ -6,6 +7,9 @@ import wsp from "./whitespace"
 
 export const recurseTree =
   (indent: number, root: RenderedComponent, settings: Settings) => {
+    if (root.props && root.props.style && (styleFromComponent(root) || {}).display === "none") {
+      return ""
+    }
 
     const nodeString = nodeToSVG(indent, root, settings)
 

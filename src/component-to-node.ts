@@ -1,4 +1,4 @@
-import type { Node } from "yoga-layout/load"
+import type { Align, Edge, Node, Yoga } from "yoga-layout/load"
 import extractText from "./extract-text"
 import { flattenStyles } from "./flatten-styles"
 import { Component, Settings } from "./index"
@@ -9,95 +9,148 @@ export const textLines = Symbol("textLines")
 
 const isNotEmpty = prop => typeof prop !== "undefined" && prop !== null
 
+const edges = (yoga: Yoga): Array<[string, Edge]> => [
+  ["", yoga.EDGE_ALL],
+  ["Vertical", yoga.EDGE_VERTICAL],
+  ["Horizontal", yoga.EDGE_HORIZONTAL],
+  ["Top", yoga.EDGE_TOP],
+  ["Bottom", yoga.EDGE_BOTTOM],
+  ["Left", yoga.EDGE_LEFT],
+  ["Right", yoga.EDGE_RIGHT],
+  ["Start", yoga.EDGE_START],
+  ["End", yoga.EDGE_END],
+  ["Block", yoga.EDGE_VERTICAL],
+  ["BlockStart", yoga.EDGE_TOP],
+  ["BlockEnd", yoga.EDGE_BOTTOM],
+  ["Inline", yoga.EDGE_HORIZONTAL],
+  ["InlineStart", yoga.EDGE_START],
+  ["InlineEnd", yoga.EDGE_END],
+]
+
+const positionEdges = (yoga: Yoga): Array<[string, Edge]> => [
+  ["top", yoga.EDGE_TOP],
+  ["bottom", yoga.EDGE_BOTTOM],
+  ["left", yoga.EDGE_LEFT],
+  ["right", yoga.EDGE_RIGHT],
+  ["start", yoga.EDGE_START],
+  ["end", yoga.EDGE_END],
+  ...edges(yoga)
+    .filter(([suffix]) => ["", "Block", "BlockStart", "BlockEnd", "Inline", "InlineStart", "InlineEnd"].includes(suffix))
+    .map(([suffix, edge]): [string, Edge] => ["inset" + suffix, edge]),
+]
+
+const alignValues = (yoga: Yoga): Record<string, Align> => ({
+  "auto": yoga.ALIGN_AUTO,
+  "flex-start": yoga.ALIGN_FLEX_START,
+  "flex-end": yoga.ALIGN_FLEX_END,
+  "center": yoga.ALIGN_CENTER,
+  "stretch": yoga.ALIGN_STRETCH,
+  "baseline": yoga.ALIGN_BASELINE,
+  "space-between": yoga.ALIGN_SPACE_BETWEEN,
+  "space-around": yoga.ALIGN_SPACE_AROUND,
+  "space-evenly": yoga.ALIGN_SPACE_EVENLY,
+})
+
+const setEnum = <T>(value: unknown, values: Record<string, T>, set: (value: T) => void) => {
+  if (typeof value === "string" && Object.prototype.hasOwnProperty.call(values, value)) {
+    set(values[value])
+  }
+}
+
+const aspectRatioOf = (value: unknown): number | undefined => {
+  if (typeof value === "number") {
+    return value
+  }
+  if (typeof value === "string") {
+    const [width, height = "1"] = value.split("/")
+    return Number(width) / Number(height)
+  }
+  return undefined
+}
+
+const applyStyle = (yoga: Yoga, node: Node, style: any) => {
+  if (isNotEmpty(style.width)) { node.setWidth(style.width) }
+  if (isNotEmpty(style.height)) { node.setHeight(style.height) }
+  if (isNotEmpty(style.minWidth)) { node.setMinWidth(style.minWidth) }
+  if (isNotEmpty(style.minHeight)) { node.setMinHeight(style.minHeight) }
+  if (isNotEmpty(style.maxWidth)) { node.setMaxWidth(style.maxWidth) }
+  if (isNotEmpty(style.maxHeight)) { node.setMaxHeight(style.maxHeight) }
+
+  for (const [suffix, edge] of edges(yoga)) {
+    if (isNotEmpty(style["margin" + suffix])) { node.setMargin(edge, style["margin" + suffix]) }
+    if (isNotEmpty(style["padding" + suffix])) { node.setPadding(edge, style["padding" + suffix]) }
+    if (isNotEmpty(style["border" + suffix + "Width"])) { node.setBorder(edge, style["border" + suffix + "Width"]) }
+  }
+  for (const [key, edge] of positionEdges(yoga)) {
+    if (isNotEmpty(style[key])) { node.setPosition(edge, style[key]) }
+  }
+
+  if (isNotEmpty(style.flex)) { node.setFlex(style.flex) }
+  if (isNotEmpty(style.flexGrow)) { node.setFlexGrow(style.flexGrow) }
+  if (isNotEmpty(style.flexShrink)) { node.setFlexShrink(style.flexShrink) }
+  if (isNotEmpty(style.flexBasis)) { node.setFlexBasis(style.flexBasis) }
+
+  const aspectRatio = aspectRatioOf(style.aspectRatio)
+  if (aspectRatio !== undefined) { node.setAspectRatio(aspectRatio) }
+
+  if (isNotEmpty(style.gap)) { node.setGap(yoga.GUTTER_ALL, style.gap) }
+  if (isNotEmpty(style.rowGap)) { node.setGap(yoga.GUTTER_ROW, style.rowGap) }
+  if (isNotEmpty(style.columnGap)) { node.setGap(yoga.GUTTER_COLUMN, style.columnGap) }
+
+  setEnum(style.position, {
+    absolute: yoga.POSITION_TYPE_ABSOLUTE,
+    relative: yoga.POSITION_TYPE_RELATIVE,
+    static: yoga.POSITION_TYPE_STATIC,
+  }, value => node.setPositionType(value))
+  setEnum(style.display, {
+    flex: yoga.DISPLAY_FLEX,
+    none: yoga.DISPLAY_NONE,
+    contents: yoga.DISPLAY_CONTENTS,
+  }, value => node.setDisplay(value))
+  setEnum(style.overflow, {
+    visible: yoga.OVERFLOW_VISIBLE,
+    hidden: yoga.OVERFLOW_HIDDEN,
+    scroll: yoga.OVERFLOW_SCROLL,
+  }, value => node.setOverflow(value))
+  setEnum(style.direction, {
+    inherit: yoga.DIRECTION_INHERIT,
+    ltr: yoga.DIRECTION_LTR,
+    rtl: yoga.DIRECTION_RTL,
+  }, value => node.setDirection(value))
+  setEnum(style.boxSizing, {
+    "border-box": yoga.BOX_SIZING_BORDER_BOX,
+    "content-box": yoga.BOX_SIZING_CONTENT_BOX,
+  }, value => node.setBoxSizing(value))
+  setEnum(style.flexDirection, {
+    "row": yoga.FLEX_DIRECTION_ROW,
+    "column": yoga.FLEX_DIRECTION_COLUMN,
+    "row-reverse": yoga.FLEX_DIRECTION_ROW_REVERSE,
+    "column-reverse": yoga.FLEX_DIRECTION_COLUMN_REVERSE,
+  }, value => node.setFlexDirection(value))
+  setEnum(style.flexWrap, {
+    "nowrap": yoga.WRAP_NO_WRAP,
+    "wrap": yoga.WRAP_WRAP,
+    "wrap-reverse": yoga.WRAP_WRAP_REVERSE,
+  }, value => node.setFlexWrap(value))
+  setEnum(style.justifyContent, {
+    "flex-start": yoga.JUSTIFY_FLEX_START,
+    "flex-end": yoga.JUSTIFY_FLEX_END,
+    "center": yoga.JUSTIFY_CENTER,
+    "space-between": yoga.JUSTIFY_SPACE_BETWEEN,
+    "space-around": yoga.JUSTIFY_SPACE_AROUND,
+    "space-evenly": yoga.JUSTIFY_SPACE_EVENLY,
+  }, value => node.setJustifyContent(value))
+  setEnum(style.alignItems, alignValues(yoga), value => node.setAlignItems(value))
+  setEnum(style.alignSelf, alignValues(yoga), value => node.setAlignSelf(value))
+  setEnum(style.alignContent, alignValues(yoga), value => node.setAlignContent(value))
+}
+
 const componentToNode = (component: Component, _settings: Settings): Node => {
   const yoga = getYoga()
-  // Do we need to pass in the parent node too?
   const node = yoga.Node.create()
-  const hasStyle = component.props && component.props.style
-  const style = hasStyle ? styleFromComponent(component) : {}
 
-  if (hasStyle) {
-    // http://facebook.github.io/react-native/releases/0.44/docs/layout-props.html
-
-    if (isNotEmpty(style.width)) { node.setWidth(style.width) }
-    if (isNotEmpty(style.height)) { node.setHeight(style.height) }
-
-    if (isNotEmpty(style.minHeight)) { node.setMinHeight(style.minHeight) }
-    if (isNotEmpty(style.minWidth)) { node.setMinWidth(style.minWidth) }
-
-    if (isNotEmpty(style.maxHeight)) { node.setMaxHeight(style.maxHeight) }
-    if (isNotEmpty(style.maxWidth)) { node.setMaxWidth(style.maxWidth) }
-
-    if (isNotEmpty(style.margin)) { node.setMargin(yoga.EDGE_ALL, style.margin) }
-    if (isNotEmpty(style.marginTop)) { node.setMargin(yoga.EDGE_TOP, style.marginTop) }
-    if (isNotEmpty(style.marginBottom)) { node.setMargin(yoga.EDGE_BOTTOM, style.marginBottom) }
-    if (isNotEmpty(style.marginLeft)) { node.setMargin(yoga.EDGE_LEFT, style.marginLeft) }
-    if (isNotEmpty(style.marginRight)) { node.setMargin(yoga.EDGE_RIGHT, style.marginRight) }
-    if (isNotEmpty(style.marginVertical)) { node.setMargin(yoga.EDGE_VERTICAL, style.marginVertical) }
-    if (isNotEmpty(style.marginHorizontal)) { node.setMargin(yoga.EDGE_HORIZONTAL, style.marginHorizontal) }
-
-    if (isNotEmpty(style.padding)) { node.setPadding(yoga.EDGE_ALL, style.padding) }
-    if (isNotEmpty(style.paddingTop)) { node.setPadding(yoga.EDGE_TOP, style.paddingTop) }
-    if (isNotEmpty(style.paddingBottom)) { node.setPadding(yoga.EDGE_BOTTOM, style.paddingBottom) }
-    if (isNotEmpty(style.paddingLeft)) { node.setPadding(yoga.EDGE_LEFT, style.paddingLeft) }
-    if (isNotEmpty(style.paddingRight)) { node.setPadding(yoga.EDGE_RIGHT, style.paddingRight) }
-    if (isNotEmpty(style.paddingVertical)) { node.setPadding(yoga.EDGE_VERTICAL, style.paddingVertical) }
-    if (isNotEmpty(style.paddingHorizontal)) { node.setPadding(yoga.EDGE_HORIZONTAL, style.paddingHorizontal) }
-
-    if (isNotEmpty(style.borderWidth)) { node.setBorder(yoga.EDGE_ALL, style.borderWidth) }
-    if (isNotEmpty(style.borderTopWidth)) { node.setBorder(yoga.EDGE_TOP, style.borderTopWidth) }
-    if (isNotEmpty(style.borderBottomWidth)) { node.setBorder(yoga.EDGE_BOTTOM, style.borderBottomWidth) }
-    if (isNotEmpty(style.borderLeftWidth)) { node.setBorder(yoga.EDGE_LEFT, style.borderLeftWidth) }
-    if (isNotEmpty(style.borderRightWidth)) { node.setBorder(yoga.EDGE_RIGHT, style.borderRightWidth) }
-
-    if (isNotEmpty(style.flex)) { node.setFlex(style.flex) }
-    if (isNotEmpty(style.flexGrow)) { node.setFlexGrow(style.flexGrow) }
-    if (isNotEmpty(style.flexShrink)) { node.setFlexShrink(style.flexShrink) }
-    if (isNotEmpty(style.flexBasis)) { node.setFlexBasis(style.flexBasis) }
-
-    if (style.position === "absolute") {
-      node.setPositionType(yoga.POSITION_TYPE_ABSOLUTE)
-    }
-    if (isNotEmpty(style.top)) { node.setPosition(yoga.EDGE_TOP, style.top) }
-    if (isNotEmpty(style.left)) { node.setPosition(yoga.EDGE_LEFT, style.left) }
-    if (isNotEmpty(style.right)) { node.setPosition(yoga.EDGE_RIGHT, style.right) }
-    if (isNotEmpty(style.bottom)) { node.setPosition(yoga.EDGE_BOTTOM, style.bottom) }
-
-    const flexDirection = style.flexDirection
-    if (flexDirection) {
-      if (flexDirection === "row") { node.setFlexDirection(yoga.FLEX_DIRECTION_ROW) }
-      if (flexDirection === "column") { node.setFlexDirection(yoga.FLEX_DIRECTION_COLUMN) }
-      if (flexDirection === "row-reverse") { node.setFlexDirection(yoga.FLEX_DIRECTION_ROW_REVERSE) }
-      if (flexDirection === "column-reverse") { node.setFlexDirection(yoga.FLEX_DIRECTION_COLUMN_REVERSE) }
-    }
-
-    const justifyContent = style.justifyContent
-    if (justifyContent) {
-      if (justifyContent === "flex-start") { node.setJustifyContent(yoga.JUSTIFY_FLEX_START) }
-      if (justifyContent === "flex-end") { node.setJustifyContent(yoga.JUSTIFY_FLEX_END) }
-      if (justifyContent === "center") { node.setJustifyContent(yoga.JUSTIFY_CENTER) }
-      if (justifyContent === "space-between") { node.setJustifyContent(yoga.JUSTIFY_SPACE_BETWEEN) }
-      if (justifyContent === "space-around") { node.setJustifyContent(yoga.JUSTIFY_SPACE_AROUND) }
-    }
-
-    const alignItems = style.alignItems
-    if (alignItems) {
-      if (alignItems === "flex-start") { node.setAlignItems(yoga.ALIGN_FLEX_START) }
-      if (alignItems === "flex-end") { node.setAlignItems(yoga.ALIGN_FLEX_END) }
-      if (alignItems === "center") { node.setAlignItems(yoga.ALIGN_CENTER) }
-      if (alignItems === "stretch") { node.setAlignItems(yoga.ALIGN_STRETCH) }
-      if (alignItems === "baseline") { node.setAlignItems(yoga.ALIGN_BASELINE) }
-    }
-
-    // TODO: De-dupe with above
-    const alignSelf = style.alignSelf
-    if (alignSelf) {
-      if (alignSelf === "flex-start") { node.setAlignSelf(yoga.ALIGN_FLEX_START) }
-      if (alignSelf === "flex-end") { node.setAlignSelf(yoga.ALIGN_FLEX_END) }
-      if (alignSelf === "center") { node.setAlignSelf(yoga.ALIGN_CENTER) }
-      if (alignSelf === "stretch") { node.setAlignSelf(yoga.ALIGN_STRETCH) }
-      if (alignSelf === "baseline") { node.setAlignSelf(yoga.ALIGN_BASELINE) }
-    }
+  if (component.props && component.props.style) {
+    applyStyle(yoga, node, styleFromComponent(component))
   }
 
   // We're in a node showing Text

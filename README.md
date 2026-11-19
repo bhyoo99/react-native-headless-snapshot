@@ -272,7 +272,9 @@ const fontDir = "react-native-vector-icons/Fonts"
 This is definitely pre-1.0, we only have it working on a few tests in [artsy/emission](https://github.com/artsy/emission/). Expect alpha quality style snapshots for a while, but more people working on it will mean we all get a better chance at it working out well.
 
 * Doesn't render image - see [#18](https://github.com/jest-community/jest-snapshots-svg/issues/18)
-* Not all flexbox attributes are supported - see [#19](https://github.com/jest-community/jest-snapshots-svg/issues/19)
+* Layout covers the flexbox props React Native supports (including `gap`, `flexWrap`, `alignContent`, `aspectRatio`,
+  `display`, percentages and `start`/`end`/`inset` edges), but only backgrounds, borders and text are drawn:
+  `transform`, `opacity`, `zIndex`, shadows and overflow clipping are not
 
 ### I want to work on this
 

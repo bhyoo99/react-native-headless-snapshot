@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg width="200" height="50" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <style type="text/css">
+    <![CDATA[
+      @font-face {
+        font-family: Proza Libre;
+        src: url(../../../font/proza-libre/ProzaLibre-Regular.ttf);
+        font-weight: 400;
+        font-style: normal;
+      }
+    ]]>
+    </style>
+  </defs>
+
+ <rect type="View" x="0" y="0" width="200" height="50" fill="none"/>
+
+ <g transform='translate(0, 0)'>
+   <rect type="View" x="0" y="0" width="50" height="50" fill="powderblue"/>
+   <rect type="View" x="50" y="0" width="50" height="50" fill="steelblue"/>
+ </g>
+
+</svg>
