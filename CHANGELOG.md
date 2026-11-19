@@ -13,6 +13,7 @@
 * Default the line height to the font's natural line height instead of 18
 * Replace every character that is invalid in file names when naming SVG snapshots
 * Follow Jest's snapshot rules: write missing snapshots and pass (not with `--ci`), fail with a diff without overwriting on a mismatch, and overwrite only with `-u`
+* Lay out `gap`/`rowGap`/`columnGap`, `flexWrap`, `alignContent`, `aspectRatio` (number or `"16 / 9"`), `display` (views with `none` are left out of the SVG), `space-evenly`, `position: static`, `overflow`, `direction`, `boxSizing`, and `Start`/`End`/`Block`/`Inline`/`inset` edges
 
 ### 0.1.0
 

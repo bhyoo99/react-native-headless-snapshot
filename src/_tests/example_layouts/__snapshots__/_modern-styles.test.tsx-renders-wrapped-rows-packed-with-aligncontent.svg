@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg width="170" height="300" xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+ <rect type="View" x="0" y="0" width="170" height="300" fill="none"/>
+
+ <g transform='translate(0, 0)'>
+   <rect type="View" x="0" y="95" width="50" height="50" fill="powderblue"/>
+   <rect type="View" x="60" y="95" width="50" height="50" fill="skyblue"/>
+   <rect type="View" x="120" y="95" width="50" height="50" fill="steelblue"/>
+   <rect type="View" x="0" y="155" width="50" height="50" fill="powderblue"/>
+ </g>
+
+</svg>
