@@ -50,6 +50,8 @@ import treeToSVG from "./tree-to-svg"
 
 const fail = (msg) => ({ message: () => msg, pass: false })
 
+import { resetUsedFonts } from "./font-loader"
+
 export { addFontFallback, addFontToSvg, loadFont, setDefaultFont } from "./font-loader"
 
 beforeAll(() => initYoga())
@@ -73,7 +75,7 @@ expect.extend({
         const currentTest = state.testPath as string
         const currentTestName = state.currentTestName as string
 
-        const testFile = currentTestName.replace(/\s+/g, "-").replace(/\//g, "-").toLowerCase()
+        const testFile = currentTestName.replace(/\s+/g, "-").replace(/[\\/:*?"<>|]/g, "-").toLowerCase()
 
         //  Figure out the paths
         const snapshotsDir = path.join(currentTest, "..", "__snapshots__")
@@ -86,6 +88,7 @@ expect.extend({
         // whereas jest-snapshots can be multi-test per file.
 
         const settings: Settings = { width, height, wireframe }
+        resetUsedFonts()
         const rootNode = componentTreeToNodeTree(root, settings)
         if (!rootNode) { return }
 

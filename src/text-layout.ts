@@ -13,10 +13,18 @@ export const lineWidth = ({ text, attributedStyles }: TextWithAttributedStyle): 
     return x + font.layout(body).advanceWidth / font.unitsPerEm * style.fontSize
   }, 0)
 
+const styleLineHeight = (style): number => {
+  if (style.lineHeight != null) {
+    return style.lineHeight
+  }
+  const font = fontForStyle(style)
+  return (font.ascent - font.descent + font.lineGap) / font.unitsPerEm * style.fontSize
+}
+
 export const lineHeight = (line: TextWithAttributedStyle): number =>
   Math.max(
     0,
-    ...line.attributedStyles.map(({ style }) => style.lineHeight)
+    ...line.attributedStyles.map(({ style }) => styleLineHeight(style))
   )
 
 export const lineFontSize = (line: TextWithAttributedStyle): number =>

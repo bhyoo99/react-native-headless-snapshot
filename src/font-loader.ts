@@ -24,14 +24,17 @@ export const getSvgFonts = () => svgFonts
 
 export const registerFontUsed = (
   fontFamily: string,
-  fontStyle: string = "normal",
-  fontWeight: string = "normal") => {
+  fontWeight: string = "normal",
+  fontStyle: string = "normal") => {
   const key = keyFor({ fontFamily, fontWeight, fontStyle })
   if (!usedFonts.includes(key)) {
     usedFonts.push(key)
   }
 }
 export const getUsedFontKeys = () => usedFonts
+export const resetUsedFonts = () => {
+  usedFonts.length = 0
+}
 
 const numberWeight = weight => weights[weight] || weight
 
@@ -42,13 +45,20 @@ interface NameMatch { match: string, value: string }
 
 const weightNames = [
   { match: "thin", value: "100" },
-  { match: "ultra light", value: "200" },
+  { match: "hairline", value: "100" },
+  { match: "extralight", value: "200" },
+  { match: "ultralight", value: "200" },
+  { match: "semilight", value: "300" },
   { match: "light", value: "300" },
   { match: "normal", value: "400" },
+  { match: "regular", value: "400" },
   { match: "medium", value: "500" },
-  { match: "semi bold", value: "600" },
+  { match: "semibold", value: "600" },
+  { match: "demibold", value: "600" },
+  { match: "extrabold", value: "800" },
+  { match: "ultrabold", value: "800" },
   { match: "bold", value: "700" },
-  { match: "ultra bold", value: "800" },
+  { match: "black", value: "900" },
   { match: "heavy", value: "900" },
   { match: "100", value: "100" },
   { match: "200", value: "200" },
@@ -67,7 +77,8 @@ const italicNames = [
 ]
 
 const matchNames = (target: string, names: NameMatch[], defaultValue: string): string => {
-  const match = names.find(name => target.toLowerCase().includes(name.match))
+  const normalized = (target || "").toLowerCase().replace(/[\s_-]/g, "")
+  const match = names.find(name => normalized.includes(name.match))
   return match ? match.value : defaultValue
 }
 

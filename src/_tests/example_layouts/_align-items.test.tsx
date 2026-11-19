@@ -21,3 +21,15 @@ it("Renders three vertically/horizontally centeredblocks", async () => {
   const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480, { wireframe: true })
 })
+
+it("Renders blocks aligned to the start and one block aligned to the end", async () => {
+  const jsx =
+    <View style={{ flex: 1, alignItems: "flex-start" }}>
+      <View style={{ width: 50, height: 50, backgroundColor: "powderblue" }} />
+      <View style={{ width: 50, height: 50, backgroundColor: "skyblue", alignSelf: "flex-end" }} />
+      <View style={{ width: 50, height: 50, backgroundColor: "steelblue" }} />
+    </View>
+
+  const component = await renderToJSON(jsx)
+  expect(component).toMatchSVGSnapshot(320, 480)
+})

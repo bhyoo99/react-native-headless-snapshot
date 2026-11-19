@@ -6,6 +6,12 @@
 * Accept the output of React 19 renderers: `@testing-library/react-native`, `test-renderer` and `react-test-renderer`, including trees with several roots
 * Update `fontkit` to 3 and `linebreak` to 2 (both ESM-only) and bundle them into the build, so the package has no runtime dependencies
 * Replace TSLint with ESLint and typescript-eslint, update husky and lint-staged, and drop Travis CI and Danger
+* Fix `alignItems`/`alignSelf: "flex-start"`, which laid views out at the end
+* Fix font weight matching: SemiBold and ExtraBold faces no longer replace Bold, and bold/italic text now gets its `@font-face`
+* Only add `@font-face` rules for fonts used by the snapshot being rendered
+* Escape `<`, `>` and `&` in text and attributes (numeric character references such as `&#xF101;` are kept)
+* Default the line height to the font's natural line height instead of 18
+* Replace every character that is invalid in file names when naming SVG snapshots
 
 ### 0.1.0
 
