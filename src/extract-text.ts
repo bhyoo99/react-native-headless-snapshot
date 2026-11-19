@@ -13,7 +13,6 @@ const defaultStyles = {
   fontSize: 14,
   fontStyle: "normal",
   fontWeight: "normal",
-  lineHeight: 18,
   textAlign: "left",
 }
 

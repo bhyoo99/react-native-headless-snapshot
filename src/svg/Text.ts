@@ -1,7 +1,7 @@
 import { TextWithAttributedStyle } from "../extract-text"
 import { fontWithFallbacks } from "../font-loader"
 import { lineBaseline, lineFontSize, lineHeight } from "../text-layout"
-import { $ } from "./util"
+import { $, escapeText } from "./util"
 
 const textStyles = style => ({
   "font-family": fontWithFallbacks(style.fontFamily),
@@ -36,10 +36,10 @@ export default (x, y, width, height, lines: TextWithAttributedStyle[]): string =
         y: i === 0 ? originY : undefined,
         fill: style.color,
         ...textStyles(style),
-      }, i === attributedStyles.length - 1
+      }, escapeText(i === attributedStyles.length - 1
         ? text.slice(start, end).replace(/\s*$/, "")
         : text.slice(start, end)
-      )
+      ))
     ))
 
     return {
