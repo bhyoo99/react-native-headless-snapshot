@@ -1,40 +1,39 @@
 import "../../index"
 
-import * as React from "react"
-import * as renderer from "react-test-renderer"
 import { View } from "../host-components"
+import { renderToJSON } from "../render-json"
 
 // https://facebook.github.io/react-native/docs/flexbox.html
 
-it("No border radius", () => {
+it("No border radius", async () => {
   const jsx = <View style={{ backgroundColor: "red", width: 100, height: 50 }} />
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Small border radius", () => {
+it("Small border radius", async () => {
   const jsx = <View style={{ backgroundColor: "red", width: 100, height: 50, borderRadius: 10 }} />
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Border radius larger than height", () => {
+it("Border radius larger than height", async () => {
   const jsx = <View style={{ backgroundColor: "red", width: 100, height: 50, borderRadius: 1000 }} />
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Border radius larger than width", () => {
+it("Border radius larger than width", async () => {
   const jsx = <View style={{ backgroundColor: "red", width: 50, height: 100, borderRadius: 1000 }} />
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Varying border radii", () => {
+it("Varying border radii", async () => {
   const jsx = (
     <View
       style={{
@@ -51,11 +50,11 @@ it("Varying border radii", () => {
     />
   )
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Varying border radii dashed", () => {
+it("Varying border radii dashed", async () => {
   const jsx = (
     <View
       style={{
@@ -73,11 +72,11 @@ it("Varying border radii dashed", () => {
     />
   )
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Varying border radii dotted", () => {
+it("Varying border radii dotted", async () => {
   const jsx = (
     <View
       style={{
@@ -95,11 +94,11 @@ it("Varying border radii dotted", () => {
     />
   )
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Varying border widths", () => {
+it("Varying border widths", async () => {
   const jsx = (
     <View
       style={{
@@ -116,11 +115,11 @@ it("Varying border widths", () => {
     />
   )
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Varying border colors", () => {
+it("Varying border colors", async () => {
   const jsx = (
     <View
       style={{
@@ -137,11 +136,11 @@ it("Varying border colors", () => {
     />
   )
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Varying border colors dashed", () => {
+it("Varying border colors dashed", async () => {
   const jsx = (
     <View
       style={{
@@ -159,11 +158,11 @@ it("Varying border colors dashed", () => {
     />
   )
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Varying border colors dotted", () => {
+it("Varying border colors dotted", async () => {
   const jsx = (
     <View
       style={{
@@ -181,11 +180,11 @@ it("Varying border colors dotted", () => {
     />
   )
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Varying border colors and widths", () => {
+it("Varying border colors and widths", async () => {
   const jsx = (
     <View
       style={{
@@ -205,11 +204,11 @@ it("Varying border colors and widths", () => {
     />
   )
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Varying border colors, radii and widths", () => {
+it("Varying border colors, radii and widths", async () => {
   const jsx = (
     <View
       style={{
@@ -232,6 +231,6 @@ it("Varying border colors, radii and widths", () => {
     />
   )
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })

@@ -2,9 +2,8 @@ import "../../index"
 
 import * as fs from "fs"
 import * as path from "path"
-import * as React from "react"
-import * as renderer from "react-test-renderer"
 import { Text, View } from "../host-components"
+import { renderToJSON } from "../render-json"
 
 import { addFontFallback, loadFont, setDefaultFont } from "../../index"
 
@@ -14,17 +13,17 @@ loadFont(fs.readFileSync(path.join(__dirname, "../Arimo/Arimo-Italic.ttf")))
 loadFont(fs.readFileSync(path.join(__dirname, "../Arimo/Arimo-BoldItalic.ttf")))
 addFontFallback("Arimo", "'Helvetica', 'Arial', sans-serif")
 
-it("Renders a line of text", () => {
+it("Renders a line of text", async () => {
   const jsx =
     <View style={{ width: 100 }}>
       <Text style={{ fontFamily: "Arimo" }}>Hello world</Text>
     </View>
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Renders multiple lines of text", () => {
+it("Renders multiple lines of text", async () => {
   const jsx =
     <View style={{ width: 100 }}>
       <Text style={{ fontFamily: "Arimo" }}>
@@ -34,21 +33,21 @@ it("Renders multiple lines of text", () => {
       </Text>
     </View>
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Renders text with forced break", () => {
+it("Renders text with forced break", async () => {
   const jsx =
     <View style={{ width: 100 }}>
       <Text style={{ fontFamily: "Arimo" }}>Hello{"\n"}world</Text>
     </View>
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Renders multiple lines of text with multiple styles", () => {
+it("Renders multiple lines of text with multiple styles", async () => {
   const jsx =
     <View style={{ width: 100 }}>
       <Text style={{ fontFamily: "Arimo" }}>
@@ -58,11 +57,11 @@ it("Renders multiple lines of text with multiple styles", () => {
       </Text>
     </View>
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Renders multiple lines of text with text align", () => {
+it("Renders multiple lines of text with text align", async () => {
   const jsx =
     <View style={{ width: 100 }}>
       <View>
@@ -82,11 +81,11 @@ it("Renders multiple lines of text with text align", () => {
       </View>
     </View>
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Renders text with different sizes", () => {
+it("Renders text with different sizes", async () => {
   const jsx =
     <View style={{ width: 500 }}>
       <View>
@@ -96,11 +95,11 @@ it("Renders text with different sizes", () => {
       </View>
     </View>
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Renders text with different colors", () => {
+it("Renders text with different colors", async () => {
   const jsx =
     <View style={{ width: 500 }}>
       <View>
@@ -110,11 +109,11 @@ it("Renders text with different colors", () => {
       </View>
     </View>
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Renders text in the correct place when positioned with flex", () => {
+it("Renders text in the correct place when positioned with flex", async () => {
   const jsx =
     <View style={{ width: 500, height: 500, alignItems: "center", justifyContent: "center" }}>
       <Text>
@@ -122,11 +121,11 @@ it("Renders text in the correct place when positioned with flex", () => {
       </Text>
     </View>
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Renders text using the specified default font", () => {
+it("Renders text using the specified default font", async () => {
   setDefaultFont("Arimo")
 
   const jsx =
@@ -136,16 +135,16 @@ it("Renders text using the specified default font", () => {
       </Text>
     </View>
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })
 
-it("Does not break if a Text tag is empty", () => {
+it("Does not break if a Text tag is empty", async () => {
   const jsx =
     <View style={{ width: 320, height: 480 }}>
       <Text />
     </View>
 
-  const component = renderer.create(jsx).toJSON()
+  const component = await renderToJSON(jsx)
   expect(component).toMatchSVGSnapshot(320, 480)
 })

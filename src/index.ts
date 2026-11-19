@@ -43,6 +43,7 @@ export interface Settings {
 
 import componentTreeToNodeTree from "./component-tree-to-nodes"
 import renderedComponentTree from "./reapply-layouts-to-components"
+import { toRootComponent } from "./to-root-component"
 import treeToSVG from "./tree-to-svg"
 
 // toMatchSVGSnapshot(1024, 768)
@@ -55,14 +56,17 @@ beforeAll(() => initYoga())
 
 expect.extend({
     toMatchSVGSnapshot(
-        root: Component,
+        received: unknown,
         width,
         height,
         { wireframe = false }: { wireframe?: boolean } = {}
     ) {
+        const root = toRootComponent(received)
         if (!root) { return fail("A falsy Component was passed to toMatchSVGSnapshot") }
         if (!root.props) { return fail("A Component without props was passed to toMatchSVGSnapshot") }
-        if (!root.type) { return fail("A Component without a type was passed to toMatchSVGSnapshot") }
+        if (typeof root.type !== "string") {
+            return fail("A Component without a type was passed to toMatchSVGSnapshot")
+        }
 
         // getState isn't in the d.ts for Jest, this is ok though.
         const state = (expect as any).getState()
