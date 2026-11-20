@@ -1,0 +1,76 @@
+{
+  "platform": "ios",
+  "osVersion": "27.2",
+  "fixture": "text-number-of-lines",
+  "window": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "screen": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 220,
+    "height": 160,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 220,
+        "height": 160,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 10,
+            "y": 10,
+            "width": 200,
+            "height": 33.66666793823242,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "The quick brown fox jumps ",
+        "x": 0,
+        "y": 0,
+        "width": 182.578125,
+        "height": 16.7578125,
+        "descender": 3.1787109375,
+        "capHeight": 10.31982421875,
+        "ascender": 13.5791015625,
+        "xHeight": 7.9248046875
+      },
+      {
+        "text": "over the lazy dog while the band keeps playing a slow song",
+        "x": 0,
+        "y": 16.7578125,
+        "width": 192.60498046875,
+        "height": 16.7578125,
+        "descender": 3.1787109375,
+        "capHeight": 10.31982421875,
+        "ascender": 13.5791015625,
+        "xHeight": 7.9248046875
+      }
+    ]
+  }
+}

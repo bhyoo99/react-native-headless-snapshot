@@ -123,18 +123,26 @@ expect(screen.toJSON()).toMatchSVGSnapshot(412, 915, { platform: "android", scal
 ```
 
 * Views are laid out with React Native's Yoga settings and rounded to the device's pixel grid.
-* With `platform: "android"`, text is measured with the rules of React Native's Android text layout: font
-  padding, glyph advances, letter spacing, line height and line breaking. iOS text is not calibrated yet.
+* Text is measured with the rules of React Native's text layout on that platform (`TextLayoutManager` on
+  Android, TextKit on iOS): glyph advances, font padding, letter spacing, line height, line breaking and
+  `numberOfLines`.
 * Load each font your app uses under the family name the app uses:
   `loadFont(readFileSync("assets/fonts/MyFont-Bold.ttf"), { fontFamily: "MyFont-Bold", fontWeight: "normal", fontStyle: "normal" })`.
-* Text without a `fontFamily` uses the platform's system font. For Android, pull the fonts from an emulator
-  (`adb pull /system/fonts/Roboto-Regular.ttf` and `adb pull /system/fonts/NotoSansCJK-Regular.ttc`) and load them:
+* Text without a `fontFamily` uses the platform's system font, and glyphs a font lacks come from fallback fonts.
+  Take them from an emulator (`adb pull /system/fonts/Roboto-Regular.ttf`, `adb pull /system/fonts/NotoSansCJK-Regular.ttc`)
+  and from an iOS simulator runtime (`SFUI.ttf` and `AppleSDGothicNeo.ttc` in
+  `<runtimeRoot>/System/Library/Fonts/Core`, where `xcrun simctl list runtimes -j` gives `runtimeRoot`):
 
 ```ts
 import { loadFallbackFont, loadSystemFont } from "jest-snapshots-svg"
 
 loadSystemFont("android", readFileSync("Roboto-Regular.ttf"))
 loadFallbackFont("android", readFileSync("NotoSansCJK-Regular.ttc"), { postscriptName: "NotoSansCJKKR-Regular" })
+
+loadSystemFont("ios", readFileSync("SFUI.ttf"))
+for (const weight of ["Light", "Regular", "Medium", "SemiBold", "Bold"]) {
+  loadFallbackFont("ios", readFileSync("AppleSDGothicNeo.ttc"), { postscriptName: `.AppleSDGothicNeoI-${weight}` })
+}
 ```
 
 `layoutTree(json, { width, height, platform, scale })` returns the frame of every view when you want numbers instead

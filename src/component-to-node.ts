@@ -3,6 +3,7 @@ import extractText from "./extract-text"
 import { flattenStyles } from "./flatten-styles"
 import { Component, Settings } from "./index"
 import { measureAndroid } from "./text/android"
+import { measureIOS } from "./text/ios"
 import { breakLines, measureLines, textSlice } from "./text-layout"
 import { getYoga } from "./yoga"
 
@@ -158,14 +159,15 @@ const componentToNode = (component: Component, settings: Settings, config?: Conf
   if (component && component.type === "Text") {
     const styledText = extractText(component)
     component[textLines] = null
-    if (settings.platform === "android") {
+    if (settings.platform === "android" || settings.platform === "ios") {
+      const measure = settings.platform === "android" ? measureAndroid : measureIOS
       const rootStyle = (component.props && component.props.style && styleFromComponent(component)) || {}
       const paragraph = {
         numberOfLines: component.props && component.props.numberOfLines,
         includeFontPadding: rootStyle.includeFontPadding !== false,
       }
       node.setMeasureFunc((width, widthMode) => {
-        const measured = measureAndroid(styledText, width, widthMode, paragraph, settings.scale ?? 1)
+        const measured = measure(styledText, width, widthMode, paragraph, settings.scale ?? 1)
         component[textLines] = measured.lines.map(line => ({
           ...textSlice(styledText, line.start, line.end),
           metrics: line,

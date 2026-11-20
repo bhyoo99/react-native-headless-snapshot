@@ -17,10 +17,20 @@ for (const [fontFamily, file] of Object.entries(fonts)) {
 }
 
 const androidFonts = join(__dirname, "../system-fonts/android")
-const hasSystemFonts = existsSync(join(androidFonts, "Roboto-Regular.ttf"))
+const hasSystemFonts = Platform.OS === "android"
+  ? existsSync(join(androidFonts, "Roboto-Regular.ttf"))
+  : existsSync(join(__dirname, "../system-fonts/ios/SFUI.ttf"))
 if (hasSystemFonts) {
   loadSystemFont("android", readFileSync(join(androidFonts, "Roboto-Regular.ttf")))
   loadFallbackFont("android", readFileSync(join(androidFonts, "NotoSansCJK-Regular.ttc")), { postscriptName: "NotoSansCJKKR-Regular" })
+}
+
+const iosFonts = join(__dirname, "../system-fonts/ios")
+if (existsSync(join(iosFonts, "SFUI.ttf"))) {
+  loadSystemFont("ios", readFileSync(join(iosFonts, "SFUI.ttf")))
+  for (const weight of ["UltraLight", "Thin", "Light", "Regular", "Medium", "SemiBold", "Bold"]) {
+    loadFallbackFont("ios", readFileSync(join(iosFonts, "AppleSDGothicNeo.ttc")), { postscriptName: `.AppleSDGothicNeoI-${weight}` })
+  }
 }
 
 const referenceDir = join(__dirname, "../reference")

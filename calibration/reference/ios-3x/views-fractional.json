@@ -1,0 +1,91 @@
+{
+  "platform": "ios",
+  "osVersion": "27.2",
+  "fixture": "views-fractional",
+  "window": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "screen": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 360,
+    "height": 400,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 400,
+        "children": [
+          {
+            "type": "RN:View",
+            "x": 18,
+            "y": 18,
+            "width": 324,
+            "height": 33.33333206176758,
+            "children": []
+          },
+          {
+            "type": "RN:View",
+            "x": 10.333333015441895,
+            "y": 59,
+            "width": 339.33331298828125,
+            "height": 26.666664123535156,
+            "children": [
+              {
+                "type": "RN:View",
+                "x": 13.666666269302368,
+                "y": 62.333333253860474,
+                "width": 107.33333587646484,
+                "height": 20.333332061767578,
+                "children": []
+              },
+              {
+                "type": "RN:View",
+                "x": 126.3333330154419,
+                "y": 62.333333253860474,
+                "width": 107.33333587646484,
+                "height": 20.333332061767578,
+                "children": []
+              },
+              {
+                "type": "RN:View",
+                "x": 239.3333330154419,
+                "y": 62.333333253860474,
+                "width": 107.33334350585938,
+                "height": 20.333332061767578,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:View",
+            "x": 52.66666793823242,
+            "y": 85.66666412353516,
+            "width": 113,
+            "height": 66.66666412353516,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {}
+}

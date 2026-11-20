@@ -1,0 +1,109 @@
+{
+  "platform": "ios",
+  "osVersion": "27.2",
+  "fixture": "text-letter-spacing",
+  "window": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "screen": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 360,
+    "height": 160,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 160,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 10,
+            "y": 10,
+            "width": 95,
+            "height": 15.666666030883789,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-2",
+            "x": 10,
+            "y": 31.66666603088379,
+            "width": 84,
+            "height": 15.666666030883789,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-3",
+            "x": 10,
+            "y": 53.33333206176758,
+            "width": 27,
+            "height": 13.666667938232422,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 0,
+        "width": 94.9443359375,
+        "height": 15.640625,
+        "descender": 2.966796875,
+        "capHeight": 9.6318359375,
+        "ascender": 12.673828125,
+        "xHeight": 7.396484375
+      }
+    ],
+    "text-2": [
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 0,
+        "width": 83.74433593750004,
+        "height": 15.640625,
+        "descender": 2.966796875,
+        "capHeight": 9.6318359375,
+        "ascender": 12.673828125,
+        "xHeight": 7.396484375
+      }
+    ],
+    "text-3": [
+      {
+        "text": "ALL",
+        "x": 0,
+        "y": 0,
+        "width": 26.926171874999998,
+        "height": 13.40625,
+        "descender": 2.54296875,
+        "capHeight": 8.255859375,
+        "ascender": 10.86328125,
+        "xHeight": 6.33984375
+      }
+    ]
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "platform": "ios",
+  "osVersion": "27.2",
+  "fixture": "text-chips",
+  "window": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "screen": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 360,
+    "height": 120,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 120,
+        "children": [
+          {
+            "type": "RN:View",
+            "x": 16,
+            "y": 16,
+            "width": 54.666664123535156,
+            "height": 29.666667938232422,
+            "children": [
+              {
+                "type": "RN:Paragraph",
+                "id": "text-1",
+                "x": 29,
+                "y": 23,
+                "width": 28.666667938232422,
+                "height": 15.666667938232422,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:View",
+            "x": 78.66666412353516,
+            "y": 16,
+            "width": 64.33333587646484,
+            "height": 29.666667938232422,
+            "children": [
+              {
+                "type": "RN:Paragraph",
+                "id": "text-2",
+                "x": 91.66666412353516,
+                "y": 23,
+                "width": 38.333335876464844,
+                "height": 15.666667938232422,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:View",
+            "x": 151,
+            "y": 16,
+            "width": 74.33332824707031,
+            "height": 29.666667938232422,
+            "children": [
+              {
+                "type": "RN:Paragraph",
+                "id": "text-3",
+                "x": 164,
+                "y": 23,
+                "width": 48.33332824707031,
+                "height": 15.666667938232422,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:View",
+            "x": 233.3333282470703,
+            "y": 16,
+            "width": 58.33332824707031,
+            "height": 29.666667938232422,
+            "children": [
+              {
+                "type": "RN:Paragraph",
+                "id": "text-4",
+                "x": 246.3333282470703,
+                "y": 23,
+                "width": 32.33332824707031,
+                "height": 15.666667938232422,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "ALL",
+        "x": 0,
+        "y": 0,
+        "width": 28.413867187499996,
+        "height": 15.640625,
+        "descender": 2.966796875,
+        "capHeight": 9.6318359375,
+        "ascender": 12.673828125,
+        "xHeight": 7.396484375
+      }
+    ],
+    "text-2": [
+      {
+        "text": "News",
+        "x": 0,
+        "y": 0,
+        "width": 38.172265624999994,
+        "height": 15.640625,
+        "descender": 2.966796875,
+        "capHeight": 9.6318359375,
+        "ascender": 12.673828125,
+        "xHeight": 7.396484375
+      }
+    ],
+    "text-3": [
+      {
+        "text": "Events",
+        "x": 0,
+        "y": 0,
+        "width": 48.31015624999999,
+        "height": 15.640625,
+        "descender": 2.966796875,
+        "capHeight": 9.6318359375,
+        "ascender": 12.673828125,
+        "xHeight": 7.396484375
+      }
+    ],
+    "text-4": [
+      {
+        "text": "Q&A",
+        "x": 0,
+        "y": 0,
+        "width": 32.310351562499996,
+        "height": 15.640625,
+        "descender": 2.966796875,
+        "capHeight": 9.6318359375,
+        "ascender": 12.673828125,
+        "xHeight": 7.396484375
+      }
+    ]
+  }
+}

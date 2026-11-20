@@ -19,7 +19,11 @@ let userDefaultFont: string | undefined
 
 export type FontPlatform = "ios" | "android"
 const systemFonts: Partial<Record<FontPlatform, any>> = {}
-const fallbackFonts: Record<FontPlatform, any[]> = { ios: [], android: [] }
+interface FallbackFace {
+  weight: number
+  font: any
+}
+const fallbackFamilies: Record<FontPlatform, Array<{ family: string, faces: FallbackFace[] }>> = { ios: [], android: [] }
 const variationCache = new WeakMap<object, Map<string, any>>()
 const svgFonts: { [key: string]: { path: string, style: FontStyle } } = {}
 const usedFonts: string[] = []
@@ -151,22 +155,39 @@ export const loadSystemFont = (platform: FontPlatform, fontFile, options: { post
   systemFonts[platform] = fontkit.create(fontFile, options.postscriptName)
 }
 
-export const loadFallbackFont = (platform: FontPlatform, fontFile, options: { postscriptName?: string } = {}) => {
-  fallbackFonts[platform].push(fontkit.create(fontFile, options.postscriptName))
+export const loadFallbackFont = (
+  platform: FontPlatform,
+  fontFile,
+  options: { postscriptName?: string, fontWeight?: string } = {},
+) => {
+  const font = fontkit.create(fontFile, options.postscriptName)
+  const weight = Number(numberWeight(options.fontWeight ?? String(font["OS/2"]?.usWeightClass ?? 400)))
+  const families = fallbackFamilies[platform]
+  const existing = families.find(entry => entry.family === font.familyName)
+  if (existing) {
+    existing.faces.push({ weight, font })
+  } else {
+    families.push({ family: font.familyName, faces: [{ weight, font }] })
+  }
 }
 
 const variationInstances = new WeakSet<object>()
 
 export const isVariationInstance = (font: object) => variationInstances.has(font)
 
-export const withVariation = (font, fontWeight, fontStyle) => {
+const clampAxis = (axis, value: number) => Math.min(axis.max, Math.max(axis.min, value))
+
+export const withVariation = (font, fontWeight, fontStyle, opticalSize?: number) => {
   const axes = font.variationAxes || {}
-  if (!axes.wght && !axes.ital) {
+  if (!axes.wght && !axes.ital && !(axes.opsz && opticalSize !== undefined)) {
     return font
   }
   const settings: Record<string, number> = {}
+  if (axes.opsz && opticalSize !== undefined) {
+    settings.opsz = clampAxis(axes.opsz, opticalSize)
+  }
   if (axes.wght) {
-    settings.wght = Math.min(axes.wght.max, Math.max(axes.wght.min, Number(numberWeight(fontWeight ?? "normal"))))
+    settings.wght = clampAxis(axes.wght, Number(numberWeight(fontWeight ?? "normal")))
   }
   if (axes.ital) {
     settings.ital = fontStyle === "italic" ? 1 : 0
@@ -188,15 +209,76 @@ export const withVariation = (font, fontWeight, fontStyle) => {
   return cache.get(key)
 }
 
+const opticalSizeFor = (style, platform?: FontPlatform) => platform === "ios" ? style.fontSize : undefined
+
 export const resolveFont = (style, platform?: FontPlatform) => {
   const system = platform && systemFonts[platform]
   if (!style.fontFamily && !userDefaultFont && system) {
-    return withVariation(system, style.fontWeight, style.fontStyle)
+    return withVariation(system, style.fontWeight, style.fontStyle, opticalSizeFor(style, platform))
   }
   return fontForStyle(style)
 }
 
-export const fallbackFontsFor = (platform: FontPlatform) => fallbackFonts[platform]
+export const fallbackFontsFor = (platform: FontPlatform, style) => {
+  const target = Number(numberWeight(style.fontWeight ?? "normal"))
+  return fallbackFamilies[platform].map(({ faces }) => {
+    const face = faces.reduce((best, candidate) => {
+      const distance = Math.abs(candidate.weight - target)
+      const bestDistance = Math.abs(best.weight - target)
+      return distance < bestDistance || (distance === bestDistance && candidate.weight > best.weight) ? candidate : best
+    })
+    return withVariation(face.font, style.fontWeight, style.fontStyle, opticalSizeFor(style, platform))
+  })
+}
+
+const trackingCache = new WeakMap<object, { sizes: number[], values: number[] } | null>()
+
+const readTracking = (font): { sizes: number[], values: number[] } | null => {
+  const table = font.directory?.tables?.trak
+  const buffer = font.stream?.buffer
+  if (!table || !buffer) {
+    return null
+  }
+  const view = new DataView(buffer.buffer, buffer.byteOffset + table.offset, table.length)
+  const horizontal = view.getUint16(6)
+  if (!horizontal) {
+    return null
+  }
+  const trackCount = view.getUint16(horizontal)
+  const sizeCount = view.getUint16(horizontal + 2)
+  const sizeOffset = view.getUint32(horizontal + 4)
+  const sizes = Array.from({ length: sizeCount }, (_, index) => view.getInt32(sizeOffset + index * 4) / 65536)
+  for (let track = 0; track < trackCount; track++) {
+    const entry = horizontal + 8 + track * 8
+    if (view.getInt32(entry) === 0) {
+      const valuesOffset = view.getUint16(entry + 6)
+      return { sizes, values: Array.from({ length: sizeCount }, (_, index) => view.getInt16(valuesOffset + index * 2)) }
+    }
+  }
+  return null
+}
+
+export const trackingAt = (font, pointSize: number): number => {
+  const key = font.stream ?? font
+  if (!trackingCache.has(key)) {
+    trackingCache.set(key, readTracking(font))
+  }
+  const tracking = trackingCache.get(key)
+  if (!tracking) {
+    return 0
+  }
+  const { sizes, values } = tracking
+  if (pointSize <= sizes[0]) {
+    return values[0]
+  }
+  for (let index = 1; index < sizes.length; index++) {
+    if (pointSize <= sizes[index]) {
+      const fraction = (pointSize - sizes[index - 1]) / (sizes[index] - sizes[index - 1])
+      return values[index - 1] + fraction * (values[index] - values[index - 1])
+    }
+  }
+  return values[values.length - 1]
+}
 
 export const fontWithFallbacks = (fontFamily: string): string => (
   fontFallbacks[fontFamily] ? `'${fontFamily}', ${fontFallbacks[fontFamily]}` : `'${fontFamily}'`

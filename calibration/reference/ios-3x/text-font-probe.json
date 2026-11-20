@@ -1,0 +1,1451 @@
+{
+  "platform": "ios",
+  "osVersion": "27.2",
+  "fixture": "text-font-probe",
+  "window": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "screen": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 360,
+    "height": 2400,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 2400,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 4,
+            "y": 4,
+            "width": 106,
+            "height": 39.66666793823242,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-2",
+            "x": 4,
+            "y": 43.66666793823242,
+            "width": 98.33333587646484,
+            "height": 26.333332061767578,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-3",
+            "x": 4,
+            "y": 70,
+            "width": 98.33333587646484,
+            "height": 26.333335876464844,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-4",
+            "x": 4,
+            "y": 96.33333587646484,
+            "width": 103.66666412353516,
+            "height": 31.99999237060547,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-5",
+            "x": 4,
+            "y": 128.3333282470703,
+            "width": 104,
+            "height": 32,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-6",
+            "x": 4,
+            "y": 160.3333282470703,
+            "width": 122.33333587646484,
+            "height": 46.66667175292969,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-7",
+            "x": 4,
+            "y": 207,
+            "width": 116,
+            "height": 31.333328247070312,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-8",
+            "x": 4,
+            "y": 238.3333282470703,
+            "width": 116,
+            "height": 31.333328247070312,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-9",
+            "x": 4,
+            "y": 269.6666564941406,
+            "width": 122.66666412353516,
+            "height": 37.66668701171875,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-10",
+            "x": 4,
+            "y": 307.3333435058594,
+            "width": 122.66666412353516,
+            "height": 37.666656494140625,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-11",
+            "x": 4,
+            "y": 345,
+            "width": 130.6666717529297,
+            "height": 50.333343505859375,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-12",
+            "x": 4,
+            "y": 395.3333435058594,
+            "width": 125,
+            "height": 33.666656494140625,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-13",
+            "x": 4,
+            "y": 429,
+            "width": 124.66667175292969,
+            "height": 33.666656494140625,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-14",
+            "x": 4,
+            "y": 462.6666564941406,
+            "width": 132,
+            "height": 40.66668701171875,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-15",
+            "x": 4,
+            "y": 503.3333435058594,
+            "width": 132,
+            "height": 40.666656494140625,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-16",
+            "x": 4,
+            "y": 544,
+            "width": 138.6666717529297,
+            "height": 54,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-17",
+            "x": 4,
+            "y": 598,
+            "width": 133.6666717529297,
+            "height": 36,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-18",
+            "x": 4,
+            "y": 634,
+            "width": 133.6666717529297,
+            "height": 36,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-19",
+            "x": 4,
+            "y": 670,
+            "width": 141.6666717529297,
+            "height": 43.66668701171875,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-20",
+            "x": 4,
+            "y": 713.6666870117188,
+            "width": 141.6666717529297,
+            "height": 43.6666259765625,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-21",
+            "x": 4,
+            "y": 757.3333129882812,
+            "width": 146.6666717529297,
+            "height": 57.3333740234375,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-22",
+            "x": 4,
+            "y": 814.6666870117188,
+            "width": 142.6666717529297,
+            "height": 38.33331298828125,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-23",
+            "x": 4,
+            "y": 853,
+            "width": 142.3333282470703,
+            "height": 38.33331298828125,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-24",
+            "x": 4,
+            "y": 891.3333129882812,
+            "width": 151,
+            "height": 46.66668701171875,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-25",
+            "x": 4,
+            "y": 938,
+            "width": 151,
+            "height": 46.66668701171875,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-26",
+            "x": 4,
+            "y": 984.6666870117188,
+            "width": 153.6666717529297,
+            "height": 60.99993896484375,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-27",
+            "x": 4,
+            "y": 1045.6666259765625,
+            "width": 151.3333282470703,
+            "height": 40.666748046875,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-28",
+            "x": 4,
+            "y": 1086.3333740234375,
+            "width": 151.3333282470703,
+            "height": 40.6666259765625,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-29",
+            "x": 4,
+            "y": 1127,
+            "width": 160.3333282470703,
+            "height": 49.3333740234375,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-30",
+            "x": 4,
+            "y": 1176.3333740234375,
+            "width": 160.3333282470703,
+            "height": 49.333251953125,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-31",
+            "x": 4,
+            "y": 1225.6666259765625,
+            "width": 170.6666717529297,
+            "height": 68.3333740234375,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-32",
+            "x": 4,
+            "y": 1294,
+            "width": 169,
+            "height": 45.6666259765625,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-33",
+            "x": 4,
+            "y": 1339.6666259765625,
+            "width": 169,
+            "height": 45.666748046875,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-34",
+            "x": 4,
+            "y": 1385.3333740234375,
+            "width": 179.3333282470703,
+            "height": 55.333251953125,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-35",
+            "x": 4,
+            "y": 1440.6666259765625,
+            "width": 179.3333282470703,
+            "height": 55.3333740234375,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-36",
+            "x": 4,
+            "y": 1496,
+            "width": 195.6666717529297,
+            "height": 79,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-37",
+            "x": 4,
+            "y": 1575,
+            "width": 195.3333282470703,
+            "height": 52.6666259765625,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-38",
+            "x": 4,
+            "y": 1627.6666259765625,
+            "width": 195.3333282470703,
+            "height": 52.666748046875,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-39",
+            "x": 4,
+            "y": 1680.3333740234375,
+            "width": 207.3333282470703,
+            "height": 64,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-40",
+            "x": 4,
+            "y": 1744.3333740234375,
+            "width": 207.6666717529297,
+            "height": 64,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 58.845703125,
+        "height": 13.126953125,
+        "descender": 2.6533203125,
+        "capHeight": 7.75048828125,
+        "ascender": 10.4736328125,
+        "xHeight": 5.7900390625
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 13.126953125,
+        "width": 105.94482421875,
+        "height": 13.126953125,
+        "descender": 2.6533203125,
+        "capHeight": 7.75048828125,
+        "ascender": 10.4736328125,
+        "xHeight": 5.7900390625
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 26.25390625,
+        "width": 98.30820312499999,
+        "height": 13.126953125,
+        "descender": 2.6533203125,
+        "capHeight": 7.699999999999999,
+        "ascender": 10.4736328125,
+        "xHeight": 5.521999999999999
+      }
+    ],
+    "text-2": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 60.42825734615326,
+        "height": 13.126953125,
+        "descender": 2.6533203125,
+        "capHeight": 7.75048828125,
+        "ascender": 10.4736328125,
+        "xHeight": 5.8330078125
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 13.126953125,
+        "width": 98.213663482666,
+        "height": 13.126953125,
+        "descender": 2.6533203125,
+        "capHeight": 7.710999999999999,
+        "ascender": 10.4736328125,
+        "xHeight": 5.5329999999999995
+      }
+    ],
+    "text-3": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 63.161376953125,
+        "height": 13.126953125,
+        "descender": 2.6533203125,
+        "capHeight": 7.75048828125,
+        "ascender": 10.4736328125,
+        "xHeight": 5.91357421875
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 13.126953125,
+        "width": 98.05039062499999,
+        "height": 13.126953125,
+        "descender": 2.6533203125,
+        "capHeight": 7.864999999999999,
+        "ascender": 10.4736328125,
+        "xHeight": 5.72
+      }
+    ],
+    "text-4": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 59.135999999999996,
+        "height": 15.927999999999999,
+        "descender": 3.1679999999999993,
+        "capHeight": 8.062999999999999,
+        "ascender": 12.76,
+        "xHeight": 5.973
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 15.927999999999999,
+        "width": 103.66400000000002,
+        "height": 15.927999999999999,
+        "descender": 3.1679999999999993,
+        "capHeight": 8.062999999999999,
+        "ascender": 12.76,
+        "xHeight": 5.973
+      }
+    ],
+    "text-5": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 62.666999999999994,
+        "height": 15.927999999999999,
+        "descender": 3.1679999999999993,
+        "capHeight": 8.062999999999999,
+        "ascender": 12.76,
+        "xHeight": 5.973
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 15.927999999999999,
+        "width": 103.697,
+        "height": 15.927999999999999,
+        "descender": 3.1679999999999993,
+        "capHeight": 8.062999999999999,
+        "ascender": 12.76,
+        "xHeight": 5.973
+      }
+    ],
+    "text-6": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 67.869140625,
+        "height": 15.513671875,
+        "descender": 3.1357421875,
+        "capHeight": 9.15966796875,
+        "ascender": 12.3779296875,
+        "xHeight": 6.8427734375
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 15.513671875,
+        "width": 122.31298828125,
+        "height": 15.513671875,
+        "descender": 3.1357421875,
+        "capHeight": 9.15966796875,
+        "ascender": 12.3779296875,
+        "xHeight": 6.8427734375
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 31.02734375,
+        "width": 116.03007812499999,
+        "height": 15.513671875,
+        "descender": 3.1357421875,
+        "capHeight": 9.1,
+        "ascender": 12.3779296875,
+        "xHeight": 6.526
+      }
+    ],
+    "text-7": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 69.73943197727203,
+        "height": 15.513671875,
+        "descender": 3.1357421875,
+        "capHeight": 9.15966796875,
+        "ascender": 12.3779296875,
+        "xHeight": 6.8935546875
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 15.513671875,
+        "width": 115.9183494567871,
+        "height": 15.513671875,
+        "descender": 3.1357421875,
+        "capHeight": 9.113,
+        "ascender": 12.3779296875,
+        "xHeight": 6.539
+      }
+    ],
+    "text-8": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 72.969482421875,
+        "height": 15.513671875,
+        "descender": 3.1357421875,
+        "capHeight": 9.15966796875,
+        "ascender": 12.3779296875,
+        "xHeight": 6.98876953125
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 15.513671875,
+        "width": 115.72539062499999,
+        "height": 15.513671875,
+        "descender": 3.1357421875,
+        "capHeight": 9.295,
+        "ascender": 12.3779296875,
+        "xHeight": 6.76
+      }
+    ],
+    "text-9": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 69.888,
+        "height": 18.823999999999998,
+        "descender": 3.743999999999998,
+        "capHeight": 9.529,
+        "ascender": 15.08,
+        "xHeight": 7.058999999999999
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 18.823999999999998,
+        "width": 122.51199999999999,
+        "height": 18.823999999999998,
+        "descender": 3.743999999999998,
+        "capHeight": 9.529,
+        "ascender": 15.08,
+        "xHeight": 7.058999999999999
+      }
+    ],
+    "text-10": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 74.061,
+        "height": 18.823999999999998,
+        "descender": 3.743999999999998,
+        "capHeight": 9.529,
+        "ascender": 15.08,
+        "xHeight": 7.058999999999999
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 18.823999999999998,
+        "width": 122.55099999999997,
+        "height": 18.823999999999998,
+        "descender": 3.743999999999998,
+        "capHeight": 9.529,
+        "ascender": 15.08,
+        "xHeight": 7.058999999999999
+      }
+    ],
+    "text-11": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 72.337890625,
+        "height": 16.70703125,
+        "descender": 3.376953125,
+        "capHeight": 9.8642578125,
+        "ascender": 13.330078125,
+        "xHeight": 7.369140625
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 16.70703125,
+        "width": 130.4228515625,
+        "height": 16.70703125,
+        "descender": 3.376953125,
+        "capHeight": 9.8642578125,
+        "ascender": 13.330078125,
+        "xHeight": 7.369140625
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 33.4140625,
+        "width": 124.887109375,
+        "height": 16.70703125,
+        "descender": 3.376953125,
+        "capHeight": 9.8,
+        "ascender": 13.330078125,
+        "xHeight": 7.0280000000000005
+      }
+    ],
+    "text-12": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 74.35205054283142,
+        "height": 16.70703125,
+        "descender": 3.376953125,
+        "capHeight": 9.8642578125,
+        "ascender": 13.330078125,
+        "xHeight": 7.423828125
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 16.70703125,
+        "width": 124.76678619384765,
+        "height": 16.70703125,
+        "descender": 3.376953125,
+        "capHeight": 9.814,
+        "ascender": 13.330078125,
+        "xHeight": 7.042
+      }
+    ],
+    "text-13": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 77.83056640625,
+        "height": 16.70703125,
+        "descender": 3.376953125,
+        "capHeight": 9.8642578125,
+        "ascender": 13.330078125,
+        "xHeight": 7.5263671875
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 16.70703125,
+        "width": 124.558984375,
+        "height": 16.70703125,
+        "descender": 3.376953125,
+        "capHeight": 10.01,
+        "ascender": 13.330078125,
+        "xHeight": 7.28
+      }
+    ],
+    "text-14": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 75.264,
+        "height": 20.272000000000002,
+        "descender": 4.032,
+        "capHeight": 10.262,
+        "ascender": 16.240000000000002,
+        "xHeight": 7.602
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 20.272000000000002,
+        "width": 131.936,
+        "height": 20.272000000000002,
+        "descender": 4.032,
+        "capHeight": 10.262,
+        "ascender": 16.240000000000002,
+        "xHeight": 7.602
+      }
+    ],
+    "text-15": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 79.75800000000001,
+        "height": 20.272000000000002,
+        "descender": 4.032,
+        "capHeight": 10.262,
+        "ascender": 16.240000000000002,
+        "xHeight": 7.602
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 20.272000000000002,
+        "width": 131.97799999999998,
+        "height": 20.272000000000002,
+        "descender": 4.032,
+        "capHeight": 10.262,
+        "ascender": 16.240000000000002,
+        "xHeight": 7.602
+      }
+    ],
+    "text-16": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 76.69921875,
+        "height": 17.900390625,
+        "descender": 3.6181640625,
+        "capHeight": 10.56884765625,
+        "ascender": 14.2822265625,
+        "xHeight": 7.8955078125
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 17.900390625,
+        "width": 138.34716796875,
+        "height": 17.900390625,
+        "descender": 3.6181640625,
+        "capHeight": 10.56884765625,
+        "ascender": 14.2822265625,
+        "xHeight": 7.8955078125
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 35.80078125,
+        "width": 133.734375,
+        "height": 17.900390625,
+        "descender": 3.6181640625,
+        "capHeight": 10.5,
+        "ascender": 14.2822265625,
+        "xHeight": 7.529999999999999
+      }
+    ],
+    "text-17": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 78.85724723339081,
+        "height": 17.900390625,
+        "descender": 3.6181640625,
+        "capHeight": 10.56884765625,
+        "ascender": 14.2822265625,
+        "xHeight": 7.9541015625
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 17.900390625,
+        "width": 133.6054573059082,
+        "height": 17.900390625,
+        "descender": 3.6181640625,
+        "capHeight": 10.514999999999999,
+        "ascender": 14.2822265625,
+        "xHeight": 7.545
+      }
+    ],
+    "text-18": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 82.584228515625,
+        "height": 17.900390625,
+        "descender": 3.6181640625,
+        "capHeight": 10.56884765625,
+        "ascender": 14.2822265625,
+        "xHeight": 8.06396484375
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 17.900390625,
+        "width": 133.3828125,
+        "height": 17.900390625,
+        "descender": 3.6181640625,
+        "capHeight": 10.725,
+        "ascender": 14.2822265625,
+        "xHeight": 7.8
+      }
+    ],
+    "text-19": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 80.64,
+        "height": 21.72,
+        "descender": 4.32,
+        "capHeight": 10.995,
+        "ascender": 17.4,
+        "xHeight": 8.145
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 21.72,
+        "width": 141.35999999999999,
+        "height": 21.72,
+        "descender": 4.32,
+        "capHeight": 10.995,
+        "ascender": 17.4,
+        "xHeight": 8.145
+      }
+    ],
+    "text-20": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 85.45499999999998,
+        "height": 21.72,
+        "descender": 4.32,
+        "capHeight": 10.995,
+        "ascender": 17.4,
+        "xHeight": 8.145
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 21.72,
+        "width": 141.405,
+        "height": 21.72,
+        "descender": 4.32,
+        "capHeight": 10.995,
+        "ascender": 17.4,
+        "xHeight": 8.145
+      }
+    ],
+    "text-21": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 81.125,
+        "height": 19.09375,
+        "descender": 3.859375,
+        "capHeight": 11.2734375,
+        "ascender": 15.234375,
+        "xHeight": 8.421875
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 19.09375,
+        "width": 146.3828125,
+        "height": 19.09375,
+        "descender": 3.859375,
+        "capHeight": 11.2734375,
+        "ascender": 15.234375,
+        "xHeight": 8.421875
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 38.1875,
+        "width": 142.5875,
+        "height": 19.09375,
+        "descender": 3.859375,
+        "capHeight": 11.200000000000001,
+        "ascender": 15.234375,
+        "xHeight": 8.032
+      }
+    ],
+    "text-22": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 83.4268970489502,
+        "height": 19.09375,
+        "descender": 3.859375,
+        "capHeight": 11.2734375,
+        "ascender": 15.234375,
+        "xHeight": 8.484375
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 19.09375,
+        "width": 142.44998779296876,
+        "height": 19.09375,
+        "descender": 3.859375,
+        "capHeight": 11.216000000000001,
+        "ascender": 15.234375,
+        "xHeight": 8.048
+      }
+    ],
+    "text-23": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 87.40234375,
+        "height": 19.09375,
+        "descender": 3.859375,
+        "capHeight": 11.2734375,
+        "ascender": 15.234375,
+        "xHeight": 8.6015625
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 19.09375,
+        "width": 142.2125,
+        "height": 19.09375,
+        "descender": 3.859375,
+        "capHeight": 11.44,
+        "ascender": 15.234375,
+        "xHeight": 8.32
+      }
+    ],
+    "text-24": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 86.01599999999999,
+        "height": 23.168,
+        "descender": 4.6080000000000005,
+        "capHeight": 11.728,
+        "ascender": 18.56,
+        "xHeight": 8.688
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 23.168,
+        "width": 150.784,
+        "height": 23.168,
+        "descender": 4.6080000000000005,
+        "capHeight": 11.728,
+        "ascender": 18.56,
+        "xHeight": 8.688
+      }
+    ],
+    "text-25": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 91.152,
+        "height": 23.168,
+        "descender": 4.6080000000000005,
+        "capHeight": 11.728,
+        "ascender": 18.56,
+        "xHeight": 8.688
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 23.168,
+        "width": 150.832,
+        "height": 23.168,
+        "descender": 4.6080000000000005,
+        "capHeight": 11.728,
+        "ascender": 18.56,
+        "xHeight": 8.688
+      }
+    ],
+    "text-26": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 85.099609375,
+        "height": 20.287109375,
+        "descender": 4.1005859375,
+        "capHeight": 11.97802734375,
+        "ascender": 16.1865234375,
+        "xHeight": 8.9482421875
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 20.287109375,
+        "width": 153.63916015625,
+        "height": 20.287109375,
+        "descender": 4.1005859375,
+        "capHeight": 11.97802734375,
+        "ascender": 16.1865234375,
+        "xHeight": 8.9482421875
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 40.57421875,
+        "width": 151.399609375,
+        "height": 20.287109375,
+        "descender": 4.1005859375,
+        "capHeight": 11.9,
+        "ascender": 16.1865234375,
+        "xHeight": 8.534
+      }
+    ],
+    "text-27": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 87.54537498950958,
+        "height": 20.287109375,
+        "descender": 4.1005859375,
+        "capHeight": 11.97802734375,
+        "ascender": 16.1865234375,
+        "xHeight": 9.0146484375
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 20.287109375,
+        "width": 151.2535026550293,
+        "height": 20.287109375,
+        "descender": 4.1005859375,
+        "capHeight": 11.917000000000002,
+        "ascender": 16.1865234375,
+        "xHeight": 8.551
+      }
+    ],
+    "text-28": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 91.769287109375,
+        "height": 20.287109375,
+        "descender": 4.1005859375,
+        "capHeight": 11.97802734375,
+        "ascender": 16.1865234375,
+        "xHeight": 9.13916015625
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 20.287109375,
+        "width": 151.001171875,
+        "height": 20.287109375,
+        "descender": 4.1005859375,
+        "capHeight": 12.155000000000001,
+        "ascender": 16.1865234375,
+        "xHeight": 8.84
+      }
+    ],
+    "text-29": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 91.39200000000002,
+        "height": 24.616000000000003,
+        "descender": 4.896000000000001,
+        "capHeight": 12.461,
+        "ascender": 19.720000000000002,
+        "xHeight": 9.231
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 24.616000000000003,
+        "width": 160.20799999999997,
+        "height": 24.616000000000003,
+        "descender": 4.896000000000001,
+        "capHeight": 12.461,
+        "ascender": 19.720000000000002,
+        "xHeight": 9.231
+      }
+    ],
+    "text-30": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 96.84900000000002,
+        "height": 24.616000000000003,
+        "descender": 4.896000000000001,
+        "capHeight": 12.461,
+        "ascender": 19.720000000000002,
+        "xHeight": 9.231
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 24.616000000000003,
+        "width": 160.25899999999996,
+        "height": 24.616000000000003,
+        "descender": 4.896000000000001,
+        "capHeight": 12.461,
+        "ascender": 19.720000000000002,
+        "xHeight": 9.231
+      }
+    ],
+    "text-31": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 94.45296230912209,
+        "height": 22.673828125,
+        "descender": 4.5830078125,
+        "capHeight": 13.38720703125,
+        "ascender": 18.0908203125,
+        "xHeight": 9.97314453125
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 22.673828125,
+        "width": 170.39168789982796,
+        "height": 22.673828125,
+        "descender": 4.5830078125,
+        "capHeight": 13.38720703125,
+        "ascender": 18.0908203125,
+        "xHeight": 9.97314453125
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 45.34765625,
+        "width": 169.11690804958343,
+        "height": 22.673828125,
+        "descender": 4.5830078125,
+        "capHeight": 13.299999999999999,
+        "ascender": 18.0908203125,
+        "xHeight": 9.538
+      }
+    ],
+    "text-32": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 97.20949880558328,
+        "height": 22.673828125,
+        "descender": 4.5830078125,
+        "capHeight": 13.38720703125,
+        "ascender": 18.0908203125,
+        "xHeight": 10.04736328125
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 22.673828125,
+        "width": 168.96381517323024,
+        "height": 22.673828125,
+        "descender": 4.5830078125,
+        "capHeight": 13.318999999999999,
+        "ascender": 18.0908203125,
+        "xHeight": 9.557
+      }
+    ],
+    "text-33": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 101.97012175619602,
+        "height": 22.673828125,
+        "descender": 4.5830078125,
+        "capHeight": 13.38720703125,
+        "ascender": 18.0908203125,
+        "xHeight": 10.1865234375
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 22.673828125,
+        "width": 168.69941908717155,
+        "height": 22.673828125,
+        "descender": 4.5830078125,
+        "capHeight": 13.584999999999999,
+        "ascender": 18.0908203125,
+        "xHeight": 9.879999999999999
+      }
+    ],
+    "text-34": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 102.144,
+        "height": 27.512,
+        "descender": 5.472000000000001,
+        "capHeight": 13.927,
+        "ascender": 22.04,
+        "xHeight": 10.317
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 27.512,
+        "width": 179.05599999999998,
+        "height": 27.512,
+        "descender": 5.472000000000001,
+        "capHeight": 13.927,
+        "ascender": 22.04,
+        "xHeight": 10.317
+      }
+    ],
+    "text-35": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 108.24300000000001,
+        "height": 27.512,
+        "descender": 5.472000000000001,
+        "capHeight": 13.927,
+        "ascender": 22.04,
+        "xHeight": 10.317
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 27.512,
+        "width": 179.11299999999997,
+        "height": 27.512,
+        "descender": 5.472000000000001,
+        "capHeight": 13.927,
+        "ascender": 22.04,
+        "xHeight": 10.317
+      }
+    ],
+    "text-36": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 106.27232521772385,
+        "height": 26.25390625,
+        "descender": 5.306640625,
+        "capHeight": 15.5009765625,
+        "ascender": 20.947265625,
+        "xHeight": 11.365234375
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 26.25390625,
+        "width": 190.91966384649277,
+        "height": 26.25390625,
+        "descender": 5.306640625,
+        "capHeight": 15.5009765625,
+        "ascender": 20.947265625,
+        "xHeight": 11.365234375
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 52.5078125,
+        "width": 195.34607701301573,
+        "height": 26.25390625,
+        "descender": 5.306640625,
+        "capHeight": 15.399999999999999,
+        "ascender": 20.947265625,
+        "xHeight": 11.043999999999999
+      }
+    ],
+    "text-37": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 109.59217363443167,
+        "height": 26.25390625,
+        "descender": 5.306640625,
+        "capHeight": 15.5009765625,
+        "ascender": 20.947265625,
+        "xHeight": 11.47265625
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 26.25390625,
+        "width": 195.22554026734431,
+        "height": 26.25390625,
+        "descender": 5.306640625,
+        "capHeight": 15.421999999999999,
+        "ascender": 20.947265625,
+        "xHeight": 11.065999999999999
+      }
+    ],
+    "text-38": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 115.32565352320671,
+        "height": 26.25390625,
+        "descender": 5.306640625,
+        "capHeight": 15.5009765625,
+        "ascender": 20.947265625,
+        "xHeight": 11.666015625
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 26.25390625,
+        "width": 195.01736961603163,
+        "height": 26.25390625,
+        "descender": 5.306640625,
+        "capHeight": 15.729999999999999,
+        "ascender": 20.947265625,
+        "xHeight": 11.44
+      }
+    ],
+    "text-39": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 118.27199999999999,
+        "height": 31.855999999999998,
+        "descender": 6.3359999999999985,
+        "capHeight": 16.125999999999998,
+        "ascender": 25.52,
+        "xHeight": 11.946
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 31.855999999999998,
+        "width": 207.32800000000003,
+        "height": 31.855999999999998,
+        "descender": 6.3359999999999985,
+        "capHeight": 16.125999999999998,
+        "ascender": 25.52,
+        "xHeight": 11.946
+      }
+    ],
+    "text-40": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 125.33399999999999,
+        "height": 31.855999999999998,
+        "descender": 6.3359999999999985,
+        "capHeight": 16.125999999999998,
+        "ascender": 25.52,
+        "xHeight": 11.946
+      },
+      {
+        "text": "안녕하세요 반갑습니다",
+        "x": 0,
+        "y": 31.855999999999998,
+        "width": 207.394,
+        "height": 31.855999999999998,
+        "descender": 6.3359999999999985,
+        "capHeight": 16.125999999999998,
+        "ascender": 25.52,
+        "xHeight": 11.946
+      }
+    ]
+  }
+}
