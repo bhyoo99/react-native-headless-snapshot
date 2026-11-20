@@ -331,6 +331,7 @@ export const fixtures: Fixture[] = [
   },
   {
     name: "components-input",
+    needsSystemFonts: true,
     width: 320,
     height: 420,
     render: () => (
