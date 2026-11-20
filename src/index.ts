@@ -55,6 +55,8 @@ export {
     setDefaultFont,
 } from "./font-loader"
 export { layoutTree } from "./layout"
+export { loadNativeWind } from "./nativewind"
+export type { NativeWindOptions } from "./nativewind"
 export type { LayoutFrame, LayoutOptions } from "./layout"
 
 beforeAll(() => initYoga())

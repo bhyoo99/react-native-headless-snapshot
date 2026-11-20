@@ -14,6 +14,9 @@ Fixtures marked `needsSystemFonts` only run when the platform's system fonts are
 `adb pull /system/fonts/<file>`, and `ios/SFUI.ttf` and `ios/AppleSDGothicNeo.ttc` copied from
 `<runtimeRoot>/System/Library/Fonts/Core` of the iOS simulator runtime.
 
+Fixtures can use NativeWind `className`: `npm test` compiles `global.css` with `tailwind.config.js` through
+`loadNativeWind()`.
+
 ## Measuring on a device
 
 1. `npm run collect` starts a server on port 4545 that writes what the app sends to `reference/`.

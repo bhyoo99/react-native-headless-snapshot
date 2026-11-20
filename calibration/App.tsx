@@ -1,3 +1,5 @@
+import "./global.css"
+
 import { useFonts } from "expo-font"
 import { useEffect, useRef, useState } from "react"
 import { Dimensions, PixelRatio, Platform, Text, View } from "react-native"

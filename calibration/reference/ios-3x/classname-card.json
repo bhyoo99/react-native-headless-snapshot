@@ -1,0 +1,318 @@
+{
+  "platform": "ios",
+  "osVersion": "27.2",
+  "fixture": "classname-card",
+  "window": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "screen": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 360,
+    "height": 420,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 420,
+        "children": [
+          {
+            "type": "RN:View",
+            "x": 14,
+            "y": 14,
+            "width": 332,
+            "height": 86.66666412353516,
+            "children": [
+              {
+                "type": "RN:View",
+                "x": 25.666666984558105,
+                "y": 36.33333396911621,
+                "width": 42,
+                "height": 42.000003814697266,
+                "children": []
+              },
+              {
+                "type": "RN:View",
+                "x": 78,
+                "y": 25.666666984558105,
+                "width": 256.6666564941406,
+                "height": 63.333335876464844,
+                "children": [
+                  {
+                    "type": "RN:Paragraph",
+                    "id": "text-1",
+                    "x": 78,
+                    "y": 25.666666984558105,
+                    "width": 256.6666564941406,
+                    "height": 24.66666603088379,
+                    "children": []
+                  },
+                  {
+                    "type": "RN:Paragraph",
+                    "id": "text-2",
+                    "x": 78,
+                    "y": 53.666666984558105,
+                    "width": 256.6666564941406,
+                    "height": 35.33333206176758,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "RN:View",
+            "x": 14,
+            "y": 111,
+            "width": 332,
+            "height": 25,
+            "children": [
+              {
+                "type": "RN:View",
+                "x": 14,
+                "y": 111,
+                "width": 41.33333206176758,
+                "height": 25,
+                "children": [
+                  {
+                    "type": "RN:Paragraph",
+                    "id": "text-3",
+                    "x": 24.333333015441895,
+                    "y": 116,
+                    "width": 20.33333396911621,
+                    "height": 14.333328247070312,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "RN:View",
+                "x": 62.33333206176758,
+                "y": 111,
+                "width": 41.66666793823242,
+                "height": 25,
+                "children": [
+                  {
+                    "type": "RN:Paragraph",
+                    "id": "text-4",
+                    "x": 72.66666507720947,
+                    "y": 116,
+                    "width": 20.666671752929688,
+                    "height": 14.333328247070312,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "RN:View",
+                "x": 111,
+                "y": 111,
+                "width": 49.33332824707031,
+                "height": 25,
+                "children": [
+                  {
+                    "type": "RN:Paragraph",
+                    "id": "text-5",
+                    "x": 121.3333330154419,
+                    "y": 116,
+                    "width": 28.333335876464844,
+                    "height": 14.333328247070312,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "RN:View",
+                "x": 167.3333282470703,
+                "y": 111,
+                "width": 43.66667175292969,
+                "height": 25,
+                "children": [
+                  {
+                    "type": "RN:Paragraph",
+                    "id": "text-6",
+                    "x": 177.6666612625122,
+                    "y": 116,
+                    "width": 22.666656494140625,
+                    "height": 14.333328247070312,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "type": "RN:View",
+                "x": 218,
+                "y": 111,
+                "width": 41,
+                "height": 25,
+                "children": [
+                  {
+                    "type": "RN:Paragraph",
+                    "id": "text-7",
+                    "x": 228.3333330154419,
+                    "y": 116,
+                    "width": 20,
+                    "height": 14.333328247070312,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "RN:View",
+            "x": 21,
+            "y": 146.3333282470703,
+            "width": 166,
+            "height": 93.33334350585938,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-8",
+            "x": 14,
+            "y": 250,
+            "width": 332,
+            "height": 24.666656494140625,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "Card title",
+        "x": 0,
+        "y": 0,
+        "width": 68.26025390625,
+        "height": 24.5,
+        "descender": 6.789794921875,
+        "capHeight": 10.8358154296875,
+        "ascender": 17.710205078125,
+        "xHeight": 8.321044921875
+      }
+    ],
+    "text-2": [
+      {
+        "text": "A description line that wraps onto a second line ",
+        "x": 0,
+        "y": 0,
+        "width": 256.6666564941406,
+        "height": 17.5,
+        "descender": 4.503173828125,
+        "capHeight": 8.4278564453125,
+        "ascender": 12.996826171875,
+        "xHeight": 6.471923828125
+      },
+      {
+        "text": "in the card",
+        "x": 0,
+        "y": 17.5,
+        "width": 57.2005615234375,
+        "height": 17.5,
+        "descender": 4.503173828125,
+        "capHeight": 8.4278564453125,
+        "ascender": 12.996826171875,
+        "xHeight": 6.471923828125
+      }
+    ],
+    "text-3": [
+      {
+        "text": "One",
+        "x": 0,
+        "y": 0,
+        "width": 20.013,
+        "height": 14,
+        "descender": 3.023999999999999,
+        "capHeight": 7.6965,
+        "ascender": 10.976,
+        "xHeight": 5.7015
+      }
+    ],
+    "text-4": [
+      {
+        "text": "Two",
+        "x": 0,
+        "y": 0,
+        "width": 20.6325,
+        "height": 14,
+        "descender": 3.023999999999999,
+        "capHeight": 7.6965,
+        "ascender": 10.976,
+        "xHeight": 5.7015
+      }
+    ],
+    "text-5": [
+      {
+        "text": "Three",
+        "x": 0,
+        "y": 0,
+        "width": 28.2555,
+        "height": 14,
+        "descender": 3.023999999999999,
+        "capHeight": 7.6965,
+        "ascender": 10.976,
+        "xHeight": 5.7015
+      }
+    ],
+    "text-6": [
+      {
+        "text": "Four",
+        "x": 0,
+        "y": 0,
+        "width": 22.449000000000005,
+        "height": 14,
+        "descender": 3.023999999999999,
+        "capHeight": 7.6965,
+        "ascender": 10.976,
+        "xHeight": 5.7015
+      }
+    ],
+    "text-7": [
+      {
+        "text": "Five",
+        "x": 0,
+        "y": 0,
+        "width": 19.929000000000002,
+        "height": 14,
+        "descender": 3.023999999999999,
+        "capHeight": 7.6965,
+        "ascender": 10.976,
+        "xHeight": 5.7015
+      }
+    ],
+    "text-8": [
+      {
+        "text": "한글과 English가 섞인 className 텍스트",
+        "x": 0,
+        "y": 0,
+        "width": 254.098,
+        "height": 24.5,
+        "descender": 6.146000000000001,
+        "capHeight": 10.262,
+        "ascender": 18.354,
+        "xHeight": 7.602
+      }
+    ]
+  }
+}
