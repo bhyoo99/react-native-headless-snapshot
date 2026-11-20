@@ -1,0 +1,116 @@
+{
+  "platform": "ios",
+  "osVersion": "27.2",
+  "fixture": "components-controls",
+  "window": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "screen": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 320,
+    "height": 360,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 360,
+        "children": [
+          {
+            "type": "RN:Switch",
+            "x": 10,
+            "y": 10,
+            "width": 63,
+            "height": 28,
+            "children": []
+          },
+          {
+            "type": "RN:Switch",
+            "x": 10,
+            "y": 48,
+            "width": 63,
+            "height": 28,
+            "children": []
+          },
+          {
+            "type": "RN:View",
+            "x": 10,
+            "y": 86,
+            "width": 20,
+            "height": 20,
+            "children": [
+              {
+                "type": "RN:ActivityIndicatorView",
+                "x": 10,
+                "y": 86,
+                "width": 20,
+                "height": 20,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:View",
+            "x": 10,
+            "y": 116,
+            "width": 36,
+            "height": 36,
+            "children": [
+              {
+                "type": "RN:ActivityIndicatorView",
+                "x": 10,
+                "y": 116,
+                "width": 36,
+                "height": 36,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:Image",
+            "x": 10,
+            "y": 162,
+            "width": 60,
+            "height": 40,
+            "children": []
+          },
+          {
+            "type": "RN:Image",
+            "x": 10,
+            "y": 212,
+            "width": 30,
+            "height": 40,
+            "children": []
+          },
+          {
+            "type": "RN:Image",
+            "x": 10,
+            "y": 262,
+            "width": 100,
+            "height": 20,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {}
+}

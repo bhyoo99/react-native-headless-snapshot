@@ -1,5 +1,5 @@
 import type { Align, Config, Edge, Node, Yoga } from "yoga-layout/load"
-import extractText from "./extract-text"
+import extractText, { textInputText } from "./extract-text"
 import { flattenStyles } from "./flatten-styles"
 import { Component, Settings } from "./index"
 import { measureAndroid } from "./text/android"
@@ -153,6 +153,24 @@ const componentToNode = (component: Component, settings: Settings, config?: Conf
 
   if (component.props && component.props.style) {
     applyStyle(yoga, node, styleFromComponent(component))
+  }
+
+  if (component.type === "TextInput" && (settings.platform === "android" || settings.platform === "ios")) {
+    const measure = settings.platform === "android" ? measureAndroid : measureIOS
+    const { styledText, empty } = textInputText(component)
+    const multiline = Boolean(component.props && component.props.multiline)
+    const paragraph = { includeFontPadding: true }
+    component[textLines] = null
+    node.setMeasureFunc((width, widthMode) => {
+      const measured = measure(styledText, width, multiline ? widthMode : 0, paragraph, settings.scale ?? 1)
+      component[textLines] = empty ? null : measured.lines.map(line => ({
+        ...textSlice(styledText, line.start, line.end),
+        metrics: line,
+      }))
+      const measuredWidth = empty ? 0 : measured.width
+      return { width: widthMode === 0 ? measuredWidth : Math.min(measuredWidth, width), height: measured.height }
+    })
+    return node
   }
 
   // We're in a node showing Text

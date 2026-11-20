@@ -1,5 +1,6 @@
 import componentTreeToNodeTree from "./component-tree-to-nodes"
 import { resetUsedFonts } from "./font-loader"
+import { normalizeHostComponents } from "./host-components"
 import type { Component, RenderedComponent, Settings } from "./index"
 import renderedComponentTree from "./reapply-layouts-to-components"
 import { toRootComponent } from "./to-root-component"
@@ -22,7 +23,8 @@ export interface LayoutFrame {
   children: LayoutFrame[]
 }
 
-export const computeLayout = (root: Component, settings: Settings): RenderedComponent => {
+export const computeLayout = (input: Component, settings: Settings): RenderedComponent => {
+  const root = normalizeHostComponents(input, settings)
   const yoga = getYoga()
   const config = yoga.Config.create()
   config.setErrata(yoga.ERRATA_ALL)

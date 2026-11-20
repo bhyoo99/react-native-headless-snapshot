@@ -1,0 +1,116 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "components-controls",
+  "window": {
+    "width": 205.71428571428572,
+    "height": 394.2857142857143,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 205.71428571428572,
+    "height": 457.14285714285717,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "pixelRatio": 3.5,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -38.85713195800781
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 320,
+    "height": 360,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 360,
+        "children": [
+          {
+            "type": "RN:Switch",
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 47.99998474121094,
+            "children": []
+          },
+          {
+            "type": "RN:Switch",
+            "x": 10,
+            "y": 67.99998474121094,
+            "width": 48,
+            "height": 48,
+            "children": []
+          },
+          {
+            "type": "RN:View",
+            "x": 10,
+            "y": 125.99998474121094,
+            "width": 20,
+            "height": 20,
+            "children": [
+              {
+                "type": "RN:AndroidProgressBar",
+                "x": 10,
+                "y": 125.99998474121094,
+                "width": 20,
+                "height": 20,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:View",
+            "x": 10,
+            "y": 155.99998474121094,
+            "width": 36,
+            "height": 36,
+            "children": [
+              {
+                "type": "RN:AndroidProgressBar",
+                "x": 10,
+                "y": 155.99998474121094,
+                "width": 36,
+                "height": 36,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:Image",
+            "x": 10,
+            "y": 201.99998474121094,
+            "width": 60,
+            "height": 40,
+            "children": []
+          },
+          {
+            "type": "RN:Image",
+            "x": 10,
+            "y": 251.99998474121094,
+            "width": 30,
+            "height": 40,
+            "children": []
+          },
+          {
+            "type": "RN:Image",
+            "x": 10,
+            "y": 301.99998474121094,
+            "width": 100,
+            "height": 20,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {}
+}

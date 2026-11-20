@@ -1,0 +1,82 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "components-input",
+  "window": {
+    "width": 205.71428571428572,
+    "height": 394.2857142857143,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 205.71428571428572,
+    "height": 457.14285714285717,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "pixelRatio": 3.5,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -38.85713195800781
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 320,
+    "height": 420,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 420,
+        "children": [
+          {
+            "type": "RN:TextInput",
+            "x": 10,
+            "y": 10,
+            "width": 83.71428680419922,
+            "height": 41.428558349609375,
+            "children": []
+          },
+          {
+            "type": "RN:TextInput",
+            "x": 10,
+            "y": 61.428558349609375,
+            "width": 240,
+            "height": 38.57142639160156,
+            "children": []
+          },
+          {
+            "type": "RN:TextInput",
+            "x": 10,
+            "y": 109.99998474121094,
+            "width": 240,
+            "height": 41.142852783203125,
+            "children": []
+          },
+          {
+            "type": "RN:TextInput",
+            "x": 10,
+            "y": 161.14283752441406,
+            "width": 200,
+            "height": 57.42857360839844,
+            "children": []
+          },
+          {
+            "type": "RN:TextInput",
+            "x": 10,
+            "y": 228.5714111328125,
+            "width": 200,
+            "height": 44.00001525878906,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {}
+}

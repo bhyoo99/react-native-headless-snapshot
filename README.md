@@ -145,6 +145,10 @@ for (const weight of ["Light", "Regular", "Medium", "SemiBold", "Bold"]) {
 }
 ```
 
+* Native components get the size React Native gives them on the device: `ScrollView` and `FlatList` (scroll
+  view defaults and `contentContainerStyle`), `TextInput` (measured from its value or placeholder, with Android's
+  default padding and the iOS multiline top inset), `Switch`, `ActivityIndicator`, and `Image` without a size
+  (the size of the required asset).
 * `className` from NativeWind v4 works when the jest transform uses the app's babel config
   (`jsxImportSource: "nativewind"`). `loadNativeWind()` compiles `global.css` with `tailwind.config.js` for the
   platform under test (so `ios:` and `android:` variants apply) and registers the styles:

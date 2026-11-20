@@ -1,0 +1,339 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "components-scroll",
+  "window": {
+    "width": 205.71428571428572,
+    "height": 394.2857142857143,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 205.71428571428572,
+    "height": 457.14285714285717,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "pixelRatio": 3.5,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -38.85713195800781
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 320,
+    "height": 320,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 320,
+        "children": [
+          {
+            "type": "RN:ScrollView",
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 159.14283752441406,
+            "children": [
+              {
+                "type": "RN:View",
+                "x": 0,
+                "y": 0,
+                "width": 320,
+                "height": 225.99998474121094,
+                "children": [
+                  {
+                    "type": "RN:View",
+                    "x": 8,
+                    "y": 8,
+                    "width": 304,
+                    "height": 29.999984741210938,
+                    "children": []
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 8,
+                    "y": 43.99998474121094,
+                    "width": 304,
+                    "height": 30,
+                    "children": []
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 8,
+                    "y": 79.99998474121094,
+                    "width": 304,
+                    "height": 30,
+                    "children": []
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 8,
+                    "y": 115.99998474121094,
+                    "width": 304,
+                    "height": 30,
+                    "children": []
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 8,
+                    "y": 151.99998474121094,
+                    "width": 304,
+                    "height": 30,
+                    "children": []
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 8,
+                    "y": 187.99998474121094,
+                    "width": 304,
+                    "height": 30,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "RN:ScrollView",
+            "x": 0,
+            "y": 169.14283752441406,
+            "width": 320,
+            "height": 71.71429443359375,
+            "children": [
+              {
+                "type": "RN:AndroidHorizontalScrollContentView",
+                "x": 0,
+                "y": 169.14283752441406,
+                "width": 426.28570556640625,
+                "height": 71.71429443359375,
+                "children": [
+                  {
+                    "type": "RN:View",
+                    "x": 12,
+                    "y": 169.14283752441406,
+                    "width": 53.42857360839844,
+                    "height": 71.71429443359375,
+                    "children": [
+                      {
+                        "type": "RN:Paragraph",
+                        "id": "text-1",
+                        "x": 24.857147216796875,
+                        "y": 175.99998474121094,
+                        "width": 27.428558349609375,
+                        "height": 18.285720825195312,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 73.42857360839844,
+                    "y": 169.14283752441406,
+                    "width": 73.71427917480469,
+                    "height": 71.71429443359375,
+                    "children": [
+                      {
+                        "type": "RN:Paragraph",
+                        "id": "text-2",
+                        "x": 86.28572082519531,
+                        "y": 175.99998474121094,
+                        "width": 47.71427917480469,
+                        "height": 18.285720825195312,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 155.14285278320312,
+                    "y": 169.14283752441406,
+                    "width": 58,
+                    "height": 71.71429443359375,
+                    "children": [
+                      {
+                        "type": "RN:Paragraph",
+                        "id": "text-3",
+                        "x": 168,
+                        "y": 175.99998474121094,
+                        "width": 32,
+                        "height": 18.285720825195312,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 221.14285278320312,
+                    "y": 169.14283752441406,
+                    "width": 66.57144165039062,
+                    "height": 71.71429443359375,
+                    "children": [
+                      {
+                        "type": "RN:Paragraph",
+                        "id": "text-4",
+                        "x": 234,
+                        "y": 175.99998474121094,
+                        "width": 40.571441650390625,
+                        "height": 18.285720825195312,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 295.71429443359375,
+                    "y": 169.14283752441406,
+                    "width": 53.428558349609375,
+                    "height": 71.71429443359375,
+                    "children": [
+                      {
+                        "type": "RN:Paragraph",
+                        "id": "text-5",
+                        "x": 308.5714416503906,
+                        "y": 175.99998474121094,
+                        "width": 27.428558349609375,
+                        "height": 18.285720825195312,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 357.1428527832031,
+                    "y": 169.14283752441406,
+                    "width": 57.142852783203125,
+                    "height": 71.71429443359375,
+                    "children": [
+                      {
+                        "type": "RN:Paragraph",
+                        "id": "text-6",
+                        "x": 370,
+                        "y": 175.99998474121094,
+                        "width": 31.142852783203125,
+                        "height": 18.285720825195312,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "RN:ScrollView",
+            "x": 0,
+            "y": 240.8571319580078,
+            "width": 320,
+            "height": 79.14285278320312,
+            "children": [
+              {
+                "type": "RN:View",
+                "x": 0,
+                "y": 240.8571319580078,
+                "width": 320,
+                "height": 40,
+                "children": [
+                  {
+                    "type": "RN:View",
+                    "x": 0,
+                    "y": 240.8571319580078,
+                    "width": 320,
+                    "height": 40,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "First",
+        "x": 0,
+        "y": 0,
+        "width": 27.212053298950195,
+        "height": 18.285715103149414,
+        "descender": 4.285714149475098,
+        "capHeight": 9.84571361541748,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-2": [
+      {
+        "text": "Second",
+        "x": 0,
+        "y": 0,
+        "width": 47.71428680419922,
+        "height": 18.285715103149414,
+        "descender": 4.285714149475098,
+        "capHeight": 9.84571361541748,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-3": [
+      {
+        "text": "Third",
+        "x": 0,
+        "y": 0,
+        "width": 32,
+        "height": 18.285715103149414,
+        "descender": 4.285714149475098,
+        "capHeight": 9.84571361541748,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-4": [
+      {
+        "text": "Fourth",
+        "x": 0,
+        "y": 0,
+        "width": 40.57143020629883,
+        "height": 18.285715103149414,
+        "descender": 4.285714149475098,
+        "capHeight": 9.84571361541748,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-5": [
+      {
+        "text": "Fifth",
+        "x": 0,
+        "y": 0,
+        "width": 27.225446701049805,
+        "height": 18.285715103149414,
+        "descender": 4.285714149475098,
+        "capHeight": 9.84571361541748,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-6": [
+      {
+        "text": "Sixth",
+        "x": 0,
+        "y": 0,
+        "width": 31.121652603149414,
+        "height": 18.285715103149414,
+        "descender": 4.285714149475098,
+        "capHeight": 9.84571361541748,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ]
+  }
+}
