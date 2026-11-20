@@ -1,14 +1,10 @@
-import "./global.css"
-
 import { useFonts } from "expo-font"
+import { router } from "expo-router"
 import { useEffect, useRef, useState } from "react"
 import { Dimensions, PixelRatio, Platform, Text, View } from "react-native"
 
-import { fixtures } from "./fixtures"
-import { resetTextIds, textLines } from "./primitives"
-
-const collector = process.env.EXPO_PUBLIC_COLLECTOR
-  ?? (Platform.OS === "android" ? "http://10.0.2.2:4545" : "http://localhost:4545")
+import { fixtures } from "../fixtures"
+import { resetTextIds, textLines } from "../primitives"
 
 interface Frame {
   type: string
@@ -34,18 +30,21 @@ const toFrame = (node: any, origin: { x: number, y: number }): Frame => {
   }
 }
 
-const post = (path: string, body: unknown) =>
+export const collector = process.env.EXPO_PUBLIC_COLLECTOR
+  ?? (Platform.OS === "android" ? "http://10.0.2.2:4545" : "http://localhost:4545")
+
+export const post = (path: string, body: unknown) =>
   fetch(collector + path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) })
 
-export default function App() {
+export default function FixtureRunner() {
   const [fontsLoaded] = useFonts({
-    "Arimo-Regular": require("./assets/fonts/Arimo-Regular.ttf"),
-    "Arimo-Bold": require("./assets/fonts/Arimo-Bold.ttf"),
-    "NotoSansKR-Regular": require("./assets/fonts/NotoSansKR-Regular.otf"),
-    "NotoSansKR-Bold": require("./assets/fonts/NotoSansKR-Bold.otf"),
+    "Arimo-Regular": require("../assets/fonts/Arimo-Regular.ttf"),
+    "Arimo-Bold": require("../assets/fonts/Arimo-Bold.ttf"),
+    "NotoSansKR-Regular": require("../assets/fonts/NotoSansKR-Regular.otf"),
+    "NotoSansKR-Bold": require("../assets/fonts/NotoSansKR-Bold.otf"),
   })
   const [index, setIndex] = useState(0)
-  const rootRef = useRef<View>(null)
+  const rootRef = useRef<any>(null)
   const fixture = fixtures[index]
 
   useEffect(() => {
@@ -53,7 +52,7 @@ export default function App() {
       return
     }
     if (!fixture) {
-      post("/done", { platform: Platform.OS })
+      router.push("/screen/header")
       return
     }
     const timer = setTimeout(async () => {

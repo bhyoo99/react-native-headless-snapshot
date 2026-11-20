@@ -1,0 +1,39 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "screen-hidden",
+  "window": {
+    "width": 205.71428571428572,
+    "height": 394.2857142857143,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 205.71428571428572,
+    "height": 457.14285714285717,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "pixelRatio": 3.5,
+  "fontScale": 1,
+  "insets": {
+    "left": 0,
+    "bottom": 24,
+    "right": 0,
+    "top": 38.85714340209961
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "tree": {
+    "type": "RN:View",
+    "id": "screen-content",
+    "x": 0,
+    "y": -38.85713195800781,
+    "width": 205.7142791748047,
+    "height": 457.142822265625,
+    "children": []
+  },
+  "textLines": {}
+}

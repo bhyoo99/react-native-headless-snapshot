@@ -3,6 +3,9 @@
 A position that falls exactly halfway between two device pixels can round the other way on the device; this
 shows up as a 1px difference on rare nodes (one `Switch` at 2.625x today).
 
+The app uses expo-router: `app/index.tsx` runs the fixtures, then `app/screen/[variant].tsx` measures where a
+native stack screen starts for each header option in `fixtures/screens.ts`, together with the safe area insets.
+
 Fixtures in `fixtures/` are rendered on a real emulator or simulator and by this library, and the frames of every
 view are compared.
 

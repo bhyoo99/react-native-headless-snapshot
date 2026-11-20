@@ -1,0 +1,39 @@
+{
+  "platform": "ios",
+  "osVersion": "27.2",
+  "fixture": "screen-header",
+  "window": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "screen": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "insets": {
+    "top": 62,
+    "right": 0,
+    "bottom": 34,
+    "left": 0
+  },
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "tree": {
+    "type": "RN:View",
+    "id": "screen-content",
+    "x": 0,
+    "y": 0,
+    "width": 402,
+    "height": 874,
+    "children": []
+  },
+  "textLines": {}
+}

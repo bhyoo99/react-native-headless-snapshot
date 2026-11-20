@@ -1,4 +1,5 @@
 import componentTreeToNodeTree from "./component-tree-to-nodes"
+import { type DeviceProfile, getDevice, resolveDevice } from "./device"
 import { resetUsedFonts } from "./font-loader"
 import { normalizeHostComponents } from "./host-components"
 import type { Component, RenderedComponent, Settings } from "./index"
@@ -7,10 +8,28 @@ import { toRootComponent } from "./to-root-component"
 import { getYoga } from "./yoga"
 
 export interface LayoutOptions {
-  width: number
-  height: number
+  width?: number
+  height?: number
   scale?: number
   platform?: "ios" | "android"
+  device?: DeviceProfile | string
+}
+
+export const settingsFor = (options: LayoutOptions & { wireframe?: boolean }): Settings => {
+  const device = options.device ? resolveDevice(options.device) : getDevice()
+  const width = options.width ?? device?.width
+  const height = options.height ?? device?.height
+  if (width === undefined || height === undefined) {
+    throw new Error("Pass a width and height, a device, or call setDevice() first")
+  }
+  return {
+    width,
+    height,
+    wireframe: options.wireframe ?? false,
+    scale: options.scale ?? device?.scale,
+    platform: options.platform ?? device?.platform,
+    insets: device?.insets,
+  }
 }
 
 export interface LayoutFrame {
@@ -59,5 +78,5 @@ export const layoutTree = (received: unknown, options: LayoutOptions): LayoutFra
   if (!root || !root.props || typeof root.type !== "string") {
     throw new Error("layoutTree needs a rendered component tree")
   }
-  return toFrame(computeLayout(root, { wireframe: false, ...options }), 0, 0)
+  return toFrame(computeLayout(root, settingsFor(options)), 0, 0)
 }
