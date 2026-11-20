@@ -1,5 +1,8 @@
 # Calibration
 
+A position that falls exactly halfway between two device pixels can round the other way on the device; this
+shows up as a 1px difference on rare nodes (one `Switch` at 2.625x today).
+
 Fixtures in `fixtures/` are rendered on a real emulator or simulator and by this library, and the frames of every
 view are compared.
 

@@ -1,5 +1,5 @@
 import type { ReactElement } from "react"
-import { View } from "react-native"
+import { ActivityIndicator, FlatList, Image, ScrollView, Switch, TextInput, View } from "react-native"
 
 import { Text } from "../primitives"
 
@@ -281,6 +281,82 @@ export const fixtures: Fixture[] = [
         </View>
         <View className="aspect-video w-1/2 bg-emerald-500 android:ml-4 ios:ml-2" />
         <Text className="font-noto text-base leading-7 tracking-wide">한글과 English가 섞인 className 텍스트</Text>
+      </View>
+    ),
+  },
+  {
+    name: "components-scroll",
+    width: 320,
+    height: 320,
+    render: () => (
+      <View style={{ flex: 1 }}>
+        <ScrollView style={{ height: 120 }} contentContainerStyle={{ padding: 8, gap: 6 }}>
+          {Array.from({ length: 6 }, (_, i) => (
+            <View key={i} style={{ height: 30, backgroundColor: i % 2 ? "skyblue" : "steelblue" }} />
+          ))}
+        </ScrollView>
+        <ScrollView horizontal style={{ marginTop: 10 }} contentContainerStyle={{ gap: 8, paddingHorizontal: 12 }}>
+          {["First", "Second", "Third", "Fourth", "Fifth", "Sixth"].map(label => (
+            <View key={label} style={{ paddingHorizontal: 12, paddingVertical: 6, borderWidth: 1, borderRadius: 14 }}>
+              <Text style={{ fontFamily: "Arimo-Regular", fontSize: 14 }}>{label}</Text>
+            </View>
+          ))}
+        </ScrollView>
+        <ScrollView>
+          <View style={{ height: 40, backgroundColor: "tomato" }} />
+        </ScrollView>
+      </View>
+    ),
+  },
+  {
+    name: "components-flatlist",
+    width: 300,
+    height: 300,
+    render: () => (
+      <View style={{ height: 240 }}>
+        <FlatList
+          data={[1, 2, 3, 4, 5, 6, 7, 8]}
+          keyExtractor={item => String(item)}
+          contentContainerStyle={{ padding: 10 }}
+          ListHeaderComponent={<View style={{ height: 24, backgroundColor: "gold" }} />}
+          ItemSeparatorComponent={() => <View style={{ height: 4 }} />}
+          renderItem={({ item }) => (
+            <View style={{ height: 36, justifyContent: "center", paddingHorizontal: 10, backgroundColor: "#eeeeee" }}>
+              <Text style={{ fontFamily: "Arimo-Regular", fontSize: 14 }}>Item {item}</Text>
+            </View>
+          )}
+        />
+      </View>
+    ),
+  },
+  {
+    name: "components-input",
+    needsSystemFonts: true,
+    width: 320,
+    height: 420,
+    render: () => (
+      <View style={{ flex: 1, padding: 10, gap: 10, alignItems: "flex-start" }}>
+        <TextInput style={{ fontFamily: "Arimo-Regular", fontSize: 16 }} value="Hello input" />
+        <TextInput style={{ fontFamily: "Arimo-Regular", fontSize: 16, borderWidth: 1, padding: 8, width: 240 }} placeholder="Placeholder text" />
+        <TextInput style={{ fontSize: 15, width: 240 }} placeholder="System font placeholder" />
+        <TextInput multiline style={{ fontFamily: "Arimo-Regular", fontSize: 15, width: 200 }} value="Multi line text input that wraps onto more lines" />
+        <TextInput style={{ height: 44, fontSize: 16, width: 200, paddingHorizontal: 12 }} placeholder="Fixed height" />
+      </View>
+    ),
+  },
+  {
+    name: "components-controls",
+    width: 320,
+    height: 360,
+    render: () => (
+      <View style={{ flex: 1, padding: 10, gap: 10, alignItems: "flex-start" }}>
+        <Switch value />
+        <Switch value={false} />
+        <ActivityIndicator />
+        <ActivityIndicator size="large" />
+        <Image source={require("../assets/images/sample.png")} />
+        <Image source={require("../assets/images/sample.png")} style={{ width: 30 }} />
+        <Image source={require("../assets/images/sample.png")} style={{ width: 100, height: 20 }} />
       </View>
     ),
   },

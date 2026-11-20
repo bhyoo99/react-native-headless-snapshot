@@ -8,7 +8,7 @@ const getStyles = component => flattenStyles(component.props.style)
 
 const mergeStyles = (a, b) => Object.keys(b).length > 0 ? { ...a, ...b } : a
 
-const defaultStyles = {
+export const defaultTextStyles = {
   color: "black",
   fontSize: 14,
   fontStyle: "normal",
@@ -34,12 +34,26 @@ const appendStyleTo = (
   }
 }
 
+export const textInputText = (component): { styledText: TextWithAttributedStyle, empty: boolean, placeholder: boolean } => {
+  const props = component.props ?? {}
+  const value = props.value ?? props.defaultValue ?? ""
+  const shown = String(value || props.placeholder || "")
+  const userDefaultFont = getUserDefaultFont()
+  const style = mergeStyles(userDefaultFont ? { ...defaultTextStyles, fontFamily: userDefaultFont } : defaultTextStyles, getStyles(component))
+  const text = shown || " "
+  return {
+    styledText: { text, attributedStyles: [{ start: 0, end: text.length, style }] },
+    empty: !shown,
+    placeholder: !value && Boolean(props.placeholder),
+  }
+}
+
 export default (component): TextWithAttributedStyle => {
   let text = ""
   const attributedStyles: AttributedStyle[] = []
 
   const userDefaultFont = getUserDefaultFont()
-  const defaultStylesWithFont = userDefaultFont ? mergeStyles(defaultStyles, { fontFamily: userDefaultFont }) : defaultStyles
+  const defaultStylesWithFont = userDefaultFont ? mergeStyles(defaultTextStyles, { fontFamily: userDefaultFont }) : defaultTextStyles
   const iterate = (c, style = mergeStyles(defaultStylesWithFont, getStyles(c))) => {
     registerFontUsed(style.fontFamily ?? getDefaultFont(), style.fontWeight, style.fontStyle);
     (c.children || []).forEach(child => {

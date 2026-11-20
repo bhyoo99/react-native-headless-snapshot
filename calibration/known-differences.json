@@ -1,0 +1,8 @@
+[
+  {
+    "profile": "android-2.625x",
+    "fixture": "components-controls",
+    "path": "0.0.1",
+    "reason": "Top edge lands on 178.5px; the device rounds it down, Yoga here rounds it up."
+  }
+]

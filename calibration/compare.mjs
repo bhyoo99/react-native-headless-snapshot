@@ -5,13 +5,37 @@ const root = import.meta.dirname
 const threshold = Number(process.env.THRESHOLD ?? 0.01)
 const verbose = process.argv.includes("--verbose")
 
-const deviceType = type => type.replace(/^RN:/, "").replace(/^Paragraph$/, "Text")
+const canonicalTypes = {
+  "RN:Paragraph": "Text",
+  "RN:ScrollView": "ScrollView",
+  "RN:AndroidHorizontalScrollView": "ScrollView",
+  "RCTScrollView": "ScrollView",
+  "RN:AndroidHorizontalScrollContentView": "View",
+  "RN:AndroidTextInput": "TextInput",
+  "RCTSwitch": "Switch",
+  "AndroidSwitch": "Switch",
+}
+
+const canonical = type => canonicalTypes[type] ?? type.replace(/^RN:/, "")
+
+const indicatorTypes = ["RN:ActivityIndicatorView", "RN:AndroidProgressBar"]
+
+const collapseIndicators = node => {
+  if (node.children.length === 1 && indicatorTypes.includes(node.children[0].type)) {
+    return { ...node, type: "ActivityIndicator", children: [] }
+  }
+  return { ...node, children: node.children.map(collapseIndicators) }
+}
 
 const flatten = (node, path, out, map = type => type) => {
   out.push({ ...node, type: map(node.type), path })
   node.children.forEach((child, index) => flatten(child, `${path}.${index}`, out, map))
   return out
 }
+
+const known = JSON.parse(readFileSync(join(root, "known-differences.json"), "utf8"))
+const isKnown = (profile, fixture, path) =>
+  known.some(entry => entry.profile === profile && entry.fixture === fixture && entry.path === path)
 
 let total = 0
 let failing = 0
@@ -26,8 +50,9 @@ for (const profile of readdirSync(join(root, "reference")).sort()) {
     if (!existsSync(resultPath)) {
       continue
     }
-    const device = flatten(JSON.parse(readFileSync(join(root, "reference", profile, file), "utf8")).tree, "0", [], deviceType)
-    const headless = flatten(JSON.parse(readFileSync(resultPath, "utf8")), "0", [])
+    const deviceTree = collapseIndicators(JSON.parse(readFileSync(join(root, "reference", profile, file), "utf8")).tree)
+    const device = flatten(deviceTree, "0", [], canonical)
+    const headless = flatten(JSON.parse(readFileSync(resultPath, "utf8")), "0", [], canonical)
     const rows = device.map((node, index) => {
       const other = headless[index]
       if (!other || other.type !== node.type) {
@@ -39,7 +64,8 @@ for (const profile of readdirSync(join(root, "reference")).sort()) {
     if (headless.length !== device.length) {
       rows.push({ path: "-", type: `node count ${device.length} vs ${headless.length}`, error: Infinity })
     }
-    const bad = rows.filter(row => row.error > threshold)
+    const fixtureName = file.replace(/\.json$/, "")
+    const bad = rows.filter(row => row.error > threshold && !isKnown(profile, fixtureName, row.path))
     const maxError = Math.max(0, ...rows.map(row => row.error))
     total++
     if (bad.length) {

@@ -1,0 +1,116 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "components-controls",
+  "window": {
+    "width": 360,
+    "height": 708,
+    "scale": 2,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 360,
+    "height": 800,
+    "scale": 2,
+    "fontScale": 1
+  },
+  "pixelRatio": 2,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -68
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 320,
+    "height": 360,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 360,
+        "children": [
+          {
+            "type": "RN:Switch",
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 48,
+            "children": []
+          },
+          {
+            "type": "RN:Switch",
+            "x": 10,
+            "y": 68,
+            "width": 48,
+            "height": 48,
+            "children": []
+          },
+          {
+            "type": "RN:View",
+            "x": 10,
+            "y": 126,
+            "width": 20,
+            "height": 20,
+            "children": [
+              {
+                "type": "RN:AndroidProgressBar",
+                "x": 10,
+                "y": 126,
+                "width": 20,
+                "height": 20,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:View",
+            "x": 10,
+            "y": 156,
+            "width": 36,
+            "height": 36,
+            "children": [
+              {
+                "type": "RN:AndroidProgressBar",
+                "x": 10,
+                "y": 156,
+                "width": 36,
+                "height": 36,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:Image",
+            "x": 10,
+            "y": 202,
+            "width": 60,
+            "height": 40,
+            "children": []
+          },
+          {
+            "type": "RN:Image",
+            "x": 10,
+            "y": 252,
+            "width": 30,
+            "height": 40,
+            "children": []
+          },
+          {
+            "type": "RN:Image",
+            "x": 10,
+            "y": 302,
+            "width": 100,
+            "height": 20,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {}
+}

@@ -19,6 +19,7 @@
 * Add `loadSystemFont()` and `loadFallbackFont()` for text without a `fontFamily` and for glyphs missing from a font
 * Measure text like React Native on iOS with `platform: "ios"`: TextKit line heights, kerning, letter spacing on every character, the system font's optical size and `trak` tracking, character-level Hangul line breaks, and text sizes rounded up to the pixel grid
 * Fallback fonts loaded with `loadFallbackFont()` are grouped by family and matched by weight
+* Lay out native components like the device with `platform` set: scroll views and their content container, `TextInput`, `Switch`, `ActivityIndicator` and `Image` sizes from required assets
 * Add `loadNativeWind()` to resolve NativeWind `className` styles in jest, including platform variants
 * Add the `calibration` folder: fixtures, measurements from an Android emulator at 2x, 2.625x, 3x and 3.5x, and a check that runs in CI
 * Lay out `gap`/`rowGap`/`columnGap`, `flexWrap`, `alignContent`, `aspectRatio` (number or `"16 / 9"`), `display` (views with `none` are left out of the SVG), `space-evenly`, `position: static`, `overflow`, `direction`, `boxSizing`, and `Start`/`End`/`Block`/`Inline`/`inset` edges

@@ -1,0 +1,82 @@
+{
+  "platform": "ios",
+  "osVersion": "27.2",
+  "fixture": "components-input",
+  "window": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "screen": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 320,
+    "height": 420,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 420,
+        "children": [
+          {
+            "type": "RN:TextInput",
+            "x": 10,
+            "y": 10,
+            "width": 75.66666412353516,
+            "height": 18,
+            "children": []
+          },
+          {
+            "type": "RN:TextInput",
+            "x": 10,
+            "y": 38,
+            "width": 240,
+            "height": 36,
+            "children": []
+          },
+          {
+            "type": "RN:TextInput",
+            "x": 10,
+            "y": 84,
+            "width": 240,
+            "height": 18,
+            "children": []
+          },
+          {
+            "type": "RN:TextInput",
+            "x": 10,
+            "y": 112,
+            "width": 200,
+            "height": 38.66667175292969,
+            "children": []
+          },
+          {
+            "type": "RN:TextInput",
+            "x": 10,
+            "y": 160.6666717529297,
+            "width": 200,
+            "height": 44,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {}
+}

@@ -1,0 +1,454 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "components-flatlist",
+  "window": {
+    "width": 240,
+    "height": 464,
+    "scale": 3,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 240,
+    "height": 533.3333333333334,
+    "scale": 3,
+    "fontScale": 1
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -45.333343505859375
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 300,
+    "height": 300,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 300,
+        "height": 240.00001525878906,
+        "children": [
+          {
+            "type": "RN:ScrollView",
+            "x": 0,
+            "y": 0,
+            "width": 300,
+            "height": 240.00001525878906,
+            "children": [
+              {
+                "type": "RN:View",
+                "x": 0,
+                "y": 0,
+                "width": 300,
+                "height": 360,
+                "children": [
+                  {
+                    "type": "RN:View",
+                    "x": 10,
+                    "y": 10,
+                    "width": 280,
+                    "height": 24,
+                    "children": [
+                      {
+                        "type": "RN:View",
+                        "x": 10,
+                        "y": 10,
+                        "width": 280,
+                        "height": 24,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 10,
+                    "y": 34,
+                    "width": 280,
+                    "height": 40.00001525878906,
+                    "children": [
+                      {
+                        "type": "RN:View",
+                        "x": 10,
+                        "y": 34,
+                        "width": 280,
+                        "height": 36.00001525878906,
+                        "children": [
+                          {
+                            "type": "RN:Paragraph",
+                            "id": "text-1",
+                            "x": 20,
+                            "y": 42.66668701171875,
+                            "width": 260,
+                            "height": 18.333328247070312,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "RN:View",
+                        "x": 10,
+                        "y": 70.00001525878906,
+                        "width": 280,
+                        "height": 4,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 10,
+                    "y": 74.00001525878906,
+                    "width": 280,
+                    "height": 40,
+                    "children": [
+                      {
+                        "type": "RN:View",
+                        "x": 10,
+                        "y": 74.00001525878906,
+                        "width": 280,
+                        "height": 36,
+                        "children": [
+                          {
+                            "type": "RN:Paragraph",
+                            "id": "text-2",
+                            "x": 20,
+                            "y": 82.66667175292969,
+                            "width": 260,
+                            "height": 18.333343505859375,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "RN:View",
+                        "x": 10,
+                        "y": 110.00001525878906,
+                        "width": 280,
+                        "height": 4,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 10,
+                    "y": 114.00001525878906,
+                    "width": 280,
+                    "height": 40,
+                    "children": [
+                      {
+                        "type": "RN:View",
+                        "x": 10,
+                        "y": 114.00001525878906,
+                        "width": 280,
+                        "height": 36,
+                        "children": [
+                          {
+                            "type": "RN:Paragraph",
+                            "id": "text-3",
+                            "x": 20,
+                            "y": 122.66667175292969,
+                            "width": 260,
+                            "height": 18.333343505859375,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "RN:View",
+                        "x": 10,
+                        "y": 150.00001525878906,
+                        "width": 280,
+                        "height": 4,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 10,
+                    "y": 154.00001525878906,
+                    "width": 280,
+                    "height": 40,
+                    "children": [
+                      {
+                        "type": "RN:View",
+                        "x": 10,
+                        "y": 154.00001525878906,
+                        "width": 280,
+                        "height": 36,
+                        "children": [
+                          {
+                            "type": "RN:Paragraph",
+                            "id": "text-4",
+                            "x": 20,
+                            "y": 162.66668701171875,
+                            "width": 260,
+                            "height": 18.333328247070312,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "RN:View",
+                        "x": 10,
+                        "y": 190.00001525878906,
+                        "width": 280,
+                        "height": 4,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 10,
+                    "y": 194.00001525878906,
+                    "width": 280,
+                    "height": 40,
+                    "children": [
+                      {
+                        "type": "RN:View",
+                        "x": 10,
+                        "y": 194.00001525878906,
+                        "width": 280,
+                        "height": 36,
+                        "children": [
+                          {
+                            "type": "RN:Paragraph",
+                            "id": "text-5",
+                            "x": 20,
+                            "y": 202.66668701171875,
+                            "width": 260,
+                            "height": 18.333328247070312,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "RN:View",
+                        "x": 10,
+                        "y": 230.00001525878906,
+                        "width": 280,
+                        "height": 4,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 10,
+                    "y": 234.00001525878906,
+                    "width": 280,
+                    "height": 40,
+                    "children": [
+                      {
+                        "type": "RN:View",
+                        "x": 10,
+                        "y": 234.00001525878906,
+                        "width": 280,
+                        "height": 36,
+                        "children": [
+                          {
+                            "type": "RN:Paragraph",
+                            "id": "text-6",
+                            "x": 20,
+                            "y": 242.66668701171875,
+                            "width": 260,
+                            "height": 18.333328247070312,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "RN:View",
+                        "x": 10,
+                        "y": 270.00001525878906,
+                        "width": 280,
+                        "height": 4,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 10,
+                    "y": 274.00001525878906,
+                    "width": 280,
+                    "height": 39.99998474121094,
+                    "children": [
+                      {
+                        "type": "RN:View",
+                        "x": 10,
+                        "y": 274.00001525878906,
+                        "width": 280,
+                        "height": 35.99998474121094,
+                        "children": [
+                          {
+                            "type": "RN:Paragraph",
+                            "id": "text-7",
+                            "x": 20,
+                            "y": 282.6666717529297,
+                            "width": 260,
+                            "height": 18.333343505859375,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "RN:View",
+                        "x": 10,
+                        "y": 310,
+                        "width": 280,
+                        "height": 4,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "RN:View",
+                    "x": 10,
+                    "y": 314,
+                    "width": 280,
+                    "height": 36,
+                    "children": [
+                      {
+                        "type": "RN:View",
+                        "x": 10,
+                        "y": 314,
+                        "width": 280,
+                        "height": 36,
+                        "children": [
+                          {
+                            "type": "RN:Paragraph",
+                            "id": "text-8",
+                            "x": 20,
+                            "y": 322.6666564941406,
+                            "width": 260,
+                            "height": 18.333343505859375,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "Item 1",
+        "x": 0,
+        "y": 0,
+        "width": 39,
+        "height": 18.33333396911621,
+        "descender": 4.333333492279053,
+        "capHeight": 9.846667289733887,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-2": [
+      {
+        "text": "Item 2",
+        "x": 0,
+        "y": 0,
+        "width": 39,
+        "height": 18.33333396911621,
+        "descender": 4.333333492279053,
+        "capHeight": 9.846667289733887,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-3": [
+      {
+        "text": "Item 3",
+        "x": 0,
+        "y": 0,
+        "width": 39,
+        "height": 18.33333396911621,
+        "descender": 4.333333492279053,
+        "capHeight": 9.846667289733887,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-4": [
+      {
+        "text": "Item 4",
+        "x": 0,
+        "y": 0,
+        "width": 39,
+        "height": 18.33333396911621,
+        "descender": 4.333333492279053,
+        "capHeight": 9.846667289733887,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-5": [
+      {
+        "text": "Item 5",
+        "x": 0,
+        "y": 0,
+        "width": 39,
+        "height": 18.33333396911621,
+        "descender": 4.333333492279053,
+        "capHeight": 9.846667289733887,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-6": [
+      {
+        "text": "Item 6",
+        "x": 0,
+        "y": 0,
+        "width": 39,
+        "height": 18.33333396911621,
+        "descender": 4.333333492279053,
+        "capHeight": 9.846667289733887,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-7": [
+      {
+        "text": "Item 7",
+        "x": 0,
+        "y": 0,
+        "width": 39,
+        "height": 18.33333396911621,
+        "descender": 4.333333492279053,
+        "capHeight": 9.846667289733887,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-8": [
+      {
+        "text": "Item 8",
+        "x": 0,
+        "y": 0,
+        "width": 39,
+        "height": 18.33333396911621,
+        "descender": 4.333333492279053,
+        "capHeight": 9.846667289733887,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ]
+  }
+}
