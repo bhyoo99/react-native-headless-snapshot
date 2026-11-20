@@ -1,0 +1,87 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "text-wrap",
+  "window": {
+    "width": 205.71428571428572,
+    "height": 394.2857142857143,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 205.71428571428572,
+    "height": 457.14285714285717,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "pixelRatio": 3.5,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -38.85713195800781
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 240,
+    "height": 300,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 240,
+        "height": 300,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 12,
+            "y": 11.999984741210938,
+            "width": 216,
+            "height": 53.42857360839844,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "The quick brown fox jumps over ",
+        "x": 0,
+        "y": 0,
+        "width": 217.96205139160156,
+        "height": 18,
+        "descender": 3.142857074737549,
+        "capHeight": 10.648571968078613,
+        "ascender": 14.857142448425293,
+        "xHeight": 8.045714378356934
+      },
+      {
+        "text": "the lazy dog while the band ",
+        "x": 0,
+        "y": 18,
+        "width": 187.71205139160156,
+        "height": 16.85714340209961,
+        "descender": 3.142857074737549,
+        "capHeight": 10.648571968078613,
+        "ascender": 13.714285850524902,
+        "xHeight": 8.045714378356934
+      },
+      {
+        "text": "keeps playing a slow song",
+        "x": 0,
+        "y": 34.85714340209961,
+        "width": 176.75892639160156,
+        "height": 18.571428298950195,
+        "descender": 4.857142925262451,
+        "capHeight": 10.648571968078613,
+        "ascender": 13.714285850524902,
+        "xHeight": 8.045714378356934
+      }
+    ]
+  }
+}

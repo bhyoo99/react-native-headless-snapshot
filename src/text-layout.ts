@@ -41,7 +41,7 @@ const baselineForAttributedStyle = ({ style }: AttributedStyle): number => {
 export const lineBaseline = (line: TextWithAttributedStyle): number =>
   Math.max(0, ...line.attributedStyles.map(baselineForAttributedStyle))
 
-const textSlice = (
+export const textSlice = (
   textStyle: TextWithAttributedStyle,
   start: number,
   end: number

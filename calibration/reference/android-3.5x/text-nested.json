@@ -1,0 +1,87 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "text-nested",
+  "window": {
+    "width": 205.71428571428572,
+    "height": 394.2857142857143,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 205.71428571428572,
+    "height": 457.14285714285717,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "pixelRatio": 3.5,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -38.85713195800781
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 260,
+    "height": 199.99998474121094,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 260,
+        "height": 199.99998474121094,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 10,
+            "y": 10,
+            "width": 240,
+            "height": 63.142852783203125,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "Plain text with bold words and a ",
+        "x": 0,
+        "y": 0,
+        "width": 209.390625,
+        "height": 24,
+        "descender": 4.285714149475098,
+        "capHeight": 9.84571361541748,
+        "ascender": 19.714284896850586,
+        "xHeight": 7.440000057220459
+      },
+      {
+        "text": "bigger part that wraps onto more ",
+        "x": 0,
+        "y": 24,
+        "width": 234.89285278320312,
+        "height": 22.285715103149414,
+        "descender": 4.285714149475098,
+        "capHeight": 9.84571361541748,
+        "ascender": 18,
+        "xHeight": 7.440000057220459
+      },
+      {
+        "text": "lines",
+        "x": 0,
+        "y": 46.28571319580078,
+        "width": 28.790178298950195,
+        "height": 16.85714340209961,
+        "descender": 4.285714149475098,
+        "capHeight": 9.84571361541748,
+        "ascender": 12.571428298950195,
+        "xHeight": 7.440000057220459
+      }
+    ]
+  }
+}

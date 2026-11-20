@@ -1,0 +1,120 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "text-system-font",
+  "window": {
+    "width": 360,
+    "height": 708,
+    "scale": 2,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 360,
+    "height": 800,
+    "scale": 2,
+    "fontScale": 1
+  },
+  "pixelRatio": 2,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -68
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 300,
+    "height": 200,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 300,
+        "height": 200,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 10,
+            "y": 10,
+            "width": 102,
+            "height": 19,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-2",
+            "x": 10,
+            "y": 35,
+            "width": 89.5,
+            "height": 21.5,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-3",
+            "x": 10,
+            "y": 62.5,
+            "width": 280,
+            "height": 44,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "System font text",
+        "x": 0,
+        "y": 0,
+        "width": 102,
+        "height": 19,
+        "descender": 4,
+        "capHeight": 10.0649995803833,
+        "ascender": 15,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-2": [
+      {
+        "text": "System bold",
+        "x": 0,
+        "y": 0,
+        "width": 89.5,
+        "height": 21.5,
+        "descender": 4.5,
+        "capHeight": 11.5,
+        "ascender": 17,
+        "xHeight": 8.5
+      }
+    ],
+    "text-3": [
+      {
+        "text": "안녕하세요 한글 시스템 폰트 줄바꿈 확인용 ",
+        "x": 0,
+        "y": 0,
+        "width": 273,
+        "height": 22,
+        "descender": 4.5,
+        "capHeight": 10.78499984741211,
+        "ascender": 17.5,
+        "xHeight": 7.96999979019165
+      },
+      {
+        "text": "문장입니다",
+        "x": 0,
+        "y": 22,
+        "width": 70,
+        "height": 22,
+        "descender": 4.5,
+        "capHeight": 10.78499984741211,
+        "ascender": 17.5,
+        "xHeight": 7.96999979019165
+      }
+    ]
+  }
+}

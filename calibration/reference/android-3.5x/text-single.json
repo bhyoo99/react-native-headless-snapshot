@@ -1,0 +1,87 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "text-single",
+  "window": {
+    "width": 205.71428571428572,
+    "height": 394.2857142857143,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 205.71428571428572,
+    "height": 457.14285714285717,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "pixelRatio": 3.5,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -38.85713195800781
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 360,
+    "height": 119.99998474121094,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 119.99998474121094,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 16,
+            "y": 15.999984741210938,
+            "width": 69.42857360839844,
+            "height": 18.285720825195312,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-2",
+            "x": 16,
+            "y": 34.28570556640625,
+            "width": 112.57142639160156,
+            "height": 24.28570556640625,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "Hello world",
+        "x": 0,
+        "y": 0,
+        "width": 69.42857360839844,
+        "height": 18.285715103149414,
+        "descender": 4.285714149475098,
+        "capHeight": 9.84571361541748,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-2": [
+      {
+        "text": "Bold headline",
+        "x": 0,
+        "y": 0,
+        "width": 112.57142639160156,
+        "height": 24.285715103149414,
+        "descender": 6.5714287757873535,
+        "capHeight": 12.054285049438477,
+        "ascender": 17.714284896850586,
+        "xHeight": 9.10857105255127
+      }
+    ]
+  }
+}

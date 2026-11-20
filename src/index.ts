@@ -6,7 +6,11 @@ declare global {
     namespace jest {
         interface Matchers<R> {
             /** Checks and sets up SVG rendering for React Components. */
-            toMatchSVGSnapshot(width: number, height: number, settings?: { wireframe?: boolean }): R;
+            toMatchSVGSnapshot(
+                width: number,
+                height: number,
+                settings?: { wireframe?: boolean, scale?: number, platform?: "ios" | "android" },
+            ): R;
         }
     }
 }
@@ -36,11 +40,22 @@ export interface Settings {
     width: number
     height: number
     wireframe: boolean
+    scale?: number
+    platform?: "ios" | "android"
 }
 
 import { toMatchSVGSnapshot } from "./to-match-svg-snapshot"
 
-export { addFontFallback, addFontToSvg, loadFont, setDefaultFont } from "./font-loader"
+export {
+    addFontFallback,
+    addFontToSvg,
+    loadFallbackFont,
+    loadFont,
+    loadSystemFont,
+    setDefaultFont,
+} from "./font-loader"
+export { layoutTree } from "./layout"
+export type { LayoutFrame, LayoutOptions } from "./layout"
 
 beforeAll(() => initYoga())
 

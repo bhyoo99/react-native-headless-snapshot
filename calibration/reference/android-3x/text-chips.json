@@ -1,0 +1,167 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "text-chips",
+  "window": {
+    "width": 240,
+    "height": 464,
+    "scale": 3,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 240,
+    "height": 533.3333333333334,
+    "scale": 3,
+    "fontScale": 1
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -45.333343505859375
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 360,
+    "height": 120.00001525878906,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 120.00001525878906,
+        "children": [
+          {
+            "type": "RN:View",
+            "x": 16,
+            "y": 16,
+            "width": 54.333335876464844,
+            "height": 34,
+            "children": [
+              {
+                "type": "RN:Paragraph",
+                "id": "text-1",
+                "x": 29,
+                "y": 23,
+                "width": 28.333328247070312,
+                "height": 20,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:View",
+            "x": 78.33333587646484,
+            "y": 16,
+            "width": 63.99999237060547,
+            "height": 34,
+            "children": [
+              {
+                "type": "RN:Paragraph",
+                "id": "text-2",
+                "x": 91.33333587646484,
+                "y": 23,
+                "width": 37.99999237060547,
+                "height": 20,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:View",
+            "x": 150.3333282470703,
+            "y": 16,
+            "width": 74,
+            "height": 34,
+            "children": [
+              {
+                "type": "RN:Paragraph",
+                "id": "text-3",
+                "x": 163.3333282470703,
+                "y": 23,
+                "width": 48,
+                "height": 20,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:View",
+            "x": 232.3333282470703,
+            "y": 16,
+            "width": 58.00001525878906,
+            "height": 34,
+            "children": [
+              {
+                "type": "RN:Paragraph",
+                "id": "text-4",
+                "x": 245.3333282470703,
+                "y": 23,
+                "width": 32.00001525878906,
+                "height": 20,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "ALL",
+        "x": 0,
+        "y": 0,
+        "width": 28.33333396911621,
+        "height": 20,
+        "descender": 5.333333492279053,
+        "capHeight": 9.846667289733887,
+        "ascender": 14.666666984558105,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-2": [
+      {
+        "text": "News",
+        "x": 0,
+        "y": 0,
+        "width": 37.76900863647461,
+        "height": 20,
+        "descender": 5.333333492279053,
+        "capHeight": 9.846667289733887,
+        "ascender": 14.666666984558105,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-3": [
+      {
+        "text": "Events",
+        "x": 0,
+        "y": 0,
+        "width": 48,
+        "height": 20,
+        "descender": 5.333333492279053,
+        "capHeight": 9.846667289733887,
+        "ascender": 14.666666984558105,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-4": [
+      {
+        "text": "Q&A",
+        "x": 0,
+        "y": 0,
+        "width": 32,
+        "height": 20,
+        "descender": 5.333333492279053,
+        "capHeight": 9.846667289733887,
+        "ascender": 14.666666984558105,
+        "xHeight": 7.440000057220459
+      }
+    ]
+  }
+}

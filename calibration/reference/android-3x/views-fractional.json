@@ -1,0 +1,91 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "views-fractional",
+  "window": {
+    "width": 240,
+    "height": 464,
+    "scale": 3,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 240,
+    "height": 533.3333333333334,
+    "scale": 3,
+    "fontScale": 1
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -45.333343505859375
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 360,
+    "height": 400.0000305175781,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 400.0000305175781,
+        "children": [
+          {
+            "type": "RN:View",
+            "x": 18,
+            "y": 18,
+            "width": 324,
+            "height": 33.333343505859375,
+            "children": []
+          },
+          {
+            "type": "RN:View",
+            "x": 10.333328247070312,
+            "y": 59.00001525878906,
+            "width": 339.33331298828125,
+            "height": 26.666656494140625,
+            "children": [
+              {
+                "type": "RN:View",
+                "x": 13.666671752929688,
+                "y": 62.333343505859375,
+                "width": 107.33333587646484,
+                "height": 20.333328247070312,
+                "children": []
+              },
+              {
+                "type": "RN:View",
+                "x": 126.33333587646484,
+                "y": 62.333343505859375,
+                "width": 107.3333511352539,
+                "height": 20.333328247070312,
+                "children": []
+              },
+              {
+                "type": "RN:View",
+                "x": 239.3333282470703,
+                "y": 62.333343505859375,
+                "width": 107.33335876464844,
+                "height": 20.333328247070312,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:View",
+            "x": 52.66667175292969,
+            "y": 85.66667175292969,
+            "width": 113,
+            "height": 66.66667175292969,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {}
+}

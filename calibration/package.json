@@ -1,0 +1,28 @@
+{
+  "name": "calibration",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "expo": "~58.0.26",
+    "expo-font": "~58.0.12",
+    "react": "19.3.0",
+    "react-native": "0.88.1"
+  },
+  "devDependencies": {
+    "@testing-library/react-native": "^14.1.0",
+    "@types/jest": "30.0.0",
+    "@types/react": "~19.3.0",
+    "jest": "~30.5.2",
+    "jest-expo": "~58.0.15",
+    "jest-snapshots-svg": "file:..",
+    "test-renderer": "^1.3.1",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "start": "expo start",
+    "collect": "node collector.mjs",
+    "test": "jest",
+    "compare": "node compare.mjs"
+  },
+  "private": true
+}

@@ -1,0 +1,66 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "views-absolute",
+  "window": {
+    "width": 205.71428571428572,
+    "height": 394.2857142857143,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 205.71428571428572,
+    "height": 457.14285714285717,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "pixelRatio": 3.5,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -38.85713195800781
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 300,
+    "height": 300,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 300,
+        "height": 300,
+        "children": [
+          {
+            "type": "RN:View",
+            "x": 26.857147216796875,
+            "y": 12.285690307617188,
+            "width": 210.57144165039062,
+            "height": 40.00001525878906,
+            "children": []
+          },
+          {
+            "type": "RN:View",
+            "x": 226,
+            "y": 226.28570556640625,
+            "width": 66.57144165039062,
+            "height": 33.42857360839844,
+            "children": []
+          },
+          {
+            "type": "RN:View",
+            "x": 124,
+            "y": 134.5714111328125,
+            "width": 21.142852783203125,
+            "height": 20.857147216796875,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {}
+}

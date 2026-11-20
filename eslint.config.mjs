@@ -4,7 +4,7 @@ import globals from "globals"
 import tseslint from "typescript-eslint"
 
 export default defineConfig(
-  { ignores: ["build/", ".jest/"] },
+  { ignores: ["build/", ".jest/", "calibration/"] },
   js.configs.recommended,
   tseslint.configs.recommended,
   {
