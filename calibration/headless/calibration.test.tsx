@@ -1,6 +1,13 @@
 import { render, screen } from "@testing-library/react-native"
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "fs"
-import { layoutTree, loadFallbackFont, loadFont, loadSystemFont, type LayoutFrame } from "jest-snapshots-svg"
+import {
+  layoutTree,
+  loadFallbackFont,
+  loadFont,
+  loadNativeWind,
+  loadSystemFont,
+  type LayoutFrame,
+} from "jest-snapshots-svg"
 import { join } from "path"
 import { Platform, View } from "react-native"
 
@@ -32,6 +39,8 @@ if (existsSync(join(iosFonts, "SFUI.ttf"))) {
     loadFallbackFont("ios", readFileSync(join(iosFonts, "AppleSDGothicNeo.ttc")), { postscriptName: `.AppleSDGothicNeoI-${weight}` })
   }
 }
+
+beforeAll(() => loadNativeWind({ cwd: join(__dirname, "..") }))
 
 const referenceDir = join(__dirname, "../reference")
 const resultsDir = join(__dirname, "../results")

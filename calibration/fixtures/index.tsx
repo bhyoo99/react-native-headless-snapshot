@@ -259,4 +259,29 @@ export const fixtures: Fixture[] = [
       </View>
     ),
   },
+  {
+    name: "classname-card",
+    width: 360,
+    height: 420,
+    render: () => (
+      <View className="flex-1 gap-3 bg-gray-100 p-4">
+        <View className="flex-row items-center gap-3 rounded-2xl border border-gray-300 bg-white p-3">
+          <View className="h-12 w-12 rounded-full bg-orange-400" />
+          <View className="flex-1 gap-1">
+            <Text className="font-arimo-bold text-lg">Card title</Text>
+            <Text className="font-arimo text-sm text-gray-600">A description line that wraps onto a second line in the card</Text>
+          </View>
+        </View>
+        <View className="flex-row flex-wrap gap-2">
+          {["One", "Two", "Three", "Four", "Five"].map(label => (
+            <View key={label} className="rounded-full bg-sky-600 px-3 py-1.5">
+              <Text className="font-noto text-xs text-white">{label}</Text>
+            </View>
+          ))}
+        </View>
+        <View className="aspect-video w-1/2 bg-emerald-500 android:ml-4 ios:ml-2" />
+        <Text className="font-noto text-base leading-7 tracking-wide">한글과 English가 섞인 className 텍스트</Text>
+      </View>
+    ),
+  },
 ]

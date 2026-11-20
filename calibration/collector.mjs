@@ -5,11 +5,12 @@ import { join } from "node:path"
 const referenceDir = join(import.meta.dirname, "reference")
 
 createServer((request, response) => {
-  let body = ""
+  const chunks = []
   request.on("data", chunk => {
-    body += chunk
+    chunks.push(chunk)
   })
   request.on("end", () => {
+    const body = Buffer.concat(chunks).toString("utf8")
     const data = body ? JSON.parse(body) : {}
     if (request.url === "/dump") {
       const dir = join(referenceDir, `${data.platform}-${data.pixelRatio}x`)

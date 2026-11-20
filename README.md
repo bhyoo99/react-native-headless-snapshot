@@ -145,6 +145,16 @@ for (const weight of ["Light", "Regular", "Medium", "SemiBold", "Bold"]) {
 }
 ```
 
+* `className` from NativeWind v4 works when the jest transform uses the app's babel config
+  (`jsxImportSource: "nativewind"`). `loadNativeWind()` compiles `global.css` with `tailwind.config.js` for the
+  platform under test (so `ios:` and `android:` variants apply) and registers the styles:
+
+```ts
+import { loadNativeWind } from "jest-snapshots-svg"
+
+beforeAll(() => loadNativeWind({ input: "global.css", config: "tailwind.config.js" }))
+```
+
 `layoutTree(json, { width, height, platform, scale })` returns the frame of every view when you want numbers instead
 of an SVG. The [calibration](calibration/README.md) folder holds the fixtures and device measurements this is checked
 against.
