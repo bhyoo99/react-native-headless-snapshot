@@ -13,6 +13,8 @@ const SWITCH_SIZES = {
 
 const ANDROID_TEXT_INPUT_PADDING = { top: 13, bottom: 8, left: 4, right: 4 }
 
+const ANDROID_TOOLBAR_HEIGHT = 56
+
 const withStyle = (component: Component, before: object | null, after: object | null = null): Component => ({
   ...component,
   props: { ...component.props, style: [before, component.props?.style, after] },
@@ -102,7 +104,15 @@ export const normalizeHostComponents = (component: Component, settings: Settings
   const props = component.props ?? {}
   let normalized = component
 
-  if (component.type === "RCTScrollView") {
+  if (component.type === "RNSScreen") {
+    const header = ((component.children ?? []) as Component[]).find(child => typeof child === "object" && child?.type === "RNSScreenStackHeaderConfig")
+    const headerProps = header?.props ?? {}
+    const pushedDown = platform === "android" && header && !headerProps.hidden && !headerProps.translucent
+    const top = pushedDown ? (settings.insets?.top ?? 0) + ANDROID_TOOLBAR_HEIGHT : 0
+    normalized = withStyle(component, null, { position: "absolute", left: 0, right: 0, top, bottom: 0 })
+  } else if (component.type === "RNSScreenStackHeaderConfig") {
+    normalized = withStyle(component, null, { position: "absolute", width: 0, height: 0, overflow: "hidden" })
+  } else if (component.type === "RCTScrollView") {
     const horizontal = Boolean(props.horizontal)
     normalized = withStyle(component, { flexGrow: 1, flexShrink: 1, flexDirection: horizontal ? "row" : "column", overflow: "scroll" })
     const children = (component.children ?? []) as Component[]

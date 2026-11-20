@@ -18,7 +18,7 @@ export default defineConfig(
     },
   },
   {
-    files: ["src/nativewind.ts"],
+    files: ["src/nativewind.ts", "src/device.ts"],
     rules: {
       "@typescript-eslint/no-require-imports": "off",
     },

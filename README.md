@@ -116,11 +116,24 @@ SVG snapshots follow Jest's snapshot rules, and Jest's summary counts them with 
 
 ### Matching a device
 
-Pass the platform and the device's pixel ratio to lay the tree out the way React Native does on that device:
+Pick a device before rendering, and snapshots are laid out the way React Native does on it:
 
 ```ts
-expect(screen.toJSON()).toMatchSVGSnapshot(412, 915, { platform: "android", scale: 2.625 })
+import { setDevice } from "jest-snapshots-svg"
+
+setDevice({ platform: "android", width: 412, height: 915, scale: 2.625, insets: { top: 24, right: 0, bottom: 24, left: 0 } })
+
+it("renders the home screen", async () => {
+  await renderRouter({ index: HomeScreen, _layout: RootLayout })
+  expect(screen.toJSON()).toMatchSVGSnapshot()
+})
 ```
+
+`setDevice()` also sets `Dimensions`, the safe area insets that `react-native-safe-area-context` starts with, and
+NativeWind's `vw`/`vh`. `devices` has the profiles the calibration was measured on (`"iphone-18-pro"`). Run the iOS
+and Android snapshots in separate jest projects with `jest-expo/ios` and `jest-expo/android`, since `Platform.OS`
+comes from the preset. `toMatchSVGSnapshot(width, height, { platform, scale })` still works without a device.
+
 
 * Views are laid out with React Native's Yoga settings and rounded to the device's pixel grid.
 * Text is measured with the rules of React Native's text layout on that platform (`TextLayoutManager` on
@@ -145,6 +158,9 @@ for (const weight of ["Light", "Regular", "Medium", "SemiBold", "Bold"]) {
 }
 ```
 
+* Screens rendered with `expo-router` (native stack) start where the device puts them: below the status bar and the
+  56dp toolbar on Android, and under the header (which overlays the content) on iOS 26 and later. Transparent and
+  hidden headers leave the content at the top on both.
 * Native components get the size React Native gives them on the device: `ScrollView` and `FlatList` (scroll
   view defaults and `contentContainerStyle`), `TextInput` (measured from its value or placeholder, with Android's
   default padding and the iOS multiline top inset), `Switch`, `ActivityIndicator`, and `Image` without a size

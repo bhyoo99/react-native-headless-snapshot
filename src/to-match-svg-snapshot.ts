@@ -2,7 +2,7 @@ import * as fs from "fs"
 import * as path from "path"
 
 import type { Settings } from "./index"
-import { computeLayout } from "./layout"
+import { computeLayout, settingsFor } from "./layout"
 import { toRootComponent } from "./to-root-component"
 import treeToSVG from "./tree-to-svg"
 
@@ -16,10 +16,13 @@ const renderSVG = (root, settings: Settings, snapshotsDir: string): string =>
 export function toMatchSVGSnapshot(
     this: any,
     received: unknown,
-    width: number,
-    height: number,
-    { wireframe = false, scale, platform }: { wireframe?: boolean, scale?: number, platform?: "ios" | "android" } = {}
+    widthOrOptions?: number | { device?: any, wireframe?: boolean },
+    height?: number,
+    options: { wireframe?: boolean, scale?: number, platform?: "ios" | "android" } = {}
 ) {
+    const settings = typeof widthOrOptions === "number"
+        ? settingsFor({ ...options, width: widthOrOptions, height })
+        : settingsFor(widthOrOptions ?? {})
     const root = toRootComponent(received)
     if (!root) { return fail("A falsy Component was passed to toMatchSVGSnapshot") }
     if (!root.props) { return fail("A Component without props was passed to toMatchSVGSnapshot") }
@@ -33,7 +36,7 @@ export function toMatchSVGSnapshot(
     const snapshotPath = path.join(snapshotsDir, path.basename(testPath) + "-" + testName + ".svg")
     const snapshotName = path.relative(process.cwd(), snapshotPath)
 
-    const svgText = renderSVG(root, { width, height, wireframe, scale, platform }, snapshotsDir)
+    const svgText = renderSVG(root, settings, snapshotsDir)
 
     const snapshotState = this.snapshotState
     const updateMode: string = snapshotState?._updateSnapshot ?? "new"

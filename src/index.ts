@@ -11,6 +11,7 @@ declare global {
                 height: number,
                 settings?: { wireframe?: boolean, scale?: number, platform?: "ios" | "android" },
             ): R;
+            toMatchSVGSnapshot(options?: { device?: import("./device").DeviceProfile | string, wireframe?: boolean }): R;
         }
     }
 }
@@ -42,6 +43,7 @@ export interface Settings {
     wireframe: boolean
     scale?: number
     platform?: "ios" | "android"
+    insets?: { top: number, right: number, bottom: number, left: number }
 }
 
 import { toMatchSVGSnapshot } from "./to-match-svg-snapshot"
@@ -54,6 +56,8 @@ export {
     loadSystemFont,
     setDefaultFont,
 } from "./font-loader"
+export { devices, getDevice, setDevice } from "./device"
+export type { DeviceProfile, Insets } from "./device"
 export { layoutTree } from "./layout"
 export { loadNativeWind } from "./nativewind"
 export type { NativeWindOptions } from "./nativewind"
