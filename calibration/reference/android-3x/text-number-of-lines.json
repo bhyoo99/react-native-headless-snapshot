@@ -1,0 +1,76 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "text-number-of-lines",
+  "window": {
+    "width": 240,
+    "height": 464,
+    "scale": 3,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 240,
+    "height": 533.3333333333334,
+    "scale": 3,
+    "fontScale": 1
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -45.333343505859375
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 220,
+    "height": 160.00001525878906,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 220,
+        "height": 160.00001525878906,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 10,
+            "y": 10,
+            "width": 200,
+            "height": 36.66668701171875,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "The quick brown fox jumps ",
+        "x": 0,
+        "y": 0,
+        "width": 182.55859375,
+        "height": 18.33333396911621,
+        "descender": 3.3333332538604736,
+        "capHeight": 10.550000190734863,
+        "ascender": 15,
+        "xHeight": 7.96999979019165
+      },
+      {
+        "text": "over the lazy dog while the …﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿",
+        "x": 0,
+        "y": 18.33333396911621,
+        "width": 196.75,
+        "height": 18.33333396911621,
+        "descender": 4.666666507720947,
+        "capHeight": 10.550000190734863,
+        "ascender": 13.666666984558105,
+        "xHeight": 7.96999979019165
+      }
+    ]
+  }
+}

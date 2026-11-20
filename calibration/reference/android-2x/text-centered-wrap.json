@@ -1,0 +1,65 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "text-centered-wrap",
+  "window": {
+    "width": 360,
+    "height": 708,
+    "scale": 2,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 360,
+    "height": 800,
+    "scale": 2,
+    "fontScale": 1
+  },
+  "pixelRatio": 2,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -68
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 200,
+    "height": 160,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 200,
+        "height": 160,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 13,
+            "y": 10,
+            "width": 173.5,
+            "height": 20,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "A centered title that wraps",
+        "x": 0,
+        "y": 0,
+        "width": 173.5,
+        "height": 20,
+        "descender": 5,
+        "capHeight": 10.550000190734863,
+        "ascender": 15,
+        "xHeight": 7.96999979019165
+      }
+    ]
+  }
+}

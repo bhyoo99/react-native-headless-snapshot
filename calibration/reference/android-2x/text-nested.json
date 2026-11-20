@@ -1,0 +1,87 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "text-nested",
+  "window": {
+    "width": 360,
+    "height": 708,
+    "scale": 2,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 360,
+    "height": 800,
+    "scale": 2,
+    "fontScale": 1
+  },
+  "pixelRatio": 2,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -68
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 260,
+    "height": 200,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 260,
+        "height": 200,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 10,
+            "y": 10,
+            "width": 240,
+            "height": 63,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "Plain text with bold words and a ",
+        "x": 0,
+        "y": 0,
+        "width": 209.375,
+        "height": 24,
+        "descender": 4,
+        "capHeight": 9.845000267028809,
+        "ascender": 20,
+        "xHeight": 7.440000057220459
+      },
+      {
+        "text": "bigger part that wraps onto more ",
+        "x": 0,
+        "y": 24,
+        "width": 234.88671875,
+        "height": 22,
+        "descender": 4,
+        "capHeight": 9.845000267028809,
+        "ascender": 18,
+        "xHeight": 7.440000057220459
+      },
+      {
+        "text": "lines",
+        "x": 0,
+        "y": 46,
+        "width": 28.7890625,
+        "height": 17,
+        "descender": 4.5,
+        "capHeight": 9.845000267028809,
+        "ascender": 12.5,
+        "xHeight": 7.440000057220459
+      }
+    ]
+  }
+}

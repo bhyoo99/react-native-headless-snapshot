@@ -1,0 +1,87 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "text-nested",
+  "window": {
+    "width": 274.2857142857143,
+    "height": 533.7142857142857,
+    "scale": 2.625,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 274.2857142857143,
+    "height": 609.5238095238095,
+    "scale": 2.625,
+    "fontScale": 1
+  },
+  "pixelRatio": 2.625,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -51.80950927734375
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 260.19049072265625,
+    "height": 199.99998474121094,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 260.19049072265625,
+        "height": 199.99998474121094,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 9.904762268066406,
+            "y": 9.90472412109375,
+            "width": 240,
+            "height": 63.61907958984375,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "Plain text with bold words and a ",
+        "x": 0,
+        "y": 0,
+        "width": 210.81100463867188,
+        "height": 24,
+        "descender": 4.190476417541504,
+        "capHeight": 9.912381172180176,
+        "ascender": 19.809524536132812,
+        "xHeight": 7.489523887634277
+      },
+      {
+        "text": "bigger part that wraps onto more ",
+        "x": 0,
+        "y": 24,
+        "width": 236.73065185546875,
+        "height": 22.4761905670166,
+        "descender": 4.190476417541504,
+        "capHeight": 9.912381172180176,
+        "ascender": 18.285715103149414,
+        "xHeight": 7.489523887634277
+      },
+      {
+        "text": "lines",
+        "x": 0,
+        "y": 46.47618865966797,
+        "width": 28.985118865966797,
+        "height": 17.14285659790039,
+        "descender": 4.5714287757873535,
+        "capHeight": 9.912381172180176,
+        "ascender": 12.571428298950195,
+        "xHeight": 7.489523887634277
+      }
+    ]
+  }
+}

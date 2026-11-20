@@ -1,0 +1,109 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "text-letter-spacing",
+  "window": {
+    "width": 205.71428571428572,
+    "height": 394.2857142857143,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 205.71428571428572,
+    "height": 457.14285714285717,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "pixelRatio": 3.5,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -38.85713195800781
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 360,
+    "height": 159.99998474121094,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 159.99998474121094,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 10,
+            "y": 10,
+            "width": 94.57142639160156,
+            "height": 18.28570556640625,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-2",
+            "x": 10,
+            "y": 34.28570556640625,
+            "width": 84.28571319580078,
+            "height": 18.28570556640625,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-3",
+            "x": 10,
+            "y": 58.5714111328125,
+            "width": 26,
+            "height": 17.142852783203125,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 0,
+        "width": 94.57142639160156,
+        "height": 18.285715103149414,
+        "descender": 4.285714149475098,
+        "capHeight": 9.84571361541748,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-2": [
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 0,
+        "width": 84.28571319580078,
+        "height": 18.285715103149414,
+        "descender": 4.285714149475098,
+        "capHeight": 9.84571361541748,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-3": [
+      {
+        "text": "ALL",
+        "x": 0,
+        "y": 0,
+        "width": 26,
+        "height": 17.14285659790039,
+        "descender": 4.5714287757873535,
+        "capHeight": 8.440000534057617,
+        "ascender": 12.571428298950195,
+        "xHeight": 6.377142906188965
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "text-single-chip-column",
+  "window": {
+    "width": 360,
+    "height": 708,
+    "scale": 2,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 360,
+    "height": 800,
+    "scale": 2,
+    "fontScale": 1
+  },
+  "pixelRatio": 2,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -68
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 360,
+    "height": 80,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 80,
+        "children": [
+          {
+            "type": "RN:View",
+            "x": 16,
+            "y": 0,
+            "width": 54.5,
+            "height": 80,
+            "children": [
+              {
+                "type": "RN:Paragraph",
+                "id": "text-1",
+                "x": 29,
+                "y": 7,
+                "width": 28.5,
+                "height": 20,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "ALL",
+        "x": 0,
+        "y": 0,
+        "width": 28.5,
+        "height": 20,
+        "descender": 5.5,
+        "capHeight": 9.845000267028809,
+        "ascender": 14.5,
+        "xHeight": 7.440000057220459
+      }
+    ]
+  }
+}

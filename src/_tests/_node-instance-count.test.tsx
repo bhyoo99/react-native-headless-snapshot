@@ -8,7 +8,7 @@ import { renderToJSON } from "./render-json"
 describe("Counting nodes", () => {
     it("it is good with memory", async () => {
       const yoga = getYoga()
-      const created = jest.spyOn(yoga.Node, "createDefault")
+      const created = jest.spyOn(yoga.Node, "createWithConfig")
       const destroyed = jest.spyOn(yoga.Node, "destroy")
 
       const jsx =

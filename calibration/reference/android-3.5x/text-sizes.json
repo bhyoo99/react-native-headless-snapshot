@@ -1,0 +1,153 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "text-sizes",
+  "window": {
+    "width": 205.71428571428572,
+    "height": 394.2857142857143,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 205.71428571428572,
+    "height": 457.14285714285717,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "pixelRatio": 3.5,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -38.85713195800781
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 360,
+    "height": 260,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 260,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 10,
+            "y": 10,
+            "width": 36.57142639160156,
+            "height": 14.5714111328125,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-2",
+            "x": 10,
+            "y": 28.5714111328125,
+            "width": 57.42857360839844,
+            "height": 18,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-3",
+            "x": 10,
+            "y": 50.5714111328125,
+            "width": 53.42857360839844,
+            "height": 20.571441650390625,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-4",
+            "x": 10,
+            "y": 75.14285278320312,
+            "width": 73.42857360839844,
+            "height": 28.571426391601562,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-5",
+            "x": 10,
+            "y": 107.71427917480469,
+            "width": 113.42857360839844,
+            "height": 43.99998474121094,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "Size 11",
+        "x": 0,
+        "y": 0,
+        "width": 36.57143020629883,
+        "height": 14.571428298950195,
+        "descender": 3.4285714626312256,
+        "capHeight": 7.8371429443359375,
+        "ascender": 11.142857551574707,
+        "xHeight": 5.919999599456787
+      }
+    ],
+    "text-2": [
+      {
+        "text": "Size 13.5",
+        "x": 0,
+        "y": 0,
+        "width": 57.42856979370117,
+        "height": 18,
+        "descender": 4.285714149475098,
+        "capHeight": 9.642857551574707,
+        "ascender": 13.714285850524902,
+        "xHeight": 7.285714149475098
+      }
+    ],
+    "text-3": [
+      {
+        "text": "Size 16",
+        "x": 0,
+        "y": 0,
+        "width": 53.42856979370117,
+        "height": 20.571428298950195,
+        "descender": 4.857142925262451,
+        "capHeight": 11.251428604125977,
+        "ascender": 15.714285850524902,
+        "xHeight": 8.5
+      }
+    ],
+    "text-4": [
+      {
+        "text": "Size 22",
+        "x": 0,
+        "y": 0,
+        "width": 73.42857360839844,
+        "height": 28.571428298950195,
+        "descender": 6.857142925262451,
+        "capHeight": 15.471428871154785,
+        "ascender": 21.714284896850586,
+        "xHeight": 11.688570976257324
+      }
+    ],
+    "text-5": [
+      {
+        "text": "Size 34",
+        "x": 0,
+        "y": 0,
+        "width": 113.42857360839844,
+        "height": 44,
+        "descender": 10.571428298950195,
+        "capHeight": 23.908571243286133,
+        "ascender": 33.42856979370117,
+        "xHeight": 18.062856674194336
+      }
+    ]
+  }
+}

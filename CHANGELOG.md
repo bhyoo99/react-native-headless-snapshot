@@ -15,6 +15,9 @@
 * Replace every character that is invalid in file names when naming SVG snapshots
 * Follow Jest's snapshot rules: write missing snapshots and pass (not with `--ci`), fail with a diff without overwriting on a mismatch, and overwrite only with `-u`
 * Build the package in `prepare`, so it can be installed straight from GitHub with npm and Yarn
+* Add `platform` and `scale` options and `layoutTree()`: views use React Native's Yoga settings on the device pixel grid, and `platform: "android"` measures text like React Native on Android
+* Add `loadSystemFont()` and `loadFallbackFont()` for text without a `fontFamily` and for glyphs missing from a font
+* Add the `calibration` folder: fixtures, measurements from an Android emulator at 2x, 2.625x, 3x and 3.5x, and a check that runs in CI
 * Lay out `gap`/`rowGap`/`columnGap`, `flexWrap`, `alignContent`, `aspectRatio` (number or `"16 / 9"`), `display` (views with `none` are left out of the SVG), `space-evenly`, `position: static`, `overflow`, `direction`, `boxSizing`, and `Start`/`End`/`Block`/`Inline`/`inset` edges
 
 ### 0.1.0

@@ -114,6 +114,33 @@ SVG snapshots follow Jest's snapshot rules, and Jest's summary counts them with 
 * A missing snapshot is written and the test passes. When Jest runs with `--ci`, it is not written and the test fails.
 * A snapshot that no longer matches fails the test with a diff and is left as it is. Run `jest -u` to overwrite it.
 
+### Matching a device
+
+Pass the platform and the device's pixel ratio to lay the tree out the way React Native does on that device:
+
+```ts
+expect(screen.toJSON()).toMatchSVGSnapshot(412, 915, { platform: "android", scale: 2.625 })
+```
+
+* Views are laid out with React Native's Yoga settings and rounded to the device's pixel grid.
+* With `platform: "android"`, text is measured with the rules of React Native's Android text layout: font
+  padding, glyph advances, letter spacing, line height and line breaking. iOS text is not calibrated yet.
+* Load each font your app uses under the family name the app uses:
+  `loadFont(readFileSync("assets/fonts/MyFont-Bold.ttf"), { fontFamily: "MyFont-Bold", fontWeight: "normal", fontStyle: "normal" })`.
+* Text without a `fontFamily` uses the platform's system font. For Android, pull the fonts from an emulator
+  (`adb pull /system/fonts/Roboto-Regular.ttf` and `adb pull /system/fonts/NotoSansCJK-Regular.ttc`) and load them:
+
+```ts
+import { loadFallbackFont, loadSystemFont } from "jest-snapshots-svg"
+
+loadSystemFont("android", readFileSync("Roboto-Regular.ttf"))
+loadFallbackFont("android", readFileSync("NotoSansCJK-Regular.ttc"), { postscriptName: "NotoSansCJKKR-Regular" })
+```
+
+`layoutTree(json, { width, height, platform, scale })` returns the frame of every view when you want numbers instead
+of an SVG. The [calibration](calibration/README.md) folder holds the fixtures and device measurements this is checked
+against.
+
 ### Fonts
 
 If you use `<Text />` elements, you must have access to the font files so we can lay the text out.

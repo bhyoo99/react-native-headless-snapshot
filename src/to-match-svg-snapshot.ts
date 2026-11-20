@@ -1,35 +1,24 @@
 import * as fs from "fs"
 import * as path from "path"
 
-import componentTreeToNodeTree from "./component-tree-to-nodes"
-import { resetUsedFonts } from "./font-loader"
 import type { Settings } from "./index"
-import renderedComponentTree from "./reapply-layouts-to-components"
+import { computeLayout } from "./layout"
 import { toRootComponent } from "./to-root-component"
 import treeToSVG from "./tree-to-svg"
-import { getYoga } from "./yoga"
 
 const fail = (msg: string) => ({ message: () => msg, pass: false })
 
 const pass = (msg: string) => ({ message: () => msg, pass: true })
 
-const renderSVG = (root, settings: Settings, snapshotsDir: string): string => {
-    resetUsedFonts()
-    const rootNode = componentTreeToNodeTree(root, settings)
-    try {
-        rootNode.calculateLayout(settings.width, settings.height, getYoga().DIRECTION_LTR)
-        return treeToSVG(renderedComponentTree(root, rootNode), settings, snapshotsDir)
-    } finally {
-        rootNode.freeRecursive()
-    }
-}
+const renderSVG = (root, settings: Settings, snapshotsDir: string): string =>
+    treeToSVG(computeLayout(root, settings), settings, snapshotsDir)
 
 export function toMatchSVGSnapshot(
     this: any,
     received: unknown,
     width: number,
     height: number,
-    { wireframe = false }: { wireframe?: boolean } = {}
+    { wireframe = false, scale, platform }: { wireframe?: boolean, scale?: number, platform?: "ios" | "android" } = {}
 ) {
     const root = toRootComponent(received)
     if (!root) { return fail("A falsy Component was passed to toMatchSVGSnapshot") }
@@ -44,7 +33,7 @@ export function toMatchSVGSnapshot(
     const snapshotPath = path.join(snapshotsDir, path.basename(testPath) + "-" + testName + ".svg")
     const snapshotName = path.relative(process.cwd(), snapshotPath)
 
-    const svgText = renderSVG(root, { width, height, wireframe }, snapshotsDir)
+    const svgText = renderSVG(root, { width, height, wireframe, scale, platform }, snapshotsDir)
 
     const snapshotState = this.snapshotState
     const updateMode: string = snapshotState?._updateSnapshot ?? "new"

@@ -48,6 +48,9 @@
     "*.{ts,tsx,js,mjs}": "eslint --fix"
   },
   "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
     "testRegex": "(.test)\\.(ts|tsx)$",
     "transformIgnorePatterns": [
       "/node_modules/(?!(yoga-layout|fontkit|linebreak|brotli|dfa|restructure|unicode-properties|unicode-trie)/)"

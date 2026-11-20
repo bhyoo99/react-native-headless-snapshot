@@ -1,0 +1,835 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "text-advance-probe",
+  "window": {
+    "width": 240,
+    "height": 464,
+    "scale": 3,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 240,
+    "height": 533.3333333333334,
+    "scale": 3,
+    "fontScale": 1
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -45.333343505859375
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 360,
+    "height": 1400,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 1400,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 4,
+            "y": 4,
+            "width": 80.66666412353516,
+            "height": 32,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-2",
+            "x": 4,
+            "y": 36,
+            "width": 89.66666412353516,
+            "height": 35.33332824707031,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-3",
+            "x": 4,
+            "y": 71.33332824707031,
+            "width": 98.66666412353516,
+            "height": 39.3333740234375,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-4",
+            "x": 4,
+            "y": 110.66670227050781,
+            "width": 107.66666412353516,
+            "height": 43,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-5",
+            "x": 4,
+            "y": 153.6667022705078,
+            "width": 116.33333587646484,
+            "height": 45.6666259765625,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-6",
+            "x": 4,
+            "y": 199.3333282470703,
+            "width": 125.33332824707031,
+            "height": 49.66668701171875,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-7",
+            "x": 4,
+            "y": 249.00001525878906,
+            "width": 134.3333282470703,
+            "height": 53.66664123535156,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-8",
+            "x": 4,
+            "y": 302.6666564941406,
+            "width": 143.3333282470703,
+            "height": 56.333343505859375,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-9",
+            "x": 4,
+            "y": 359,
+            "width": 152.3333282470703,
+            "height": 60.000030517578125,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-10",
+            "x": 4,
+            "y": 419.0000305175781,
+            "width": 161.3333282470703,
+            "height": 63.33331298828125,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-11",
+            "x": 4,
+            "y": 482.3333435058594,
+            "width": 170.3333282470703,
+            "height": 67.3333740234375,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-12",
+            "x": 4,
+            "y": 549.6667175292969,
+            "width": 179,
+            "height": 70.6666259765625,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-13",
+            "x": 4,
+            "y": 620.3333435058594,
+            "width": 188,
+            "height": 74,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-14",
+            "x": 4,
+            "y": 694.3333435058594,
+            "width": 197,
+            "height": 78,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-15",
+            "x": 4,
+            "y": 772.3333435058594,
+            "width": 215,
+            "height": 84.3333740234375,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-16",
+            "x": 4,
+            "y": 856.6667175292969,
+            "width": 232.6666717529297,
+            "height": 92.3333740234375,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-17",
+            "x": 4,
+            "y": 949.0000915527344,
+            "width": 250.6666717529297,
+            "height": 99,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-18",
+            "x": 4,
+            "y": 1048.0000915527344,
+            "width": 286.6666564941406,
+            "height": 113,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 44.51041793823242,
+        "height": 11,
+        "descender": 2,
+        "capHeight": 6.329999923706055,
+        "ascender": 9,
+        "xHeight": 4.7833333015441895
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 11,
+        "width": 80.53255462646484,
+        "height": 10,
+        "descender": 2,
+        "capHeight": 6.329999923706055,
+        "ascender": 8,
+        "xHeight": 4.7833333015441895
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 21,
+        "width": 56.53125,
+        "height": 11,
+        "descender": 3,
+        "capHeight": 6.329999923706055,
+        "ascender": 8,
+        "xHeight": 4.7833333015441895
+      }
+    ],
+    "text-2": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 49.45833206176758,
+        "height": 12,
+        "descender": 2,
+        "capHeight": 7.0333333015441895,
+        "ascender": 10,
+        "xHeight": 5.313333034515381
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 12,
+        "width": 89.47916412353516,
+        "height": 11,
+        "descender": 2,
+        "capHeight": 7.0333333015441895,
+        "ascender": 9,
+        "xHeight": 5.313333034515381
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 23,
+        "width": 62.81119918823242,
+        "height": 12.333333015441895,
+        "descender": 3.3333332538604736,
+        "capHeight": 7.0333333015441895,
+        "ascender": 9,
+        "xHeight": 5.313333034515381
+      }
+    ],
+    "text-3": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 54.40104293823242,
+        "height": 13.333333015441895,
+        "descender": 2.3333332538604736,
+        "capHeight": 7.736666202545166,
+        "ascender": 11,
+        "xHeight": 5.8466668128967285
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 13.333333015441895,
+        "width": 98.42838287353516,
+        "height": 12.333333015441895,
+        "descender": 2.3333332538604736,
+        "capHeight": 7.736666202545166,
+        "ascender": 10,
+        "xHeight": 5.8466668128967285
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 25.66666603088379,
+        "width": 69.09375,
+        "height": 13.666666984558105,
+        "descender": 3.6666667461395264,
+        "capHeight": 7.736666202545166,
+        "ascender": 10,
+        "xHeight": 5.8466668128967285
+      }
+    ],
+    "text-4": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 59.34895706176758,
+        "height": 14.666666984558105,
+        "descender": 2.6666667461395264,
+        "capHeight": 8.4399995803833,
+        "ascender": 12,
+        "xHeight": 6.37666654586792
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 14.666666984558105,
+        "width": 107.375,
+        "height": 13.666666984558105,
+        "descender": 2.6666667461395264,
+        "capHeight": 8.4399995803833,
+        "ascender": 11,
+        "xHeight": 6.37666654586792
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 28.33333396911621,
+        "width": 75.37369537353516,
+        "height": 14.666666984558105,
+        "descender": 3.6666667461395264,
+        "capHeight": 8.4399995803833,
+        "ascender": 11,
+        "xHeight": 6.37666654586792
+      }
+    ],
+    "text-5": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 64.29557037353516,
+        "height": 15.666666984558105,
+        "descender": 2.6666667461395264,
+        "capHeight": 9.143333435058594,
+        "ascender": 13,
+        "xHeight": 6.906666278839111
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 15.666666984558105,
+        "width": 116.3203125,
+        "height": 14.333333015441895,
+        "descender": 2.6666667461395264,
+        "capHeight": 9.143333435058594,
+        "ascender": 11.666666984558105,
+        "xHeight": 6.906666278839111
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 30,
+        "width": 81.65234375,
+        "height": 15.666666984558105,
+        "descender": 4,
+        "capHeight": 9.143333435058594,
+        "ascender": 11.666666984558105,
+        "xHeight": 6.906666278839111
+      }
+    ],
+    "text-6": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 69.23828125,
+        "height": 17,
+        "descender": 3,
+        "capHeight": 9.846667289733887,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 17,
+        "width": 125.26953125,
+        "height": 15.666666984558105,
+        "descender": 3,
+        "capHeight": 9.846667289733887,
+        "ascender": 12.666666984558105,
+        "xHeight": 7.440000057220459
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 32.66666793823242,
+        "width": 87.93489837646484,
+        "height": 17,
+        "descender": 4.333333492279053,
+        "capHeight": 9.846667289733887,
+        "ascender": 12.666666984558105,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-7": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 74.18619537353516,
+        "height": 18.33333396911621,
+        "descender": 3.3333332538604736,
+        "capHeight": 10.550000190734863,
+        "ascender": 15,
+        "xHeight": 7.96999979019165
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 18.33333396911621,
+        "width": 134.2161407470703,
+        "height": 17,
+        "descender": 3.3333332538604736,
+        "capHeight": 10.550000190734863,
+        "ascender": 13.666666984558105,
+        "xHeight": 7.96999979019165
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 35.33333206176758,
+        "width": 94.21484375,
+        "height": 18.33333396911621,
+        "descender": 4.666666507720947,
+        "capHeight": 10.550000190734863,
+        "ascender": 13.666666984558105,
+        "xHeight": 7.96999979019165
+      }
+    ],
+    "text-8": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 79.140625,
+        "height": 19.33333396911621,
+        "descender": 3.3333332538604736,
+        "capHeight": 11.25,
+        "ascender": 16,
+        "xHeight": 8.5
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 19.33333396911621,
+        "width": 143.1796875,
+        "height": 17.66666603088379,
+        "descender": 3.3333332538604736,
+        "capHeight": 11.25,
+        "ascender": 14.333333015441895,
+        "xHeight": 8.5
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 37,
+        "width": 100.5078125,
+        "height": 19.33333396911621,
+        "descender": 5,
+        "capHeight": 11.25,
+        "ascender": 14.333333015441895,
+        "xHeight": 8.5
+      }
+    ],
+    "text-9": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 84.08072662353516,
+        "height": 20.33333396911621,
+        "descender": 3.6666667461395264,
+        "capHeight": 11.953333854675293,
+        "ascender": 16.66666603088379,
+        "xHeight": 9.033333778381348
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 20.33333396911621,
+        "width": 152.1223907470703,
+        "height": 19,
+        "descender": 3.6666667461395264,
+        "capHeight": 11.953333854675293,
+        "ascender": 15.333333015441895,
+        "xHeight": 9.033333778381348
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 39.33333206176758,
+        "width": 106.78515625,
+        "height": 20.66666603088379,
+        "descender": 5.333333492279053,
+        "capHeight": 11.953333854675293,
+        "ascender": 15.333333015441895,
+        "xHeight": 9.033333778381348
+      }
+    ],
+    "text-10": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 89.02864837646484,
+        "height": 21.33333396911621,
+        "descender": 3.6666667461395264,
+        "capHeight": 12.65666675567627,
+        "ascender": 17.66666603088379,
+        "xHeight": 9.563333511352539
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 21.33333396911621,
+        "width": 161.0690155029297,
+        "height": 20,
+        "descender": 3.6666667461395264,
+        "capHeight": 12.65666675567627,
+        "ascender": 16.33333396911621,
+        "xHeight": 9.563333511352539
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 41.33333206176758,
+        "width": 113.06510162353516,
+        "height": 22,
+        "descender": 5.666666507720947,
+        "capHeight": 12.65666675567627,
+        "ascender": 16.33333396911621,
+        "xHeight": 9.563333511352539
+      }
+    ],
+    "text-11": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 93.97135162353516,
+        "height": 22.66666603088379,
+        "descender": 4,
+        "capHeight": 13.360000610351562,
+        "ascender": 18.66666603088379,
+        "xHeight": 10.096667289733887
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 22.66666603088379,
+        "width": 170.0182342529297,
+        "height": 21.33333396911621,
+        "descender": 4,
+        "capHeight": 13.360000610351562,
+        "ascender": 17.33333396911621,
+        "xHeight": 10.096667289733887
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 44,
+        "width": 119.34765625,
+        "height": 23.33333396911621,
+        "descender": 6,
+        "capHeight": 13.360000610351562,
+        "ascender": 17.33333396911621,
+        "xHeight": 10.096667289733887
+      }
+    ],
+    "text-12": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 98.91927337646484,
+        "height": 24,
+        "descender": 4.333333492279053,
+        "capHeight": 14.063332557678223,
+        "ascender": 19.66666603088379,
+        "xHeight": 10.626666069030762
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 24,
+        "width": 178.96484375,
+        "height": 22.33333396911621,
+        "descender": 4.333333492279053,
+        "capHeight": 14.063332557678223,
+        "ascender": 18,
+        "xHeight": 10.626666069030762
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 46.33333206176758,
+        "width": 125.62760162353516,
+        "height": 24.33333396911621,
+        "descender": 6.333333492279053,
+        "capHeight": 14.063332557678223,
+        "ascender": 18,
+        "xHeight": 10.626666069030762
+      }
+    ],
+    "text-13": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 103.86588287353516,
+        "height": 25,
+        "descender": 4.333333492279053,
+        "capHeight": 14.766666412353516,
+        "ascender": 20.66666603088379,
+        "xHeight": 11.15666675567627
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 25,
+        "width": 187.91015625,
+        "height": 23.33333396911621,
+        "descender": 4.333333492279053,
+        "capHeight": 14.766666412353516,
+        "ascender": 19,
+        "xHeight": 11.15666675567627
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 48.33333206176758,
+        "width": 131.90625,
+        "height": 25.66666603088379,
+        "descender": 6.666666507720947,
+        "capHeight": 14.766666412353516,
+        "ascender": 19,
+        "xHeight": 11.15666675567627
+      }
+    ],
+    "text-14": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 108.80859375,
+        "height": 26.33333396911621,
+        "descender": 4.666666507720947,
+        "capHeight": 15.470000267028809,
+        "ascender": 21.66666603088379,
+        "xHeight": 11.6899995803833
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 26.33333396911621,
+        "width": 196.859375,
+        "height": 24.66666603088379,
+        "descender": 4.666666507720947,
+        "capHeight": 15.470000267028809,
+        "ascender": 20,
+        "xHeight": 11.6899995803833
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 51,
+        "width": 138.1887969970703,
+        "height": 27,
+        "descender": 7,
+        "capHeight": 15.470000267028809,
+        "ascender": 20,
+        "xHeight": 11.6899995803833
+      }
+    ],
+    "text-15": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 118.7109375,
+        "height": 28.66666603088379,
+        "descender": 5,
+        "capHeight": 16.876667022705078,
+        "ascender": 23.66666603088379,
+        "xHeight": 12.75
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 28.66666603088379,
+        "width": 214.76953125,
+        "height": 26.66666603088379,
+        "descender": 5,
+        "capHeight": 16.876667022705078,
+        "ascender": 21.66666603088379,
+        "xHeight": 12.75
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 55.33333206176758,
+        "width": 150.76171875,
+        "height": 29,
+        "descender": 7.333333492279053,
+        "capHeight": 16.876667022705078,
+        "ascender": 21.66666603088379,
+        "xHeight": 12.75
+      }
+    ],
+    "text-16": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 128.5989532470703,
+        "height": 31.33333396911621,
+        "descender": 5.666666507720947,
+        "capHeight": 18.28333282470703,
+        "ascender": 25.66666603088379,
+        "xHeight": 13.813332557678223
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 31.33333396911621,
+        "width": 232.6588592529297,
+        "height": 29.33333396911621,
+        "descender": 5.666666507720947,
+        "capHeight": 18.28333282470703,
+        "ascender": 23.66666603088379,
+        "xHeight": 13.813332557678223
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 60.66666793823242,
+        "width": 163.3190155029297,
+        "height": 31.66666603088379,
+        "descender": 8,
+        "capHeight": 18.28333282470703,
+        "ascender": 23.66666603088379,
+        "xHeight": 13.813332557678223
+      }
+    ],
+    "text-17": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 138.4895782470703,
+        "height": 33.66666793823242,
+        "descender": 6,
+        "capHeight": 19.690000534057617,
+        "ascender": 27.66666603088379,
+        "xHeight": 14.876667022705078
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 33.66666793823242,
+        "width": 250.5546875,
+        "height": 31.33333396911621,
+        "descender": 6,
+        "capHeight": 19.690000534057617,
+        "ascender": 25.33333396911621,
+        "xHeight": 14.876667022705078
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 65,
+        "width": 175.8815155029297,
+        "height": 34,
+        "descender": 8.666666984558105,
+        "capHeight": 19.690000534057617,
+        "ascender": 25.33333396911621,
+        "xHeight": 14.876667022705078
+      }
+    ],
+    "text-18": [
+      {
+        "text": "Hello world\n",
+        "x": 0,
+        "y": 0,
+        "width": 158.28125,
+        "height": 38.33333206176758,
+        "descender": 6.666666507720947,
+        "capHeight": 22.5,
+        "ascender": 31.66666603088379,
+        "xHeight": 17
+      },
+      {
+        "text": "The quick brown fox\n",
+        "x": 0,
+        "y": 38.33333206176758,
+        "width": 286.359375,
+        "height": 35.66666793823242,
+        "descender": 6.666666507720947,
+        "capHeight": 22.5,
+        "ascender": 29,
+        "xHeight": 17
+      },
+      {
+        "text": "Letter spacing",
+        "x": 0,
+        "y": 74,
+        "width": 201.015625,
+        "height": 39,
+        "descender": 10,
+        "capHeight": 22.5,
+        "ascender": 29,
+        "xHeight": 17
+      }
+    ]
+  }
+}

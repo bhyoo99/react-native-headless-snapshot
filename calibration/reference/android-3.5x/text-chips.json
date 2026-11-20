@@ -1,0 +1,167 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "text-chips",
+  "window": {
+    "width": 205.71428571428572,
+    "height": 394.2857142857143,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 205.71428571428572,
+    "height": 457.14285714285717,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "pixelRatio": 3.5,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -38.85713195800781
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 360,
+    "height": 119.99998474121094,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 119.99998474121094,
+        "children": [
+          {
+            "type": "RN:View",
+            "x": 16,
+            "y": 15.999984741210938,
+            "width": 54.28571319580078,
+            "height": 34,
+            "children": [
+              {
+                "type": "RN:Paragraph",
+                "id": "text-1",
+                "x": 28.857147216796875,
+                "y": 22.857131958007812,
+                "width": 28.28570556640625,
+                "height": 20,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:View",
+            "x": 78.28571319580078,
+            "y": 15.999984741210938,
+            "width": 64.00000762939453,
+            "height": 34,
+            "children": [
+              {
+                "type": "RN:Paragraph",
+                "id": "text-2",
+                "x": 91.14285278320312,
+                "y": 22.857131958007812,
+                "width": 38,
+                "height": 20,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:View",
+            "x": 150.2857208251953,
+            "y": 15.999984741210938,
+            "width": 74,
+            "height": 34,
+            "children": [
+              {
+                "type": "RN:Paragraph",
+                "id": "text-3",
+                "x": 163.1428680419922,
+                "y": 22.857131958007812,
+                "width": 48,
+                "height": 20,
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "RN:View",
+            "x": 232.28573608398438,
+            "y": 15.999984741210938,
+            "width": 57.999969482421875,
+            "height": 34,
+            "children": [
+              {
+                "type": "RN:Paragraph",
+                "id": "text-4",
+                "x": 245.14288330078125,
+                "y": 22.857131958007812,
+                "width": 32,
+                "height": 20,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "ALL",
+        "x": 0,
+        "y": 0,
+        "width": 28.285715103149414,
+        "height": 20,
+        "descender": 5.4285712242126465,
+        "capHeight": 9.84571361541748,
+        "ascender": 14.571428298950195,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-2": [
+      {
+        "text": "News",
+        "x": 0,
+        "y": 0,
+        "width": 37.77031707763672,
+        "height": 20,
+        "descender": 5.4285712242126465,
+        "capHeight": 9.84571361541748,
+        "ascender": 14.571428298950195,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-3": [
+      {
+        "text": "Events",
+        "x": 0,
+        "y": 0,
+        "width": 48,
+        "height": 20,
+        "descender": 5.4285712242126465,
+        "capHeight": 9.84571361541748,
+        "ascender": 14.571428298950195,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-4": [
+      {
+        "text": "Q&A",
+        "x": 0,
+        "y": 0,
+        "width": 32,
+        "height": 20,
+        "descender": 5.4285712242126465,
+        "capHeight": 9.84571361541748,
+        "ascender": 14.571428298950195,
+        "xHeight": 7.440000057220459
+      }
+    ]
+  }
+}

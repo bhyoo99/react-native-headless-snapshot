@@ -1,8 +1,9 @@
-import type { Align, Edge, Node, Yoga } from "yoga-layout/load"
+import type { Align, Config, Edge, Node, Yoga } from "yoga-layout/load"
 import extractText from "./extract-text"
 import { flattenStyles } from "./flatten-styles"
 import { Component, Settings } from "./index"
-import { breakLines, measureLines } from "./text-layout"
+import { measureAndroid } from "./text/android"
+import { breakLines, measureLines, textSlice } from "./text-layout"
 import { getYoga } from "./yoga"
 
 export const textLines = Symbol("textLines")
@@ -145,9 +146,9 @@ const applyStyle = (yoga: Yoga, node: Node, style: any) => {
   setEnum(style.alignContent, alignValues(yoga), value => node.setAlignContent(value))
 }
 
-const componentToNode = (component: Component, _settings: Settings): Node => {
+const componentToNode = (component: Component, settings: Settings, config?: Config): Node => {
   const yoga = getYoga()
-  const node = yoga.Node.create()
+  const node = yoga.Node.create(config)
 
   if (component.props && component.props.style) {
     applyStyle(yoga, node, styleFromComponent(component))
@@ -157,11 +158,27 @@ const componentToNode = (component: Component, _settings: Settings): Node => {
   if (component && component.type === "Text") {
     const styledText = extractText(component)
     component[textLines] = null
-    node.setMeasureFunc(width => {
-      const lines = breakLines(styledText, width)
-      component[textLines] = lines
-      return measureLines(lines)
-    })
+    if (settings.platform === "android") {
+      const rootStyle = (component.props && component.props.style && styleFromComponent(component)) || {}
+      const paragraph = {
+        numberOfLines: component.props && component.props.numberOfLines,
+        includeFontPadding: rootStyle.includeFontPadding !== false,
+      }
+      node.setMeasureFunc((width, widthMode) => {
+        const measured = measureAndroid(styledText, width, widthMode, paragraph, settings.scale ?? 1)
+        component[textLines] = measured.lines.map(line => ({
+          ...textSlice(styledText, line.start, line.end),
+          metrics: line,
+        }))
+        return { width: measured.width, height: measured.height }
+      })
+    } else {
+      node.setMeasureFunc(width => {
+        const lines = breakLines(styledText, width)
+        component[textLines] = lines
+        return measureLines(lines)
+      })
+    }
   }
 
   return node

@@ -14,12 +14,19 @@ export interface FontStyle {
 }
 const fonts = {}
 const fontFallbacks = {}
-let defaultFont = "Proza Libre"
+const builtInDefaultFont = "Proza Libre"
+let userDefaultFont: string | undefined
+
+export type FontPlatform = "ios" | "android"
+const systemFonts: Partial<Record<FontPlatform, any>> = {}
+const fallbackFonts: Record<FontPlatform, any[]> = { ios: [], android: [] }
+const variationCache = new WeakMap<object, Map<string, any>>()
 const svgFonts: { [key: string]: { path: string, style: FontStyle } } = {}
 const usedFonts: string[] = []
 
-export const getDefaultFont = () => defaultFont
-export const setDefaultFont = (fontName: string) => defaultFont = fontName
+export const getDefaultFont = () => userDefaultFont ?? builtInDefaultFont
+export const getUserDefaultFont = () => userDefaultFont
+export const setDefaultFont = (fontName: string) => userDefaultFont = fontName
 export const getSvgFonts = () => svgFonts
 
 export const registerFontUsed = (
@@ -133,12 +140,63 @@ export const addFontFallback = (fontFamily: string, fallback: string) => {
 }
 
 export const fontForStyle = style => {
-  const key = keyFor(style)
+  const key = keyFor({ ...style, fontFamily: style.fontFamily ?? getDefaultFont() })
   if (!fonts[key]) {
     throw new Error(`No font defined for ${key}, load it with loadFont() or addFontToSvg()`)
   }
   return fonts[key]
 }
+
+export const loadSystemFont = (platform: FontPlatform, fontFile, options: { postscriptName?: string } = {}) => {
+  systemFonts[platform] = fontkit.create(fontFile, options.postscriptName)
+}
+
+export const loadFallbackFont = (platform: FontPlatform, fontFile, options: { postscriptName?: string } = {}) => {
+  fallbackFonts[platform].push(fontkit.create(fontFile, options.postscriptName))
+}
+
+const variationInstances = new WeakSet<object>()
+
+export const isVariationInstance = (font: object) => variationInstances.has(font)
+
+export const withVariation = (font, fontWeight, fontStyle) => {
+  const axes = font.variationAxes || {}
+  if (!axes.wght && !axes.ital) {
+    return font
+  }
+  const settings: Record<string, number> = {}
+  if (axes.wght) {
+    settings.wght = Math.min(axes.wght.max, Math.max(axes.wght.min, Number(numberWeight(fontWeight ?? "normal"))))
+  }
+  if (axes.ital) {
+    settings.ital = fontStyle === "italic" ? 1 : 0
+  }
+  if (Object.entries(settings).every(([tag, value]) => axes[tag].default === value)) {
+    return font
+  }
+  const key = JSON.stringify(settings)
+  let cache = variationCache.get(font)
+  if (!cache) {
+    cache = new Map()
+    variationCache.set(font, cache)
+  }
+  if (!cache.has(key)) {
+    const instance = font.getVariation(settings)
+    variationInstances.add(instance)
+    cache.set(key, instance)
+  }
+  return cache.get(key)
+}
+
+export const resolveFont = (style, platform?: FontPlatform) => {
+  const system = platform && systemFonts[platform]
+  if (!style.fontFamily && !userDefaultFont && system) {
+    return withVariation(system, style.fontWeight, style.fontStyle)
+  }
+  return fontForStyle(style)
+}
+
+export const fallbackFontsFor = (platform: FontPlatform) => fallbackFonts[platform]
 
 export const fontWithFallbacks = (fontFamily: string): string => (
   fontFallbacks[fontFamily] ? `'${fontFamily}', ${fontFallbacks[fontFamily]}` : `'${fontFamily}'`

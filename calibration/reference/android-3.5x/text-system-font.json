@@ -1,0 +1,120 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "text-system-font",
+  "window": {
+    "width": 205.71428571428572,
+    "height": 394.2857142857143,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 205.71428571428572,
+    "height": 457.14285714285717,
+    "scale": 3.5,
+    "fontScale": 1
+  },
+  "pixelRatio": 3.5,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -38.85713195800781
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 300,
+    "height": 199.99998474121094,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 300,
+        "height": 199.99998474121094,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 10,
+            "y": 10,
+            "width": 101.71428680419922,
+            "height": 18.857131958007812,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-2",
+            "x": 10,
+            "y": 34.85713195800781,
+            "width": 89.42857360839844,
+            "height": 21.714279174804688,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-3",
+            "x": 10,
+            "y": 62.5714111328125,
+            "width": 280,
+            "height": 43.42857360839844,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "System font text",
+        "x": 0,
+        "y": 0,
+        "width": 101.71428680419922,
+        "height": 18.85714340209961,
+        "descender": 4,
+        "capHeight": 10.062857627868652,
+        "ascender": 14.857142448425293,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-2": [
+      {
+        "text": "System bold",
+        "x": 0,
+        "y": 0,
+        "width": 89.42857360839844,
+        "height": 21.714284896850586,
+        "descender": 4.5714287757873535,
+        "capHeight": 11.5,
+        "ascender": 17.14285659790039,
+        "xHeight": 8.5
+      }
+    ],
+    "text-3": [
+      {
+        "text": "안녕하세요 한글 시스템 폰트 줄바꿈 확인용 ",
+        "x": 0,
+        "y": 0,
+        "width": 274.28570556640625,
+        "height": 21.714284896850586,
+        "descender": 4.285714149475098,
+        "capHeight": 10.885713577270508,
+        "ascender": 17.428571701049805,
+        "xHeight": 8.045714378356934
+      },
+      {
+        "text": "문장입니다",
+        "x": 0,
+        "y": 21.714284896850586,
+        "width": 70,
+        "height": 21.714284896850586,
+        "descender": 4.285714149475098,
+        "capHeight": 10.885713577270508,
+        "ascender": 17.428571701049805,
+        "xHeight": 8.045714378356934
+      }
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "platform": "android",
+  "osVersion": 36,
+  "fixture": "text-single",
+  "window": {
+    "width": 360,
+    "height": 708,
+    "scale": 2,
+    "fontScale": 1
+  },
+  "screen": {
+    "width": 360,
+    "height": 800,
+    "scale": 2,
+    "fontScale": 1
+  },
+  "pixelRatio": 2,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": -68
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 360,
+    "height": 120,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 120,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 16,
+            "y": 16,
+            "width": 69.5,
+            "height": 18.5,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-2",
+            "x": 16,
+            "y": 34.5,
+            "width": 111.5,
+            "height": 24.5,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "Hello world",
+        "x": 0,
+        "y": 0,
+        "width": 69.5,
+        "height": 18.5,
+        "descender": 4.5,
+        "capHeight": 9.845000267028809,
+        "ascender": 14,
+        "xHeight": 7.440000057220459
+      }
+    ],
+    "text-2": [
+      {
+        "text": "Bold headline",
+        "x": 0,
+        "y": 0,
+        "width": 111.5,
+        "height": 24.5,
+        "descender": 6.5,
+        "capHeight": 11.954999923706055,
+        "ascender": 18,
+        "xHeight": 9.03499984741211
+      }
+    ]
+  }
+}
