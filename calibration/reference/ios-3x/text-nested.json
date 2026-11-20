@@ -1,0 +1,87 @@
+{
+  "platform": "ios",
+  "osVersion": "27.2",
+  "fixture": "text-nested",
+  "window": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "screen": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 260,
+    "height": 200,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 260,
+        "height": 200,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 10,
+            "y": 10,
+            "width": 240,
+            "height": 60.333335876464844,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "Plain text with bold words and a ",
+        "x": 0,
+        "y": 0,
+        "width": 209.404296875,
+        "height": 22.34375,
+        "descender": 4.23828125,
+        "capHeight": 9.6318359375,
+        "ascender": 18.10546875,
+        "xHeight": 7.396484375
+      },
+      {
+        "text": "bigger part that wraps onto more ",
+        "x": 0,
+        "y": 22.34375,
+        "width": 234.904296875,
+        "height": 22.34375,
+        "descender": 4.23828125,
+        "capHeight": 13.759765625,
+        "ascender": 18.10546875,
+        "xHeight": 10.56640625
+      },
+      {
+        "text": "lines",
+        "x": 0,
+        "y": 44.6875,
+        "width": 28.79296875,
+        "height": 15.640625,
+        "descender": 2.966796875,
+        "capHeight": 9.6318359375,
+        "ascender": 12.673828125,
+        "xHeight": 7.396484375
+      }
+    ]
+  }
+}

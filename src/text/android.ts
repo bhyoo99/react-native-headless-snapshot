@@ -1,7 +1,6 @@
-import { LineBreaker } from "linebreak"
-
 import type { TextWithAttributedStyle } from "../extract-text"
-import { fallbackFontsFor, isVariationInstance, resolveFont, withVariation } from "../font-loader"
+import { fallbackFontsFor, isVariationInstance, resolveFont } from "../font-loader"
+import { breakLines, fontRanges, trimTrailingSpaces } from "./shared"
 import type { MeasuredLine, MeasuredText, Paragraph } from "./types"
 
 interface FontMetricsInt {
@@ -43,32 +42,12 @@ const isAutohinted = (font: any) => {
   return Boolean(tables.CFF2 || (tables.glyf && !tables.fpgm && !tables.prep))
 }
 
-const fontRanges = (text: string, start: number, end: number, fonts: any[]) => {
-  const ranges: Array<{ start: number, end: number, font: any }> = []
-  let index = start
-  while (index < end) {
-    const codePoint = text.codePointAt(index) as number
-    const length = codePoint > 0xffff ? 2 : 1
-    const font = /\s/.test(text[index])
-      ? fonts[0]
-      : fonts.find(candidate => candidate.hasGlyphForCodePoint(codePoint)) ?? fonts[0]
-    const last = ranges[ranges.length - 1]
-    if (last && last.font === font) {
-      last.end = index + length
-    } else {
-      ranges.push({ start: index, end: index + length, font })
-    }
-    index += length
-  }
-  return ranges
-}
-
 const toRuns = ({ text, attributedStyles }: TextWithAttributedStyle, scale: number): Run[] =>
   attributedStyles.flatMap(({ start, end, style }) => {
     const sizePx = Math.ceil(style.fontSize * scale)
     const fonts = [
       resolveFont(style, "android"),
-      ...fallbackFontsFor("android").map(font => withVariation(font, style.fontWeight, style.fontStyle)),
+      ...fallbackFontsFor("android", style),
     ]
     const primaryMetrics = fontMetricsInt(fonts[0], sizePx)
     return fontRanges(text, start, end, fonts).map(range => ({
@@ -139,47 +118,6 @@ const measureRange = (text: string, runs: Run[], start: number, end: number): nu
   return width - ((firstSpacing ?? 0) + lastSpacing) / 2
 }
 
-const breakOpportunities = (text: string): Array<{ position: number, required: boolean }> => {
-  const breaker = new LineBreaker(text)
-  const breaks: Array<{ position: number, required: boolean }> = []
-  let next = breaker.nextBreak()
-  while (next) {
-    breaks.push({ position: next.position, required: next.required })
-    next = breaker.nextBreak()
-  }
-  return breaks
-}
-
-const trimTrailingSpaces = (text: string, start: number, end: number) => {
-  let trimmed = end
-  while (trimmed > start && /\s/.test(text[trimmed - 1])) {
-    trimmed--
-  }
-  return trimmed
-}
-
-const breakLines = (text: string, runs: Run[], layoutWidth: number): Array<{ start: number, end: number }> => {
-  const lines: Array<{ start: number, end: number }> = []
-  let lineStart = 0
-  let lastFit = -1
-  for (const { position, required } of breakOpportunities(text)) {
-    const fits = measureRange(text, runs, lineStart, trimTrailingSpaces(text, lineStart, position)) <= layoutWidth
-    if (!fits && lastFit > lineStart) {
-      lines.push({ start: lineStart, end: lastFit })
-      lineStart = lastFit
-    }
-    lastFit = position
-    if (required) {
-      lines.push({ start: lineStart, end: position })
-      lineStart = position
-    }
-  }
-  if (lineStart < text.length || lines.length === 0) {
-    lines.push({ start: lineStart, end: text.length })
-  }
-  return lines
-}
-
 const lineMetrics = (runs: Run[], start: number, end: number): FontMetricsInt & { lineHeightPx?: number } => {
   const inLine = runs.filter(run => run.start < Math.max(end, start + 1) && run.end > start)
   const used = inLine.length ? inLine : [runs[runs.length - 1]]
@@ -229,7 +167,7 @@ export const measureAndroid = (
     layoutWidth = widthMode === MEASURE_MODE_EXACTLY ? Math.ceil(availablePx)
       : widthMode === MEASURE_MODE_AT_MOST ? Math.min(desiredCeil, Math.floor(availablePx))
       : desiredCeil
-    ranges = breakLines(text, runs, layoutWidth)
+    ranges = breakLines(text, layoutWidth, (from, to) => measureRange(text, runs, from, to))
   }
 
   const maxLines = paragraph.numberOfLines && paragraph.numberOfLines > 0 ? paragraph.numberOfLines : Infinity

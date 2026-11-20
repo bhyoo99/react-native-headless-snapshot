@@ -1,0 +1,67 @@
+{
+  "platform": "ios",
+  "osVersion": "27.2",
+  "fixture": "views-borders",
+  "window": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "screen": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 300,
+    "height": 200,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 300,
+        "height": 200,
+        "children": [
+          {
+            "type": "RN:View",
+            "x": 8,
+            "y": 8,
+            "width": 284,
+            "height": 50,
+            "children": []
+          },
+          {
+            "type": "RN:View",
+            "x": 8,
+            "y": 64,
+            "width": 284,
+            "height": 30.666664123535156,
+            "children": [
+              {
+                "type": "RN:View",
+                "x": 15.333333492279053,
+                "y": 68.66666650772095,
+                "width": 272.33331298828125,
+                "height": 21.666671752929688,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {}
+}

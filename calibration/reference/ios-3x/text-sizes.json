@@ -1,0 +1,153 @@
+{
+  "platform": "ios",
+  "osVersion": "27.2",
+  "fixture": "text-sizes",
+  "window": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "screen": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 360,
+    "height": 260,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 260,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 10,
+            "y": 10,
+            "width": 36,
+            "height": 12.333333969116211,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-2",
+            "x": 10,
+            "y": 26.33333396911621,
+            "width": 56.333335876464844,
+            "height": 15.333333969116211,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-3",
+            "x": 10,
+            "y": 45.66666793823242,
+            "width": 53.66666793823242,
+            "height": 18,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-4",
+            "x": 10,
+            "y": 67.66666412353516,
+            "width": 73.66666412353516,
+            "height": 24.666671752929688,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-5",
+            "x": 10,
+            "y": 96.33333587646484,
+            "width": 113.66666412353516,
+            "height": 37.99999237060547,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "Size 11",
+        "x": 0,
+        "y": 0,
+        "width": 35.87353515625,
+        "height": 12.2890625,
+        "descender": 2.3310546875,
+        "capHeight": 7.56787109375,
+        "ascender": 9.9580078125,
+        "xHeight": 5.8115234375
+      }
+    ],
+    "text-2": [
+      {
+        "text": "Size 13.5",
+        "x": 0,
+        "y": 0,
+        "width": 56.287353515625,
+        "height": 15.08203125,
+        "descender": 2.86083984375,
+        "capHeight": 9.287841796875,
+        "ascender": 12.22119140625,
+        "xHeight": 7.13232421875
+      }
+    ],
+    "text-3": [
+      {
+        "text": "Size 16",
+        "x": 0,
+        "y": 0,
+        "width": 53.3671875,
+        "height": 17.875,
+        "descender": 3.390625,
+        "capHeight": 11.0078125,
+        "ascender": 14.484375,
+        "xHeight": 8.453125
+      }
+    ],
+    "text-4": [
+      {
+        "text": "Size 22",
+        "x": 0,
+        "y": 0,
+        "width": 73.3798828125,
+        "height": 24.578125,
+        "descender": 4.662109375,
+        "capHeight": 15.1357421875,
+        "ascender": 19.916015625,
+        "xHeight": 11.623046875
+      }
+    ],
+    "text-5": [
+      {
+        "text": "Size 34",
+        "x": 0,
+        "y": 0,
+        "width": 113.4052734375,
+        "height": 37.984375,
+        "descender": 7.205078125,
+        "capHeight": 23.3916015625,
+        "ascender": 30.779296875,
+        "xHeight": 17.962890625
+      }
+    ]
+  }
+}

@@ -9,8 +9,10 @@ view are compared.
 * `npm run compare` prints the difference per fixture and exits with an error when a frame is off by more than
   0.01 (`THRESHOLD=0.5 npm run compare` to loosen it, `--verbose` to list the frames).
 
-Fixtures marked `needsSystemFonts` only run when `system-fonts/android/` has `Roboto-Regular.ttf` and
-`NotoSansCJK-Regular.ttc` pulled from the emulator with `adb pull /system/fonts/<file>`.
+Fixtures marked `needsSystemFonts` only run when the platform's system fonts are in `system-fonts/`:
+`android/Roboto-Regular.ttf` and `android/NotoSansCJK-Regular.ttc` pulled from the emulator with
+`adb pull /system/fonts/<file>`, and `ios/SFUI.ttf` and `ios/AppleSDGothicNeo.ttc` copied from
+`<runtimeRoot>/System/Library/Fonts/Core` of the iOS simulator runtime.
 
 ## Measuring on a device
 

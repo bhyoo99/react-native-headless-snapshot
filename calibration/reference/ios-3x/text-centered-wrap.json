@@ -1,0 +1,65 @@
+{
+  "platform": "ios",
+  "osVersion": "27.2",
+  "fixture": "text-centered-wrap",
+  "window": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "screen": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 200,
+    "height": 160,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 200,
+        "height": 160,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 13.666666984558105,
+            "y": 10,
+            "width": 172.66665649414062,
+            "height": 17,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "A centered title that wraps",
+        "x": 0.0357208251953125,
+        "y": 0,
+        "width": 172.59521484375,
+        "height": 16.7578125,
+        "descender": 3.1787109375,
+        "capHeight": 10.31982421875,
+        "ascender": 13.5791015625,
+        "xHeight": 7.9248046875
+      }
+    ]
+  }
+}

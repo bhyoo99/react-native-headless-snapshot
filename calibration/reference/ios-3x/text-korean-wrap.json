@@ -1,0 +1,197 @@
+{
+  "platform": "ios",
+  "osVersion": "27.2",
+  "fixture": "text-korean-wrap",
+  "window": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "screen": {
+    "fontScale": 1,
+    "width": 402,
+    "height": 874,
+    "scale": 3
+  },
+  "pixelRatio": 3,
+  "fontScale": 1,
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "tree": {
+    "type": "RN:View",
+    "x": 0,
+    "y": 0,
+    "width": 180,
+    "height": 500,
+    "children": [
+      {
+        "type": "RN:View",
+        "x": 0,
+        "y": 0,
+        "width": 180,
+        "height": 500,
+        "children": [
+          {
+            "type": "RN:Paragraph",
+            "id": "text-1",
+            "x": 10,
+            "y": 10,
+            "width": 160,
+            "height": 87,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-2",
+            "x": 10,
+            "y": 107,
+            "width": 160,
+            "height": 69,
+            "children": []
+          },
+          {
+            "type": "RN:Paragraph",
+            "id": "text-3",
+            "x": 10,
+            "y": 186,
+            "width": 160,
+            "height": 66.33332824707031,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "textLines": {
+    "text-1": [
+      {
+        "text": "한글 줄바꿈은 단어 단위",
+        "x": 0,
+        "y": 0,
+        "width": 148.08,
+        "height": 21.72,
+        "descender": 4.32,
+        "capHeight": 10.995,
+        "ascender": 17.4,
+        "xHeight": 8.145
+      },
+      {
+        "text": "인지 글자 단위인지 확인",
+        "x": 0,
+        "y": 21.72,
+        "width": 148.08,
+        "height": 21.72,
+        "descender": 4.32,
+        "capHeight": 10.995,
+        "ascender": 17.4,
+        "xHeight": 8.145
+      },
+      {
+        "text": "하는 아주아주긴단어가들",
+        "x": 0,
+        "y": 43.44,
+        "width": 155.16,
+        "height": 21.72,
+        "descender": 4.32,
+        "capHeight": 10.995,
+        "ascender": 17.4,
+        "xHeight": 8.145
+      },
+      {
+        "text": "어있는 문장입니다",
+        "x": 0,
+        "y": 65.16,
+        "width": 113.75999999999999,
+        "height": 21.72,
+        "descender": 4.32,
+        "capHeight": 10.995,
+        "ascender": 17.4,
+        "xHeight": 8.145
+      }
+    ],
+    "text-2": [
+      {
+        "text": "한글 줄바꿈은 단어 단위인",
+        "x": 0,
+        "y": 0,
+        "width": 154.678125,
+        "height": 17.900390625,
+        "descender": 3.6181640625,
+        "capHeight": 10.5,
+        "ascender": 14.2822265625,
+        "xHeight": 7.529999999999999
+      },
+      {
+        "text": "지 글자 단위인지 확인하는 ",
+        "x": 0,
+        "y": 17.900390625,
+        "width": 158.6625,
+        "height": 17.900390625,
+        "descender": 3.6181640625,
+        "capHeight": 10.5,
+        "ascender": 14.2822265625,
+        "xHeight": 7.529999999999999
+      },
+      {
+        "text": "아주아주긴단어가들어있는 ",
+        "x": 0,
+        "y": 35.80078125,
+        "width": 159.684375,
+        "height": 17.900390625,
+        "descender": 3.6181640625,
+        "capHeight": 10.5,
+        "ascender": 14.2822265625,
+        "xHeight": 7.529999999999999
+      },
+      {
+        "text": "문장입니다",
+        "x": 0,
+        "y": 53.701171875,
+        "width": 64.875,
+        "height": 15,
+        "descender": 2.0999999999999996,
+        "capHeight": 10.5,
+        "ascender": 12.9,
+        "xHeight": 7.529999999999999
+      }
+    ],
+    "text-3": [
+      {
+        "text": "English words mixed 한",
+        "x": 0,
+        "y": 0,
+        "width": 149.968,
+        "height": 22,
+        "descender": 4.896000000000001,
+        "capHeight": 10.262,
+        "ascender": 17.104,
+        "xHeight": 7.602
+      },
+      {
+        "text": "글 단어 together 섞인 문장",
+        "x": 0,
+        "y": 22,
+        "width": 158.508,
+        "height": 22,
+        "descender": 4.896000000000001,
+        "capHeight": 10.262,
+        "ascender": 17.104,
+        "xHeight": 7.602
+      },
+      {
+        "text": "이 어떻게 나뉘는지",
+        "x": 0,
+        "y": 44,
+        "width": 109.312,
+        "height": 22,
+        "descender": 4.896000000000001,
+        "capHeight": 10.262,
+        "ascender": 17.104,
+        "xHeight": 7.602
+      }
+    ]
+  }
+}
